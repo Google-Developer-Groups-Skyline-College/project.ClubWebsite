@@ -71,7 +71,7 @@ export default function Footer() {
             <div className='pt-4 pb-10'>
                 <Link href='https://github.com/Skyline-College-Computer-Science-Club/project.ClubWebsite' target='_blank'>
                     <p className='text-red-500 text-sm sm:text-lg'>
-                        Made with ☕ & 💞 by Students, for Students.
+                        Made with ☕ & 💞 by students, for students.
                     </p>
                 </Link>
                 <p className='text-neutral-500 text-sm sm:text-lg'>

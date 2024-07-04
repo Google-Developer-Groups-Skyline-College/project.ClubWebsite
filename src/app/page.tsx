@@ -47,8 +47,8 @@ export default function App() {
 
             <About />
 
-            <div className='w-full bg-gradient-to-b from-neutral-900 via-black to-black py-20'>
-                <h1 className='title-main mx-auto text-2xl text-center sm:text-4xl font-extrabold text-white'>
+            <div className='w-full bg-gradient-to-b from-neutral-900 via-black to-black py-14'>
+                <h1 className='title-main mx-auto text-xl text-center sm:text-3xl font-extrabold text-white'>
                     <span className='text-shadow shadow-gray-700'>
                         Journey with us in&nbsp;
                     </span>

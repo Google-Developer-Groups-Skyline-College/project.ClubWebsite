@@ -7,12 +7,10 @@ const kitty = '/assets/mascot.gif'
 
 export default function Recruitment(): React.ReactNode {
     return (
-            
             <div className='w-full h-[200vh] relative overflow-hidden'>
-                
-                {/* top        */}{' '}
+                {/* top        */}
                 <div className='bg-gradient-to-b from-black to-transparent absolute top-0 w-full h-[15%]'></div>
-                {/* bottom     */}{' '}
+                {/* bottom     */}
                 <div className='bg-gradient-to-t from-[#0a0a0a] to-transparent absolute bottom-0 w-full h-[30%]'></div>
                 {/* cent-left  */}
 
@@ -22,6 +20,7 @@ export default function Recruitment(): React.ReactNode {
                     height={1600}
                     alt=''
                     className='-z-10 bg-white object-cover aspect-auto` absolute w-full h-full opacity-[80%]'
+                    priority
                 />
 
                 <div className='w-full h-[102vh] flex absolute bottom-[12rem] flex-col gap-4 justify-center items-center'>
@@ -32,11 +31,11 @@ export default function Recruitment(): React.ReactNode {
                         alt=''
                         width={100}
                         height={100}
+                        unoptimized
                     />
 
                     <div className='pt-4 pb-10'>
                         <h1 className='title-main w-full text-center text-4xl font-semibold'>
-                            
                             <span className='text-green-400 drop-shadow-[0_0_10px_rgba(50,250,50,0.45)]'>
                             Join Us.{' '}
                             </span>
@@ -52,7 +51,7 @@ export default function Recruitment(): React.ReactNode {
                         </h1>
                     </div>
 
-                    <iframe src="https://e.widgetbot.io/channels/939701223144185867/939701223144185874" 
+                    <iframe src="https://e.widgetbot.io/channels/939701223144185867/939714632929665034" 
                         allow="clipboard-write; fullscreen" 
                         height="600" 
                         className='rounded-2xl drop-shadow-[0_0_20px_rgba(0,0,0,0.5)]'
@@ -68,7 +67,7 @@ export default function Recruitment(): React.ReactNode {
                             className='rounded-2xl pointer-events-none '
                             sandbox='allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'
                         ></iframe>
-                        <p className='font-semibold mt-2 ml-2'>Click above to join!</p>
+                        <p className='font-semibold mt-2 ml-2'>Click to join!</p>
                     </a>
 
                     <Element name='recruitment' />

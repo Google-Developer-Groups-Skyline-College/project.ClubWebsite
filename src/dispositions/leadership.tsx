@@ -39,6 +39,7 @@ const pfp_auxillary1 = dir_leaderPortraits + 'christseport.png'
 
 const pfp_coadvisor1 = dir_leaderPortraits + 'denisehumport.png'
 const pfp_coadvisor2 = dir_leaderPortraits + 'bryanswartoutport.png'
+const pfp_none = dir_leaderPortraits + 'noprofile.webp'
 
 export const FALLBACK_QUOTE = (
     <p>
@@ -74,6 +75,15 @@ export const leadership = {
         'Kaila Bautista': {
             role: 'The Club Secretary',
             imgSrc: pfp_secretary,
+            quote: (
+                <p className='font-bold'>
+                    {`  ㅤㅤㅤㅤ／l、ㅤmeow
+                        （ﾟ､ ｡ ７
+                        ⠀ l、ﾞ ~ヽ
+                          じしf_, )ノ
+                    `}
+                </p>
+            ),
             linktree: '',
             instagram: 'https://instagram.com/kqilamae',
             icon: <PiFeatherDuotone />,
@@ -95,7 +105,7 @@ export const leadership = {
             icon: <GrMoney />,
         },
         'Lance Ruiz': {
-            role: 'Projects Manager',
+            role: 'The Projects Manager',
             imgSrc: pfp_projectmanager,
             quote: (
                 <p>
@@ -114,7 +124,7 @@ export const leadership = {
             icon: <LuConstruction />,
         },
         'Chris Tse': {
-            role: 'SOCC Advisor',
+            role: 'Club SOCC Deputy',
             imgSrc: pfp_auxillary1,
             quote: ( 
                 <p>
@@ -148,7 +158,7 @@ export const leadership = {
         },
         'Luis Prado': {
             role: 'Club Co-Advisor',
-            imgSrc: pfp_coadvisor2,
+            imgSrc: pfp_none,
             linktree: '',
             discord: 'https://discordapp.com/users/373597111192911892',
             github: '',

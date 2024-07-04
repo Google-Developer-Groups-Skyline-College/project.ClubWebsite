@@ -12,15 +12,18 @@ import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
 
 const TYPED_KEYWORDS = [
-    'Design',
+    'Design Projects',
     'Pioneer',
     'Optimize',
     'Build',
     'Compile',
+    'Web Design',
+    '$ yarn build',
     '3D-Model',
     'Deploy',
     'Problem-Solve',
     'Interpret',
+    'Game Design',
     'Collaborate',
     'Develop',
     'Delegate',
@@ -37,7 +40,7 @@ export default function Hero(): React.ReactNode {
             <Element name='hero' />
 
             <motion.div
-                    className='absolute w-full h-screen pointer-events-none'
+                    className='absolute w-full h-full pointer-events-none'
                     initial={{ transform: 'translateY(10%)' }}
                     animate={{ transform: 'translateY(0%)' }}
                     transition={{ duration: 3, ease: 'backOut' }}
@@ -60,6 +63,7 @@ export default function Hero(): React.ReactNode {
                     src={heroOverlay}
                     className='opacity-10 absolute top-0 w-full h-full drop-shadow-lg'
                     alt='overlay'
+                    unoptimized
                     priority
                 />
 
@@ -68,21 +72,22 @@ export default function Hero(): React.ReactNode {
             <div className='absolute w-full h-full mx-auto flex flex-col items-center justify-center pb-20'>
                 {/* mascot */}
                 <Image
-                    width={100}
-                    height={100}
+                    width={80}
+                    height={80}
                     src={mascotAnimated}
                     alt='mascot'
-                    className='z-20 drop-shadow-[0_0_25px_rgba(255,255,255,0.4)]'
+                    unoptimized
+                    className='z-20 hover:scale-105 transition-all duration-300 drop-shadow-[0_0_25px_rgba(255,255,255,0.4)]'
                 />
 
                 {/* The main texts */}
-                <h1 className='z-20 title-main text-xl md:2xl text-center sm:text-5xl text-shadow shadow-black font-bold text-white my-2'>
+                <h1 className='z-20 title-main text-lg md:xl text-center sm:text-4xl text-shadow shadow-black font-bold text-white my-2'>
                     The Computer Science Club at Skyline
                 </h1>
 
-                <div className='z-20 text-white text-center text-shadow shadow-black sm:text-2xl text-xl font-semibold` w-full'>
+                <div className='z-20 text-white text-center text-shadow shadow-black sm:text-xl text-lg font-semibold` w-full'>
                     <p>Elevate Your Code—the Sky&apos;s the Limit.</p>
-                    <h1 className='title-main font-bold sm:text-[30px] text-[20px] sm:pt-[20px] pt-[10px]'>
+                    <h1 className='title-main font-bold sm:text-[24px] text-[16px] sm:pt-[16px] pt-[8px]'>
                         {'>'} We{' '}
                         <Typed
                             className='text-[#FCD690] drop-shadow-[0_0_8px_rgba(245,210,140,255)]'
@@ -103,7 +108,7 @@ export default function Hero(): React.ReactNode {
                     smooth={true}
                     offset={-140}
                     duration={1500}
-                    className='z-20 mt-6 relative group w-[240px] active:scale-95 duration-150 border-[1px] hover:border-green-900 border-white rounded-2xl hover:outline hover:outline-[6px] active:outline-4 text-white text-lg title-main overflow-hidden'
+                    className='z-20 mt-4 relative group w-[220px] active:scale-95 duration-150 border-[1px] hover:border-green-900 border-white rounded-2xl hover:outline hover:outline-[6px] active:outline-4 text-white text-[1rem] title-main overflow-hidden'
                 >
                     <IoMdArrowRoundDown className='absolute w-full h-full group-hover:translate-y-0 -translate-y-[100%] duration-300 pointer-events-none bg-gradient-to-t from-[#16a34aec] to-[#ffffff91]' />
                     <button className='flex w-full justify-center p-2 font-semibold text-shadow-lg shadow-black hover:bg-green-600 bg-neutral-900 bg-opacity-50 duration-300 hover:border-green-300 overflow-hidden'>

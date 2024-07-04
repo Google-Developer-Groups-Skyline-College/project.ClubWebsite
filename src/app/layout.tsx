@@ -2,6 +2,8 @@ import './globals.css'
 
 import { Inter, Poppins, Ubuntu, Rubik, Open_Sans } from 'next/font/google'
 
+import { Analytics } from '@vercel/analytics/react'
+
 import Navbar from '../components/Navbar'
 
 const inter = Inter({
@@ -48,6 +50,7 @@ export default function RootLayout({
         <html
             className={`${inter.variable} ${poppins.variable} ${ubuntu.variable} ${rubik.variable} ${open_sans.variable}`}
         >
+            <Analytics />
             <body>
                 <Navbar />
                 {children}

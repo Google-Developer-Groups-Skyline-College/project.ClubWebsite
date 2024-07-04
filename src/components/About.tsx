@@ -45,7 +45,7 @@ export default function About(): React.ReactNode {
                     height={100}
                 />
 
-                <h1 className='title-main mx-auto text-2xl text-center sm:text-4xl font-extrabold text-white mb-10'>
+                <h1 className='title-main mx-auto text-xl text-center sm:text-3xl font-extrabold text-white mb-10'>
                     <span>Join us in Exploring the </span>
                     <span className='text-yellow-300 animate-pulse drop-shadow-[0_0_10px_rgba(255,250,50,0.45)]'>
                         World of Computer Science

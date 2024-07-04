@@ -1,10 +1,8 @@
 'use client'
 
 /*
-    
     TODO:
         Add context pull-out section for hovering over announcement bar
-
 */
 
 import React, { useState } from 'react'
@@ -21,8 +19,8 @@ import { FiTool } from 'react-icons/fi'
 import { motion } from 'framer-motion'
 
 const diagonalGlideOverlay = '/assets/home/diagonal_slowglide_overlay.gif'
-const mascot = '/assets/mascot.gif'
-
+const mascot = '/assets/mascot.gif'     
+    
 const ANNOUNCEMENT_TEXT =
     '🚧 Welcome! Mind the mess—our website is undergoing constant development. 👷'
 const ANNOUNCEMENT_GRAD_COLOR = 'from-[#33200d]'
@@ -41,7 +39,7 @@ export default function Navbar(): React.ReactNode {
                     onMouseDown={() => {
                         setAnnounceDismissed(true)
                     }}
-                    className={`flex w-full h-[46px] bg-gradient-to-b ${ANNOUNCEMENT_GRAD_COLOR} to-[#000000] justify-between items-center overflow-hidden`}
+                    className={`flex w-full h-[40px] bg-gradient-to-b ${ANNOUNCEMENT_GRAD_COLOR} to-[#000000] justify-between items-center overflow-hidden`}
                     initial={{
                         opacity: 0,
                         translateY: '-100%',
@@ -58,7 +56,7 @@ export default function Navbar(): React.ReactNode {
                     }
                     transition={{ duration: 1, ease: 'easeOut' }}
                 >
-                    <p className='w-full font-semibold text-sm sm:text-md text-center text-orange-200'>
+                    <p className='w-full font-semibold text-xs sm:text-sm text-center text-orange-200'>
                         {ANNOUNCEMENT_TEXT}
                     </p>
                     <Image
@@ -78,22 +76,22 @@ export default function Navbar(): React.ReactNode {
 
             {/* Top Bar */}
             <motion.div
-                className='z-20 flex relative h-[80px] px-4 justify-between items-center text-gray-300 bg-gradient-to-b from-[#000000cc] to-transparent'
+                className='z-20 flex relative h-[60px] px-4 justify-between items-center text-gray-300 bg-gradient-to-b from-[#000000cc] to-transparent'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1, ease: 'easeOut' }}
             >
                 <Image
-                    width={64}
-                    height={64}
+                    width={48}
+                    height={48}
                     src={mascot}
                     alt=''
                     className='z-20 drop-shadow-lg ml-4 rounded-2xl hover:rotate-180'
-                    style={{ width: '50px' }}
+                    style={{ width: '48px' }}
                 />
 
                 {/* Navigation */}
-                <ul className='hidden md:flex'>
+                <ul className='hidden md:flex text-sm'>
                     <li className='text-white font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
                         <GoHome className='my-auto mr-2' />
                         <Link

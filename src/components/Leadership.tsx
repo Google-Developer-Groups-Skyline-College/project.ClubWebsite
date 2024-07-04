@@ -45,7 +45,7 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
     const [isAnimating, setIsAnimating] = useState(false)
 
     const ref = useRef(null)
-    const isInView = useInView(ref, { once: true })
+    const isInView = useInView(ref)
 
     const majorLeaderDetails = leadership.major[leaderName]
 
@@ -64,7 +64,7 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
                 isInView ? { opacity: 1, transform: 'translateX(0%)' } : ''
             }
             transition={{ duration: 1, delay: index * 0.1, ease: 'easeOut' }}
-            className={`${isAnimating && 'pointer-events-none'} min-w-[230px] max-w-[200px] hover:z-20 ring-2 ring-green-950 relative group opacity-0 hover:rounded-b-none hover:!scale-105 transition duration-300 ease-out select-none rounded-xl bg-gradient-to-t from-[#040404] via-green-950 to-green-950`}
+            className={`${isAnimating && 'pointer-events-none'} w-[210px] hover:z-20 ring-2 ring-green-950 relative group opacity-0 hover:rounded-b-none hover:!scale-110 transition duration-500 ease-out select-none rounded-xl bg-gradient-to-t from-[#040404] via-green-950 to-green-950`}
             key={leaderName}
         >
             {/* Leader Portrait + Leader Quote Overlay */}
@@ -91,12 +91,12 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
                             duration: 1.5,
                         }}
                     >
-                        <FaQuoteLeft size={32} className='m-4' />
+                        <FaQuoteLeft size={26} className='m-4' />
                     </motion.div>
 
                     <div className='aspect-square w-full flex items-center px-6 font-semibold text-shadow-lg shadow-black'>
                         {/* whitespace-pre-line enables usage of specifically \n */}
-                        <div className='text-center text-white whitespace-pre-line'>
+                        <div className='text-center text-white whitespace-pre-line leading-5 text-[14px]'>
                             {majorLeaderDetails.quote
                                 ? majorLeaderDetails.quote
                                 : FALLBACK_QUOTE}
@@ -114,12 +114,12 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
             </div>
 
             {/* Leader Name and Role */}
-            <div className='rounded-xl p-4 group-hover:pb-0'>
+            <div className='rounded-xl p-3 group-hover:pb-0'>
                 <div className='absolute w-full'>{majorLeaderDetails.icon}</div>
-                <h1 className='title-main text-xl font-semibold text-center'>
+                <h1 className='title-main text-xl font-semibold text-center group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.3)] duration-300'>
                     {leaderName}
                 </h1>
-                <h2 className='text-lg font-semibold text-center'>
+                <h2 className='text-[15px] font-semibold text-center drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]'>
                     {majorLeaderDetails.role}
                 </h2>
             </div>
@@ -220,7 +220,7 @@ const MinorLeaderCard: React.FC<props_MinorLeaderCard> = ({
     const [isAnimating, setIsAnimating] = useState(false)
 
     const ref = useRef(null)
-    const isInView = useInView(ref, { once: true })
+    const isInView = useInView(ref)
 
     const minorLeaderDetails = leadership.minor[roleName]
 
@@ -239,16 +239,16 @@ const MinorLeaderCard: React.FC<props_MinorLeaderCard> = ({
                 isInView ? { opacity: 1, transform: 'translateX(0%)' } : ''
             }
             transition={{ duration: 1.3, delay: index * 0.3, ease: 'easeOut' }}
-            className={`${isAnimating && 'pointer-events-none'} w-[270px] hover:z-20 relative group opacity-0 hover:!scale-105 border-b border-neutral-800 border-1 transition duration-300 ease-out select-none rounded-xl bg-gradient-to-b ${minorLeaderDetails.color} to-transparent`}
+            className={`${isAnimating && 'pointer-events-none'} w-[240px] hover:z-20 relative group leading-[21px] opacity-0 hover:!scale-105 border-b border-neutral-800 border-1 transition duration-300 ease-out select-none rounded-xl bg-gradient-to-b ${minorLeaderDetails.color} to-transparent`}
             key={roleName}
         >
             {/* Role and Name of Person */}
             <div className='rounded-xl p-4'>
                 <div className='absolute w-full'>{minorLeaderDetails.icon}</div>
-                <h1 className='title-main text-xl font-semibold text-center'>
+                <h1 className='title-main text-lg font-semibold text-center'>
                     {roleName}
                 </h1>
-                <h2 className='text-lg font-semibold text-center'>
+                <h2 className='text-md font-semibold text-center'>
                     {minorLeaderDetails.label}
                 </h2>
             </div>
@@ -259,15 +259,15 @@ const MinorLeaderCard: React.FC<props_MinorLeaderCard> = ({
 export default function Leadership(): React.ReactNode {
     return (
         // bg-[radial-gradient(#000_1px,transparent_1px)]
-        <div className='w-full h-full py-80 text-gray-300 bg-gradient-to-b from-black via-[#031302] to-black'>
-            <Element name='leadership' />
+        <div className='w-full h-full pb-40 text-gray-300 bg-gradient-to-b from-black via-[#031302] to-black'>
+            <Element name='leadership' />   
 
-            <div className='flex flex-col justify-center items-center w-full h-full px-[8vw] xl:px-[15vw] gap-6 overflow-X-hidden'>
+            <div className='flex flex-col justify-center items-center w-full h-full px-[8vw] py-[44px] xl:px-[15vw] gap-4 overflow-x-hidden'>
                 <div>
-                    <h1 className='title-main w-full text-center text-4xl font-semibold drop-shadow-[0_0_30px_rgba(255,255,255,1)]'>
+                    <h1 className='title-main w-full text-center text-3xl font-semibold leading-7 drop-shadow-[0_0_14px_rgba(255,255,255,0.5)]'>
                         Our Club Leadership
                     </h1>
-                    <h1 className='title-main w-full text-center text-2xl font-semibold'>
+                    <h1 className='title-main w-full text-center text-lg font-semibold text-yellow-100 drop-shadow-[0_0_20px_rgba(255,205,60,0.9)]'>
                         👑 2023 - 2024 👑
                     </h1>
                 </div>
@@ -276,7 +276,7 @@ export default function Leadership(): React.ReactNode {
                 <div className='w-full text-4xl font-semibold border-b-2 border-[#345222] drop-shadow-[0_0_30px_rgba(50,255,50,1)]'></div>
 
                 {/* Major Leadership Role Cards */}
-                <div className='flex flex-row flex-wrap justify-center align-middle gap-x-8 gap-y-6'>
+                <div className='flex flex-row flex-wrap justify-center align-middle gap-x-7 gap-y-[18px]'>
                     {Object.keys(leadership.major).map(
                         (majorLeaderName, index) => (
                             <MajorLeaderCard
