@@ -80,15 +80,15 @@ export const HomeCollection: GalleryPiece[] = [
         imgSrc: dir_home + 'eyh_ws2.jpg',
     },
     {
-        remark: '🌄 "Expand Your Horizons" - TinkerCAD 3D Design Workshop 2',
-        imgSrc: dir_home + 'expand_tinkercad_ws2.jpg',
-    },
-    {
         remark: '🌄 "Expand Your Horizons 2022" - Games with Scratch Workshop Group Photo!',
         imgSrc: dir_home + 'eyh_group.jpg',
     },
     {
-        remark: '🐕‍🦺 Boston Dog @ "CalHacks v10.0"',
+        remark: '🌄 "Expand Your Horizons" - TinkerCAD 3D Design Workshop 2',
+        imgSrc: dir_home + 'expand_tinkercad_ws2.jpg',
+    },
+    {
+        remark: '🐕‍🦺 Boston Doggo @ "CalHacks v10.0"',
         imgSrc: dir_home + 'calhacks_dog.png',
     },
     {
@@ -104,17 +104,34 @@ export const HomeCollection: GalleryPiece[] = [
         imgSrc: dir_home + 'boba_social_2023.png',
     },
     {
-        remark: '🎮 Roblox Game Development - Experimental Tower Defense',
+        remark: '🎮 Roblox Game Development: Experimental Tower Defense, Project Work',
         imgSrc: dir_home + 'roblox_studio.png',
     },
     {
-        remark: '✨ Blender Rendering of Skyline College',
-        imgSrc: dir_home + 'blender.jpg',
+        remark: '🪁 Blender Rendering of Skyline College, Project Work',
+        imgSrc: dir_home + 'blender_render.png',
     },
     {
         remark: '💪 Settling Outside Balcony Feat. Jonnald\n@ "CalHacks v10.0"',
         imgSrc: dir_home + 'calhacks_jonnald.jpg',
     },
+    {
+        remark: '🧑‍💻 Our First Intercollegiate Hackathon: Contestants #1',
+        imgSrc: dir_home + 'hackathon_contest2.jpg',
+    },
+    {
+        remark: '🤖 Fieldtrip: Dexterity.AI Robotics Fieldtrip Group Photo',
+        imgSrc: dir_home + 'dexterity_groupphoto.jpg',
+    },
+    {
+        remark: '🧑‍💻 Our First Intercollegiate Hackathon: Contestants #2',
+        imgSrc: dir_home + 'hackathon_contest1.jpg',
+    },
+    {
+        remark: '🔬 Fieldtrip: SLAC Linear Accelerator Tour feat. Physics Astronomy Club',
+        imgSrc: dir_home + 'slac_tour.png',
+    },
+    
     {
         remark: '🌉 Opening Night Group Photo feat. The Club and SFSU Friends @ "SFHacks 2024"',
         imgSrc: dir_home + 'sfhacks_group.jpg',
@@ -123,7 +140,7 @@ export const HomeCollection: GalleryPiece[] = [
 
 export const HackathonCollection: GalleryPiece[] = [
     {
-        remark: '✨ Blender Rendering of Skyline College',
+        remark: '🪁 Blender Rendering of Skyline College',
         imgSrc: dir_hackathon + 'blender.jpg',
     },
     {

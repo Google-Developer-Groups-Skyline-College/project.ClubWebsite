@@ -7,7 +7,7 @@ const kitty = '/assets/mascot.gif'
 
 export default function Recruitment(): React.ReactNode {
     return (
-            <div className='w-full h-[200vh] relative overflow-hidden'>
+            <div className='w-full h-[220vh] relative overflow-hidden'>
                 {/* top        */}
                 <div className='bg-gradient-to-b from-black to-transparent absolute top-0 w-full h-[15%]'></div>
                 {/* bottom     */}
@@ -23,7 +23,7 @@ export default function Recruitment(): React.ReactNode {
                     priority
                 />
 
-                <div className='w-full h-[102vh] flex absolute bottom-[12rem] flex-col gap-4 justify-center items-center'>
+                <div className='w-full h-[110vh] flex absolute bottom-[12rem] flex-col gap-4 justify-center items-center'>
 
                     <Image
                         src={kitty}
@@ -67,7 +67,7 @@ export default function Recruitment(): React.ReactNode {
                             className='rounded-2xl pointer-events-none '
                             sandbox='allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'
                         ></iframe>
-                        <p className='font-semibold mt-2 ml-2'>Click to join!</p>
+                        <p className='font-semibold mt-2 ml-2'>👉 Click to join us!</p>
                     </a>
 
                     <Element name='recruitment' />

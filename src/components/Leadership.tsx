@@ -59,11 +59,11 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
                 setIsAnimating(false)
             }}
             onMouseEnter={() => playSfx_hoverThunk()}
-            initial={{ opacity: 0, transform: 'translateX(50%)' }}
+            initial={{ opacity: 0, transform: 'perspective(500px) translateZ(100px) translateX(70%)' }}
             animate={
-                isInView ? { opacity: 1, transform: 'translateX(0%)' } : ''
+                isInView ? { opacity: 1, transform: 'translateZ(0px) translateX(0%)' } : ''
             }
-            transition={{ duration: 1, delay: index * 0.1, ease: 'easeOut' }}
+            transition={{ duration: 1.25, delay: index * 0.15, ease: 'easeOut' }}
             className={`${isAnimating && 'pointer-events-none'} w-[210px] hover:z-20 ring-2 ring-green-950 relative group opacity-0 hover:rounded-b-none hover:!scale-110 transition duration-500 ease-out select-none rounded-xl bg-gradient-to-t from-[#040404] via-green-950 to-green-950`}
             key={leaderName}
         >
@@ -95,7 +95,7 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
                     </motion.div>
 
                     <div className='aspect-square w-full flex items-center px-6 font-semibold text-shadow-lg shadow-black'>
-                        {/* whitespace-pre-line enables usage of specifically \n */}
+                        {/* whitespace-pre-line enables usage of \n below */}
                         <div className='text-center text-white whitespace-pre-line leading-5 text-[14px]'>
                             {majorLeaderDetails.quote
                                 ? majorLeaderDetails.quote
@@ -115,8 +115,8 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
 
             {/* Leader Name and Role */}
             <div className='rounded-xl p-3 group-hover:pb-0'>
-                <div className='absolute w-full'>{majorLeaderDetails.icon}</div>
-                <h1 className='title-main text-xl font-semibold text-center group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.3)] duration-300'>
+                <div className='absolute text-[16px]'>{majorLeaderDetails.icon}</div>
+                <h1 className='title-main text-xl font-semibold text-center group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.8)] duration-300'>
                     {leaderName}
                 </h1>
                 <h2 className='text-[15px] font-semibold text-center drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]'>
@@ -238,13 +238,13 @@ const MinorLeaderCard: React.FC<props_MinorLeaderCard> = ({
             animate={
                 isInView ? { opacity: 1, transform: 'translateX(0%)' } : ''
             }
-            transition={{ duration: 1.3, delay: index * 0.3, ease: 'easeOut' }}
-            className={`${isAnimating && 'pointer-events-none'} w-[240px] hover:z-20 relative group leading-[21px] opacity-0 hover:!scale-105 border-b border-neutral-800 border-1 transition duration-300 ease-out select-none rounded-xl bg-gradient-to-b ${minorLeaderDetails.color} to-transparent`}
+            transition={{ duration: 1.3, delay: index * 0.45, ease: 'easeOut' }}
+            className={`${isAnimating && 'pointer-events-none'} w-[240px] hover:z-20 relative group leading-[21px] opacity-0 hover:!scale-110 border-b border-neutral-800 border-1 transition duration-300 ease-out select-none rounded-xl bg-gradient-to-b ${minorLeaderDetails.color} to-transparent`}
             key={roleName}
         >
             {/* Role and Name of Person */}
             <div className='rounded-xl p-4'>
-                <div className='absolute w-full'>{minorLeaderDetails.icon}</div>
+                <div className='absolute text-lg'>{minorLeaderDetails.icon}</div>
                 <h1 className='title-main text-lg font-semibold text-center'>
                     {roleName}
                 </h1>

@@ -109,7 +109,6 @@ export default function About(): React.ReactNode {
                             </span>
                         </h1>
                         <p className='text-sm mx-auto text-center py-2 px-4'>
-                            {/* This is a description. */}
                             Expand your development toolkit by diving hands-on
                             through hundreds of diverse, specialized pieces of{' '}
                             <b>libraries, services, applications, frameworks</b>

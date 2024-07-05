@@ -56,7 +56,7 @@ export default function Navbar(): React.ReactNode {
                     }
                     transition={{ duration: 1, ease: 'easeOut' }}
                 >
-                    <p className='w-full font-semibold text-xs sm:text-sm text-center text-orange-200'>
+                    <p className='w-full font-semibold text-sm text-center text-orange-200'>
                         {ANNOUNCEMENT_TEXT}
                     </p>
                     <Image
@@ -64,9 +64,9 @@ export default function Navbar(): React.ReactNode {
                         height={600}
                         src={diagonalGlideOverlay}
                         alt=''
-                        className='absolute w-full opacity-10'
+                        className='absolute w-full opacity-5'
                     />
-                    <p className='absolute text-neutral-600 font-semibold right-4'>
+                    <p className='absolute text-neutral-600 font-semibold right-4 animate-pulse'>
                         ( click to dismiss )
                     </p>
                 </motion.div>
@@ -91,7 +91,7 @@ export default function Navbar(): React.ReactNode {
                 />
 
                 {/* Navigation */}
-                <ul className='hidden md:flex text-sm'>
+                <ul className='hidden md:flex text-[15px]'>
                     <li className='text-white font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
                         <GoHome className='my-auto mr-2' />
                         <Link
@@ -125,7 +125,6 @@ export default function Navbar(): React.ReactNode {
                 {/* Mobile Menu */}
                 {/* Mobile Menu */}
                 {/* Mobile Menu */}
-
                 <div onClick={handleClick} className='md:hidden z-10'>
                     {!nav ? <FaBars /> : <FaTimes />}
                 </div>

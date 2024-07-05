@@ -20,6 +20,13 @@ module.exports = {
                 medpall: '#c9aa72',
                 darkpall: '#493d29',
             },
+            screens: {
+                '3xl': '1600px',
+                '4xl': '1800px',
+                'wide': '2200px',
+                'uwide': '3000px',
+                'uuwide': '3600px',
+            }
         },
 
         fontFamily: {

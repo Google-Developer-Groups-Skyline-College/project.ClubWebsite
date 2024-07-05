@@ -67,7 +67,7 @@ export default function Footer() {
                     />
                 </Link>
             </div>
-            
+
             <div className='pt-4 pb-10'>
                 <Link href='https://github.com/Skyline-College-Computer-Science-Club/project.ClubWebsite' target='_blank'>
                     <p className='text-red-500 text-sm sm:text-lg'>
@@ -78,8 +78,6 @@ export default function Footer() {
                     Copyright ©️ Skyline Computer Science Club 2022-2025
                 </p>
             </div>
-            
-            
         </div>
     )
 }

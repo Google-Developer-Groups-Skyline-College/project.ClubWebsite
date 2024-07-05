@@ -11,7 +11,7 @@ const sfx_clunk = '/assets/sound_fx/clunk.mp3'
 const imageClasses =
     'relative h-full w-full object-cover duration-500 hover:!opacity-100 hover:!scale-110 hover:outline-[6px] outline-0 outline-white outline rounded-lg group-hover:opacity-100'
 const listItemClasses =
-    'flex-grow p-1 min-h-[120px] h-[21vw] hover:z-10 group/inner duration-500 hover:!z-10 active:!scale-[125%] hover:max-h-[600px]'
+    'flex-grow p-1 min-h-[120px] h-[46vw] sm:h-[21vw] md:h-[15vw] lg:h-[21vw] wide:h-[15vw] uwide:h-[12vw] hover:z-10 group/inner duration-500 hover:!z-10 active:!scale-[125%]'
 
 interface GalleryPiece {
     remark: string
@@ -58,12 +58,12 @@ function GalleryPiece({
             <Image
                 key={index}
                 className={imageClasses}
-                width={1000}
-                height={1000}
+                width={800}
+                height={800}
                 alt=''
                 src={pieceDetails.imgSrc}
             />
-            <p className='z-20 group-hover/inner:opacity-100 opacity-0 absolute rounded-2xl bottom-0 w-full text-center duration-300 font-semibold text-shadow-lg shadow-black bg-[#00000090] whitespace-pre-line pointer-events-none'>
+            <p className='z-20 object-  group-hover/inner:opacity-100 opacity-0 absolute rounded-2xl bottom-0 w-full text-center duration-300 font-semibold text-shadow-lg shadow-black bg-[#00000090] whitespace-pre-line pointer-events-none'>
                 {pieceDetails.remark}
             </p>
         </motion.div>
@@ -76,7 +76,7 @@ export default function Gallery({
     collection: Array<GalleryPiece>
 }): React.ReactNode {
     return (
-        <div className='flex flex-wrap z-50 w-full group py-12 overflow-x-hidden'>
+        <div className='flex flex-wrap z-50 w-full group py-12 overflow-hidden'>
             {collection.map((pieceDetails, index) => (
                 <GalleryPiece
                     key={pieceDetails.toString()}
