@@ -5,7 +5,7 @@ import React from 'react'
 import { Element } from 'react-scroll'
 import Typed from 'react-typed'
 
-import { HomeCollection } from '../dispositions/gallery'
+import { HomeAlbum } from '../dispositions/gallery'
 
 // components
 import IntroFade from '../components/IntroFade'
@@ -48,7 +48,7 @@ export default function App() {
             <About />
 
             <div className='w-full bg-gradient-to-b from-neutral-900 via-black to-black py-14'>
-                <h1 className='title-main mx-auto text-xl text-center sm:text-3xl font-extrabold text-white'>
+                <h1 className='title-main mx-auto text-3xl text-center sm:text-4xl font-extrabold text-white'>
                     <span className='text-shadow shadow-gray-700'>
                         Journey with us in&nbsp;
                     </span>
@@ -63,10 +63,10 @@ export default function App() {
                 </h1>
 
                 <Element name='gallery' />
-                <Gallery collection={HomeCollection} />
+                <Gallery album={HomeAlbum} />
             </div>
 
-            <div className='w-full h-80' />
+            <div className='w-full h-30' />
 
             {/* <History /> */}
             <Recruitment />

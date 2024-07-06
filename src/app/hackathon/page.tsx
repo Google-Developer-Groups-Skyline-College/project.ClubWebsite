@@ -1,7 +1,7 @@
 'use client'
 
 import Gallery from '../../components/Gallery'
-import { HackathonCollection } from '../../dispositions/gallery'
+import { HackathonAlbum } from '../../dispositions/gallery'
 
 import IntroFade from '../../components/IntroFade'
 
@@ -186,7 +186,7 @@ export default function Hackathon() {
                     ></Typed>
                 </h1>
 
-                <Gallery collection={HackathonCollection} />
+                <Gallery album={HackathonAlbum} />
             </div>
         </>
     )

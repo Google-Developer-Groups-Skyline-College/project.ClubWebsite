@@ -39,7 +39,7 @@ export default function Navbar(): React.ReactNode {
                     onMouseDown={() => {
                         setAnnounceDismissed(true)
                     }}
-                    className={`flex w-full h-[40px] bg-gradient-to-b ${ANNOUNCEMENT_GRAD_COLOR} to-[#000000] justify-between items-center overflow-hidden`}
+                    className={`flex w-full px-6 h-[60px] sm:h-[40px] bg-gradient-to-b ${ANNOUNCEMENT_GRAD_COLOR} to-[#000000] justify-between items-center overflow-hidden`}
                     initial={{
                         opacity: 0,
                         translateY: '-100%',
@@ -56,7 +56,7 @@ export default function Navbar(): React.ReactNode {
                     }
                     transition={{ duration: 1, ease: 'easeOut' }}
                 >
-                    <p className='w-full font-semibold text-sm text-center text-orange-200'>
+                    <p className='w-full font-semibold text-xs sm:text-sm text-center text-orange-200'>
                         {ANNOUNCEMENT_TEXT}
                     </p>
                     <Image

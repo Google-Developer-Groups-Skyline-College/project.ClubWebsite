@@ -179,7 +179,7 @@ export default function Technologies(): React.ReactNode {
             <motion.img
                 width={80}
                 src={kittyAstro}
-                className='mx-auto my-10 hover:!scale-105 transition duration-300 ease-out'
+                className='mx-auto my-4 md:my-10 hover:!scale-105 transition duration-300 ease-out'
                 initial={{ transform: 'translateY(-10%)' }}
                 animate={{ transform: `translateY(10%)` }}
                 transition={{
@@ -192,7 +192,7 @@ export default function Technologies(): React.ReactNode {
             />
 
             {/* optional shadow for title (looks fine): drop-shadow-[0_0_20px_rgba(255,255,255,0.1)] */}
-            <h1 className='title-main mx-auto text-xl text-center sm:text-3xl font-extrabold text-[#e7e9ef]'>
+            <h1 className='title-main mx-auto p-4 text-2xl text-center sm:text-3xl font-extrabold text-[#e7e9ef]'>
                 <span className='text-shadow shadow-gray-700'>
                     Join us in Exploring
                 </span>{' '}

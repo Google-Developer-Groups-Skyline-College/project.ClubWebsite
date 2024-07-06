@@ -39,35 +39,39 @@ export default function Hero(): React.ReactNode {
         <div className='w-full h-screen bg-black'>
             <Element name='hero' />
 
-            <motion.div
-                className='absolute w-full h-full pointer-events-none'
-                initial={{ transform: 'translateY(10%)', opacity: '0%' }}
-                animate={{ transform: 'translateY(0%)', opacity: '100%' }}
-                transition={{ duration: 3, ease: 'backOut' }}
-            >
+            <div className='absolute w-full h-full pointer-events-none overflow-hidden'>
+                <motion.div
+                    className='w-full h-full'
+                    initial={{ transform: 'translateY(10%)', opacity: '0%' }}
+                    animate={{ transform: 'translateY(0%)', opacity: '100%' }}
+                    transition={{ duration: 3, ease: 'backOut' }}
+                >
 
-                {/* Actual backdrop image */}
-                <Image
-                    width={1920}
-                    height={1080}
-                    className='absolute w-full h-full blur-[0px] object-cover'
-                    src={backdrop}
-                    alt=''
-                    priority
-                />
+                    {/* Actual backdrop image */}
+                    <Image
+                        width={1920}
+                        height={1080}
+                        className='absolute w-full h-full blur-[0px] object-cover'
+                        src={backdrop}
+                        alt=''
+                        priority
+                    />
 
-                {/* Hero .gif overlay */}
-                <Image
-                    width={1920}
-                    height={1080}
-                    src={heroOverlay}
-                    className='opacity-10 absolute top-0 w-full h-full drop-shadow-lg'
-                    alt=''
-                    unoptimized
-                    priority
-                />
+                    {/* Hero .gif overlay */}
+                    <Image
+                        width={1920}
+                        height={1080}
+                        src={heroOverlay}
+                        className='absolute top-0 w-full h-full drop-shadow-lg opacity-5 sm:opacity-10'
+                        alt=''
+                        unoptimized
+                        priority
+                    />
 
-            </motion.div>
+                </motion.div>
+            </div>
+
+            
 
             <div className='absolute w-full h-full mx-auto flex flex-col items-center justify-center pb-20'>
                 {/* mascot */}
@@ -81,13 +85,13 @@ export default function Hero(): React.ReactNode {
                 />
 
                 {/* The main texts */}
-                <h1 className='z-20 title-main text-lg md:xl text-center sm:text-[46px] text-shadow shadow-black font-bold text-white my-3'>
+                <h1 className='z-20 title-main text-center text-[20px] sm:text-[32px] md:text-[38px] xl:text-[52px] text-shadow shadow-black font-bold text-white mx-4 my-[-6px]'>
                     The Computer Science Club at Skyline
                 </h1>
 
-                <div className='z-20 w-full text-white text-center text-shadow shadow-black sm:text-xl text-lg font-semibold'>
+                <div className='z-20 title-main w-full text-white text-center text-shadow shadow-black sm:text-xl text-lg'>
                     <p>Elevate Your Code—the Sky&apos;s the Limit.</p>
-                    <h1 className='title-main font-bold sm:text-[24px] text-[16px] sm:pt-[14px]'>
+                    <h1 className='title-main font-bold sm:text-[24px] text-2xl sm:pt-[10px]'>
                         {'>'} We{' '}
                         <Typed
                             className='text-[#FCD690] drop-shadow-[0_0_12px_rgba(245,210,140,210)]'
@@ -108,7 +112,7 @@ export default function Hero(): React.ReactNode {
                     smooth={true}
                     offset={-140}
                     duration={1500}
-                    className='z-20 mt-4 relative group w-[230px] active:scale-95 duration-150 border-[1px] hover:border-green-900 border-white rounded-2xl hover:outline hover:outline-[6px] active:outline-4 text-white text-lg title-main overflow-hidden'
+                    className='z-20 mt-2 relative group w-[230px] active:scale-95 duration-150 hover:border-green-900 border-white rounded-2xl hover:outline hover:outline-[4px] active:outline-4 text-white text-lg title-main drop-shadow-[0_16px_20px_rgba(0,0,0,0.7)] overflow-hidden'
                 >
                     <IoMdArrowRoundDown className='absolute w-full h-full group-hover:translate-y-0 -translate-y-[100%] duration-300 pointer-events-none bg-gradient-to-t from-[#16a34aec] to-[#ffffff91]' />
                     <button className='flex w-full justify-center p-2 font-semibold text-shadow-lg shadow-black hover:bg-green-600 bg-neutral-900 bg-opacity-50 duration-300 hover:border-green-300 overflow-hidden'>
@@ -123,9 +127,9 @@ export default function Hero(): React.ReactNode {
                 {/* bottom     */}{' '}
                 <div className='bg-gradient-to-t from-black to-transparent absolute bottom-0 w-full h-[20%]'></div>
                 {/* cent-left  */}
-                <div className='bg-gradient-to-l from-[#00000075] to-transparent absolute top-0 left-[25%] w-[25%] h-screen'></div>
+                <div className='bg-gradient-to-l from-[#00000035] sm:from-[#00000075] to-transparent absolute top-0 left-[25%] w-[25%] h-screen'></div>
                 {/* cent-right */}
-                <div className='bg-gradient-to-r from-[#00000075] to-transparent absolute top-0 right-[25%] w-[25%] h-screen'></div>
+                <div className='bg-gradient-to-r from-[#00000035] sm:from-[#00000075] to-transparent absolute top-0 right-[25%] w-[25%] h-screen'></div>
             </div>
         </div>
     )

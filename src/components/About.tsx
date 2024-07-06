@@ -252,6 +252,7 @@ export default function About(): React.ReactNode {
                         </p>
                     </motion.div>
                 </div>
+                <p className='m-4 lg:hidden font-semibold text-neutral-400 animate-pulse'>drag to view cards →</p>
             </div>
         </div>
     )

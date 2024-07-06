@@ -14,7 +14,7 @@ interface GalleryPiece {
     imgSrc: string
 }
 
-export const HomeCollection: GalleryPiece[] = [
+export const HomeAlbum: GalleryPiece[] = [
     {
         remark: '🌇 Waking Up in Downtown San Francisco\n@ "CalHacks v10.0"',
         imgSrc: dir_home + 'calhacks_downtown.jpg',
@@ -120,7 +120,7 @@ export const HomeCollection: GalleryPiece[] = [
         imgSrc: dir_home + 'hackathon_contest2.jpg',
     },
     {
-        remark: '🤖 Fieldtrip: Dexterity.AI Robotics Fieldtrip Group Photo',
+        remark: '🤖 Fieldtrip: Dexterity.AI Robotics Group Photo',
         imgSrc: dir_home + 'dexterity_groupphoto.jpg',
     },
     {
@@ -131,14 +131,21 @@ export const HomeCollection: GalleryPiece[] = [
         remark: '🔬 Fieldtrip: SLAC Linear Accelerator Tour feat. Physics Astronomy Club',
         imgSrc: dir_home + 'slac_tour.png',
     },
-    
     {
         remark: '🌉 Opening Night Group Photo feat. The Club and SFSU Friends @ "SFHacks 2024"',
         imgSrc: dir_home + 'sfhacks_group.jpg',
     },
+    {
+        remark: '🌱 "Touching Grass: The Sequel" Up-hill Group Photo',
+        imgSrc: dir_home + 'hikeof2024_groupphoto1.png',
+    },
+    {
+        remark: '🌱 "Touching Grass: The Sequel" National Trail Viewpoint Group Photo',
+        imgSrc: dir_home + 'hikeof2024_groupphoto2.png',
+    },
 ]
 
-export const HackathonCollection: GalleryPiece[] = [
+export const HackathonAlbum: GalleryPiece[] = [
     {
         remark: '🪁 Blender Rendering of Skyline College',
         imgSrc: dir_hackathon + 'blender.jpg',

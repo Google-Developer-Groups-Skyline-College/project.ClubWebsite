@@ -169,17 +169,17 @@ export const leadership = {
     minor: {
         'Web Master': {
             label: 'Lance Ruiz',
-            color: 'from-[#1eb0b0]',
+            color_complex: 'from-[#1eb0b0] shadow-[#1eb0b0]',
             icon: <AiOutlineGlobal />,
         },
         'Social Outreach': {
             label: 'Chris Tse & Kaila Bautista',
-            color: 'from-[#651e94]',
+            color_complex: 'from-[#651e94] shadow-[#651e94]',
             icon: <PiHandshakeBold />,
         },
         'Event Planners': {
             label: 'Tyler Kuwada & Lance Ruiz',
-            color: 'from-[#9c710c]',
+            color_complex: 'from-[#9c710c] shadow-[#9c710c]',
             icon: <MdOutlineEmojiEvents />,
         },
     },
