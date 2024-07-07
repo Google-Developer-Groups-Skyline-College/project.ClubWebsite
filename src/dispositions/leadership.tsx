@@ -165,6 +165,16 @@ export const leadership = {
             linkedin: 'https://www.linkedin.com/in/luis-jibaja-prado-82b4b9135/',
             icon: <PiHandshakeBold />,
         },
+        'Romeo Calabia': {
+            role: 'King of the Pirates',
+            imgSrc: pfp_none,
+            quote: 'Once you reach the top, it can be really lonely. That\'s why a Lamborghini only has two seats.',
+            linktree: '',
+            discord: 'https://discordapp.com/users/373597111192911892',
+            github: '',
+            linkedin: 'https://www.linkedin.com/in/luis-jibaja-prado-82b4b9135/',
+            icon: <></>,
+        }
     },
     minor: {
         'Web Master': {

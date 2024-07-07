@@ -212,7 +212,7 @@ export default function About(): React.ReactNode {
                             delay: 0.3,
                             ease: 'easeOut',
                         }}
-                        className={`${card3Animating && 'pointer-events-none'} hover:z-10 z-0 shrink-0 w-[350px] h-[430px] p-4 hover:!scale-[97%] active:!scale-100 hover:outline-[8px] outline-[3px] outline hover:outline-double outline-yellow-600 transition-all duration-300 ease-out bg-gradient-to-t rounded-3xl from-black via-yellow-950 to-yellow-600 hover:drop-shadow-[0_15px_35px_rgba(237,144,10,0.35)] drop-shadow-[0_25px_25px_rgba(237,144,10,0.15)]`}
+                        className={`${card3Animating && 'pointer-events-none'} hover:z-10 z-0 shrink-0 w-[350px] hover:w-[420px] h-[430px] py-2 px-4 hover:!scale-[97%] active:!scale-100 hover:outline-[8px] outline-[3px] outline hover:outline-double outline-yellow-600 transition-all duration-300 ease-out bg-gradient-to-t rounded-3xl from-black via-yellow-950 to-yellow-600 hover:drop-shadow-[0_15px_35px_rgba(237,144,10,0.35)] drop-shadow-[0_25px_25px_rgba(237,144,10,0.15)]`}
                     >
                         <motion.div
                             className='relative my-[8%]'
@@ -228,8 +228,7 @@ export default function About(): React.ReactNode {
                             }}
                         >
                             <FcIdea
-                                className='mx-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.7)]'
-                                size={'50%'}
+                                className='mx-auto w-[145px] h-[145px] drop-shadow-[0_35px_35px_rgba(0,0,0,0.7)]'
                             />
                         </motion.div>
                         {/* <img className="w-[calc(50%)] mx-auto p-4" src={experimentAnimation} alt="experiment"/> */}
