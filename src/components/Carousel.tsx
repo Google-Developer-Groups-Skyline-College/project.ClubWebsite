@@ -116,7 +116,7 @@ export default function Carousel() {
 
                 {/* The main backdrop preview video clip */}
                 <video
-                    className=' w-full h-full object-cover'
+                    className='w-full h-full object-cover'
                     src={projectDetails.backdrop || fallBackdrop}
                     preload='auto'
                     autoPlay
@@ -137,7 +137,7 @@ export default function Carousel() {
                     <p className='text-4xl font-bold max-w-lg text-gray-100 text-shadow shadow-gray-700'>
                         {currentProject}
                     </p>
-                    {/* <Typed className="text-4xl font-bold" strings={[currentProject]} typeSpeed={120} backSpeed={120} backDelay={3000} loop></Typed> */}
+                    {/* <ReactTyped className="text-4xl font-bold" strings={[currentProject]} typeSpeed={120} backSpeed={120} backDelay={3000} loop></ReactTyped> */}
                     <p className='py-2 font-xl max-w-md text-shadow-lg text-gray-200 shadow-gray-900 whitespace-break-spaces'>
                         {projectDetails.description}
                     </p>

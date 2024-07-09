@@ -19,7 +19,7 @@ import { FiTool } from 'react-icons/fi'
 import { motion } from 'framer-motion'
 
 const diagonalGlideOverlay = '/assets/home/diagonal_slowglide_overlay.gif'
-const mascot = '/assets/mascot.gif'     
+const mascot = '/assets/mascot.gif'
     
 const ANNOUNCEMENT_TEXT =
     '🚧 Welcome! Mind the mess—our website is undergoing constant development. 👷'
@@ -39,7 +39,7 @@ export default function Navbar(): React.ReactNode {
                     onMouseDown={() => {
                         setAnnounceDismissed(true)
                     }}
-                    className={`flex w-full px-6 h-[60px] sm:h-[40px] bg-gradient-to-b ${ANNOUNCEMENT_GRAD_COLOR} to-[#000000] justify-between items-center overflow-hidden`}
+                    className={`flex w-full px-6 h-[58px] sm:h-[40px] bg-gradient-to-b ${ANNOUNCEMENT_GRAD_COLOR} to-[#000000] justify-between items-center overflow-hidden`}
                     initial={{
                         opacity: 0,
                         translateY: '-100%',
@@ -65,9 +65,10 @@ export default function Navbar(): React.ReactNode {
                         src={diagonalGlideOverlay}
                         alt=''
                         className='absolute w-full opacity-5'
+                        unoptimized
                     />
-                    <p className='absolute text-neutral-600 font-semibold right-4 animate-pulse'>
-                        ( click to dismiss )
+                    <p className='absolute text-neutral-600 bottom-2 text-xs lg:text-base font-semibold right-4 animate-pulse'>
+                        press to dismiss
                     </p>
                 </motion.div>
             ) : (
@@ -76,7 +77,7 @@ export default function Navbar(): React.ReactNode {
 
             {/* Top Bar */}
             <motion.div
-                className='z-20 flex relative h-[60px] px-4 justify-between items-center text-gray-300 bg-gradient-to-b from-[#000000cc] to-transparent'
+                className='z-20 flex relative h-[64px] px-4 justify-between items-center text-gray-300 bg-gradient-to-b from-[#000] to-transparent'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1, ease: 'easeOut' }}
@@ -88,6 +89,7 @@ export default function Navbar(): React.ReactNode {
                     alt=''
                     className='z-20 drop-shadow-lg ml-4 rounded-2xl hover:rotate-180'
                     style={{ width: '48px' }}
+                    unoptimized
                 />
 
                 {/* Navigation */}

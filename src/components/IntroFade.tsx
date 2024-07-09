@@ -22,10 +22,11 @@ export default function IntroFade(): React.ReactNode {
         >
             <Image
                 src={kitty}
-                className='opacity-70'
+                className='opacity-90 animate-pulse'
                 alt=''
                 width={100}
                 height={100}
+                unoptimized
             />
             <Image
                 src={loader}
@@ -33,6 +34,7 @@ export default function IntroFade(): React.ReactNode {
                 alt=''
                 width={100}
                 height={100}
+                unoptimized
             />
 
             {/* <p className="text-neutral-500">Loading...</p> */}

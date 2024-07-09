@@ -3,7 +3,7 @@
 import React from 'react'
 
 import { Element } from 'react-scroll'
-import Typed from 'react-typed'
+import { ReactTyped } from 'react-typed'
 
 import { HomeAlbum } from '../dispositions/gallery'
 
@@ -52,14 +52,14 @@ export default function App() {
                     <span className='text-shadow shadow-gray-700'>
                         Journey with us in&nbsp;
                     </span>
-                    <Typed
+                    <ReactTyped
                         strings={GALLERY_TYPED_WORDS}
                         typeSpeed={50}
                         backSpeed={75}
                         backDelay={3000}
                         loop
                         className='bg-gradient-to-t from-yellow-300 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(225,200,255,0.5)]'
-                    ></Typed>
+                    ></ReactTyped>
                 </h1>
 
                 <Element name='gallery' />

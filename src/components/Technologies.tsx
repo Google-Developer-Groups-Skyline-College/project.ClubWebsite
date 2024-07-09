@@ -39,8 +39,8 @@ const sfxClick = '/assets/sound_fx/click.mp3'
 const conveyorFront = '/assets/home/conveyor_front.png'
 const kittyAstro = '/assets/home/kitty_astro.png'
 
-const TECH_TEXT_CLASSES = 'title-main my-auto mx-10 font-semibold text-2xl'
-const TECH_ICON_CLASSES = 'my-auto w-[8vh] h-full'
+const TECH_TEXT_CLASSES = 'title-main my-auto mx-10 font-semibold text-xl md:text-2xl'
+const TECH_ICON_CLASSES = 'my-auto w-[60px] md:w-[72px] h-full'
 const TECH_ICON_SHADOW = { filter: 'drop-shadow(4px 4px 2px rgba(0, 0, 0, 1))' }
 
 /*
@@ -237,7 +237,7 @@ export default function Technologies(): React.ReactNode {
                                     <div
                                         onMouseEnter={() => playSfx_Click()}
                                         key={technology_name}
-                                        className='flex h-[80px] md:h-[110px] mt-[32px] md:mt-0 mx-5 hover:mx-7 hover:scale-110 duration-300 bg-[#000000bb] outline outline-1 outline-white text-white rounded-xl pl-6'
+                                        className='flex h-[90px] md:h-[110px] mt-[22px] md:mt-0 mx-5 hover:mx-7  hover:scale-110 duration-300 bg-[#000000bb] outline outline-1 outline-white text-white rounded-xl pl-6'
                                     >
                                         {TECHNOLOGIES[technology_name]}
                                         <ReactTyped

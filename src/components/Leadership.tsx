@@ -3,10 +3,10 @@
 import React, { useRef, useState } from 'react'
 import { Element } from 'react-scroll'
 
-import Image from 'next/image'
-
 import { motion, useInView } from 'framer-motion'
 import { useSound } from 'use-sound'
+
+import Image from 'next/image'
 
 import {
     SiLinktree,
@@ -64,12 +64,12 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
                 isInView ? { opacity: 1, transform: 'translateZ(0px) translateX(0%)' } : ''
             }
             transition={{ duration: 1.25, delay: index * 0.15, ease: 'easeOut' }}
-            className={`${isAnimating && 'pointer-events-none'} w-[160px] sm:w-[210px] hover:z-20 ring-2 ring-green-950 relative group/majorcard sm:group-hover/majorcards:[&:not(:hover)]:!opacity-80 hover:rounded-b-none sm:hover:!scale-[115%] transition duration-500 select-none rounded-xl bg-gradient-to-t from-[#040404] via-green-950 to-green-950 shadow-md hover:shadow-2xl shadow-neutral-600 hover:shadow-green-300`}
+            className={`${isAnimating && 'pointer-events-none'} hover:z-20 sm:hover:mx-4 w-[160px] sm:w-[200px] ring-2 ring-green-950 relative group/majorcard hover:rounded-b-none sm:hover:!scale-[115%] transition-all duration-500 select-none rounded-t-xl rounded-b-lg bg-gradient-to-t from-[#040404] via-green-950 to-green-950 shadow-md hover:shadow-2xl shadow-neutral-600 hover:shadow-green-300`}
             key={leaderName}
         >
             {/* Leader Portrait + Leader Quote Overlay */}
             <div
-                className='sm:hover:scale-110 sm:hover:-translate-y-2 active:!scale-[104%] transition duration-300'
+                className='sm:hover:scale-110 sm:hover:-translate-y-2 outline-neutral-300 outline-0 hover:outline-2 active:!scale-[104%] transition-all duration-200 rounded-t-xl rounded-b-lg drop-shadow-2xl outline-6 active:outline-8 active:outline-neutral-300 outline-double'
                 onMouseDown={() => {
                     setDisplayQuote(!displayQuote)
                     playSfx_clunk()
@@ -78,7 +78,7 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
             >
                 <motion.div
                     animate={displayQuote ? { opacity: 1 } : { opacity: 0 }}
-                    className='z-10 absolute w-full outline-6 active:outline-8 active:outline-neutral-100 duration-200 outline-double opacity-0 outline-black bg-gradient-to-b from-[#040a0470] to-black rounded-xl drop-shadow-2xl'
+                    className='z-10 absolute w-full opacity-0 outline-black bg-gradient-to-b from-[#040a0470] to-black rounded-t-xl rounded-b-lg'
                 >
                     <motion.div
                         className='absolute'
@@ -105,10 +105,10 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
                 </motion.div>
 
                 <Image
-                    width={1024}
-                    height={1024}
-                    className='rounded-xl aspect-square'
-                    alt='mascot'
+                    width={320}
+                    height={320}
+                    className='rounded-t-xl rounded-b-lg aspect-square'
+                    alt=''
                     src={majorLeaderDetails.imgSrc}
                 />
             </div>
@@ -128,7 +128,7 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
             <div
                 onMouseDown={() => playSfx_clunk()}
                 onMouseUp={() => playSfx_clunk()}
-                className='z-10 absolute hidden group-hover/majorcard:flex border-b-4 border-green-700 justify-center w-full rounded-b-xl bg-gradient-to-b from-[#040a04] to-black gap-2 px-2 pb-2'
+                className='z-10 absolute hidden group-hover/majorcard:flex border-b-4 border-green-700 justify-center w-full rounded-b-lg bg-gradient-to-b from-[#040a04] to-black gap-2 px-2 pb-2'
             >
                 {majorLeaderDetails.linktree ? (
                     <a
@@ -211,6 +211,8 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
     )
 }
 
+
+
 const MinorLeaderCard: React.FC<props_MinorLeaderCard> = ({
     roleName,
     index,
@@ -243,18 +245,20 @@ const MinorLeaderCard: React.FC<props_MinorLeaderCard> = ({
             key={roleName}
         >
             {/* Role and Name of Person */}
-            <div className='rounded-xl p-4'>
-                <div className='absolute text-lg'>{minorLeaderDetails.icon}</div>
-                <h1 className='title-main text-lg font-semibold text-center'>
+            <div className='rounded-xl p-3'>
+                <div className='absolute text-xl'>{minorLeaderDetails.icon}</div>
+                <h1 className='title-main text-lg sm:text-xl font-semibold text-center'>
                     {roleName}
                 </h1>
-                <h2 className='text-md font-semibold text-center'>
+                <h2 className='text-base font-semibold text-center'>
                     {minorLeaderDetails.label}
                 </h2>
             </div>
         </motion.div>
     )
 }
+
+
 
 export default function Leadership(): React.ReactNode {
     return (
@@ -289,7 +293,7 @@ export default function Leadership(): React.ReactNode {
                 </div>
 
                 {/* Minor Leadership Role Cards */}
-                <div className='flex flex-row flex-wrap justify-center align-middle mt-1 gap-x-4 sm:gap-x-8 gap-y-3'>
+                <div className='flex flex-row flex-wrap justify-center align-middle mt-1 gap-x-4 sm:gap-x-8 gap-y-4'>
                     {Object.keys(leadership.minor).map(
                         (minorLeaderRoleName, index) => (
                             <MinorLeaderCard
