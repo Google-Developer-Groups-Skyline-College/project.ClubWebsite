@@ -8,7 +8,7 @@ import IntroFade from '../../components/IntroFade'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-import Typed from 'react-typed'
+import { ReactTyped } from 'react-typed'
 
 import { useState, useEffect } from 'react'
 
@@ -176,14 +176,14 @@ export default function Hackathon() {
             {/* <Gallery /> */}
             <div className='w-full bg-gradient-to-b from-slate-900 via-black to-black py-20'>
                 <h1 className='title-main mx-auto text-4xl text-center sm:text-4xl font-extrabold text-white'>
-                    <Typed
+                    <ReactTyped
                         strings={GALLERY_TYPED_WORDS}
                         typeSpeed={50}
                         backSpeed={75}
                         backDelay={3000}
                         loop
                         className='bg-gradient-to-t from-white to-[#da5fff] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(255,50,255,1)]'
-                    ></Typed>
+                    ></ReactTyped>
                 </h1>
 
                 <Gallery album={HackathonAlbum} />

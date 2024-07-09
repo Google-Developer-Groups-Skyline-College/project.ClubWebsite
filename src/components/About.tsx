@@ -7,6 +7,7 @@ import { motion, useInView } from 'framer-motion'
 import { useSound } from 'use-sound'
 
 import Image from 'next/image'
+import { ReactTyped } from 'react-typed'
 
 import { FcCollaboration, FcElectronics, FcIdea } from 'react-icons/fc'
 
@@ -14,10 +15,6 @@ const cardBaseClasses = 'hover:z-10 z-0 w-[350px] hover:w-[420px] h-[430px] acti
 
 const sfxClunk = '/assets/sound_fx/clunk.mp3'
 const kitty = '/assets/mascot.gif'
-
-// import experimentAnimation from '../assets/home/experiment.gif'
-
-// TODO: Make cards scroll to relevant sectors of home page
 
 export default function About(): React.ReactNode {
     const [playSfx_clunk] = useSound(sfxClunk)
@@ -30,42 +27,50 @@ export default function About(): React.ReactNode {
     const [card3Animating, setCard3Animating] = useState(false)
 
     return (
-        <div ref={ref} className='w-full h-full bg-gradient-to-b from-black to-[#0a0a0a] text-gray-300 py-[24vh] mt-40'>
+        <div ref={ref} className='w-full h-full bg-gradient-to-b from-black to-[#0a0a0a] text-gray-300 py-[24vh] mt-40 overflow-hidden'>
             <Element name='about' />
 
-           
-
-            <div className='w-full h-[600px] flex flex-row justify-center items-center gap-x-20 bg-[#020202]'>
+            <div className='w-full py-24 flex flex-col lg:flex-row justify-center items-center gap-x-20 gap-y-8 bg-[#030303]'>
             
-                <div className='relative h-[500px]'>
-                    <div className='absolute top-0 w-full h-[12%] bg-gradient-to-b from-[#020202] to-transparent'></div>
-                    <div className='absolute bottom-[24px] w-full h-[12%] bg-gradient-to-t from-[#020202] to-transparent'></div>
-                    {/* <div className='absolute left-0 w-[10%] h-full bg-gradient-to-r from-[#020202] to-transparent'></div>
-                    <div className='absolute right-0 w-[10%] h-full bg-gradient-to-l from-[#020202] to-transparent'></div> */}
-                    <div className='absolute w-full h-full bg-[radial-gradient(50%_90%_at_50%_50%,rgba(255,255,255,0)_40%,rgba(2,2,2,1)_100%)]'></div>
-
-                    <div className='absolute bottom-0 w-full h-[24px] bg-[#020202]'></div>
+                <div className='relative w-[85%] lg:w-[45%]'>
+                    <div className='absolute top-0 w-full h-[18%] bg-gradient-to-b from-[#030303] to-transparent' />
+                    <div className='z-0 absolute bottom-[24px] w-full h-[18%] bg-gradient-to-t from-[#030303] to-transparent' />
+                    <div className='absolute w-full h-full bg-[radial-gradient(50%_90%_at_50%_50%,rgba(255,255,255,0)_40%,rgba(03,03,03,1)_100%)]' />
+                    <p className='z-10 absolute bottom-0 w-full h-[24px] bg-[#030303] text-xs text-neutral-700 font-semibold text-center italic'>We generated this via the easy, fun-to-learn <a className='text-neutral-600' href='https://developers.google.com/maps/documentation/aerial-view' target='_blank'>Google Aerial View API</a>.</p>
                     <video
                         src='/assets/home/aboutCinematic.mp4'
-                        className='w-full h-full'
+                        className='outline-[#030303] outline outline-4'
                         preload='auto'
                         autoPlay
+                        playsInline
+                        muted
                         loop
-                    > 
-                    </video>
+                    />
                 </div>
 
-                <div className='w-[33%]'>
-                    <h1 className='title-main text-3xl font-bold'>Our Community at Skyline College</h1>
-                    <h2>San Bruno, California</h2>
+                <div className='w-[80%] lg:w-[35%] text-sm xl:text-base'>
+                    <ReactTyped
+                        className='title-main text-base md:text-3xl font-bold text-white'
+                        strings={['Our Community at Skyline College']}
+                        typeSpeed={50}
+                        startWhenVisible
+                    />
+                    <h2>📍 San Bruno, California</h2>
                     <div className='w-full h-[1px] bg-white my-3'></div>
-                    <p className=''>
-                        {`Our journey started out in the Fall of 2020, with over 250 members past and present.
-                        We are a club made up entirely by students, led by other fellow students—people
-                        from all experiences levels put together. Whether you are a beginner or are already
-                        deeply-immersed into the industry with software and technology, our club and its community
-                        .`}
+                    <p className='my-2'>
+                        Since our formation in 🍃 Fall of 2020, we have served as a platform for over <b>256 members</b> past and present.
+                        We are a club made up entirely by students, led by other fellow students, plus a diverse network of outside community members
+                        from all branches of computer science.
                     </p>
+                    <p className='my-2'>
+                        Whether you are a beginner to the world of computer science, or are already deeply-immersed into the industry with the newest software and technology stacks, our club and its growing community welcome everyone of all experience levels—beginners especially!
+                    </p>
+                    <p className='my-2'>
+                        This is your place to network, to explore, to experiment, and to ultimately discover yourself!
+                    </p>
+                    {/* <p className='my-2'>
+                        Find what suits you: Web Design, Game Development, Mobile Development, Research, and more!
+                    </p> */}
                 </div>
 
             </div>
@@ -75,10 +80,11 @@ export default function About(): React.ReactNode {
             <div className='flex flex-col'>
                 <Image
                     src={kitty}
-                    className='z-10 hover:!scale-110 transition duration-300 bounce ease-out mx-auto mb-6'
+                    className='z-10 hover:!scale-110 transition duration-300 ease-out mx-auto mb-6'
                     alt=''
-                    width={100}
-                    height={100}
+                    width={128}
+                    height={128}
+                    unoptimized
                 />
 
                 <h1 className='title-main text-xl text-center sm:text-3xl font-extrabold text-white mb-10'>
@@ -134,16 +140,16 @@ export default function About(): React.ReactNode {
                             </motion.div>
                             <h1 className='title-main font-bold text-2xl text-center mt-7'>
                                 Discover{' '}
-                                <span className='text-green-300 drop-shadow-[0_0_10px_rgba(100,250,100,0.25)]'>
+                                <span className='text-green-300 drop-shadow-[0_0_10px_rgba(100,250,100,0.25)] animate-pulse'>
                                     Technology
                                 </span>
                             </h1>
-                            <p className='text-sm text-center py-2 px-8'>
+                            <p className='text-sm text-center py-2 px-8 leading-6'>
                                 Expand your development toolkit by diving hands-on
-                                through hundreds of diverse, specialized pieces of{' '}
-                                <b>libraries, services, applications, frameworks</b>
-                                , and other software. Also learn industry-leading
-                                tools like <b>GitHub, Docker, Blender, Linux</b>,
+                                through hundreds of diverse and specialized pieces of{' '}
+                                <b>libraries, services, and frameworks</b>
+                                . We'll teach you industry-leading
+                                technologies: <b>GitHub, Docker, OpenAI, Linux</b>,
                                 and more!
                             </p>
                         </div>
@@ -194,11 +200,11 @@ export default function About(): React.ReactNode {
                             </motion.div>
                             <h1 className='title-main font-bold text-2xl text-center mt-7'>
                                 Build{' '}
-                                <span className='text-blue-300 drop-shadow-[0_0_10px_rgba(125,100,250,0.25)]'>
+                                <span className='text-blue-300 drop-shadow-[0_0_10px_rgba(125,100,250,0.25)] animate-pulse'>
                                     Connections
                                 </span>
                             </h1>
-                            <p className='text-sm text-center py-2 px-8'>
+                            <p className='text-sm text-center py-2 px-8 leading-6'>
                                 In an always-evolving, inter-connected world,{' '}
                                 <b>networking is as important as ever!</b> Meet with
                                 other fellow students and share your{' '}
@@ -254,20 +260,20 @@ export default function About(): React.ReactNode {
                             </motion.div>
                             <h1 className='title-main font-bold text-2xl text-center mt-7'>
                                 Gain{' '}
-                                <span className='text-yellow-200 drop-shadow-[0_0_10px_rgba(255,250,100,0.25)]'>
+                                <span className='text-yellow-200 drop-shadow-[0_0_10px_rgba(255,250,100,0.25)] animate-pulse'>
                                     Experience
                                 </span>
                             </h1>
-                            <p className='text-sm text-center py-2 px-8'>
+                            <p className='text-sm text-center py-2 px-8 leading-6'>
                                 Get the opportunity to work across a diverse set of
                                 projects in{' '}
                                 <b>
                                     game development, web UI/UX design, and
-                                    fullstack
+                                    general software
                                 </b>{' '}
-                                development! Experience <b>real-world project</b>{' '}
-                                workflows with fellow members! Or—even propose and{' '}
-                                <b>lead your own project!</b>
+                                development! Experience <b>real-world</b>{' '}project
+                                workflows with fellow members! And—even propose and{' '}
+                                <b>lead your own projects!</b>
                             </p>
                         </div>
 

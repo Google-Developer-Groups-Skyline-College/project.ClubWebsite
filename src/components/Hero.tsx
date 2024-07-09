@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Typed from 'react-typed'
+import { ReactTyped } from 'react-typed'
 import { Element } from 'react-scroll'
 
 import Image from 'next/image'
@@ -76,7 +76,7 @@ export default function Hero(): React.ReactNode {
                 </motion.div>
             </div>
 
-            <div className='absolute w-full h-full mx-auto flex flex-col items-center justify-center pb-20'>
+            <div className='absolute w-full h-full mx-auto flex flex-col items-center justify-center pb-24'>
                 {/* mascot */}
                 <Image
                     width={80}
@@ -96,7 +96,7 @@ export default function Hero(): React.ReactNode {
                     <p>Elevate Your Code—the Sky&apos;s the Limit.</p>
                     <h1 className='title-main font-bold sm:text-[24px] text-2xl sm:pt-[10px]'>
                         {'>'} We{' '}
-                        <Typed
+                        <ReactTyped
                             className='text-[#FCD690] drop-shadow-[0_0_12px_rgba(245,210,140,210)]'
                             strings={TYPED_KEYWORDS}
                             typeSpeed={120}
@@ -126,13 +126,13 @@ export default function Hero(): React.ReactNode {
 
             <div>
                 {/* top        */}
-                <div className='absolute top-0 w-full h-[15%] bg-gradient-to-b from-black to-transparent'></div>
+                <div className='absolute top-0 w-full h-[15%] bg-gradient-to-b from-black to-transparent' />
                 {/* bottom     */}
-                <div className='absolute bottom-0 w-full h-[20%] bg-gradient-to-t from-black to-transparent'></div>
+                <div className='absolute bottom-0 w-full h-[20%] bg-gradient-to-t from-black to-transparent' />
                 {/* cent-left  */}
-                <div className=' absolute top-0 left-[25%] w-[25%] h-screen bg-gradient-to-l from-[#00000035] sm:from-[#00000075] to-transparent'></div>
+                <div className=' absolute top-0 left-[25%] w-[25%] h-screen bg-gradient-to-l from-[#00000035] sm:from-[#00000075] to-transparent' />
                 {/* cent-right */}
-                <div className=' absolute top-0 right-[25%] w-[25%] h-screen bg-gradient-to-r from-[#00000035] sm:from-[#00000075] to-transparent'></div>
+                <div className=' absolute top-0 right-[25%] w-[25%] h-screen bg-gradient-to-r from-[#00000035] sm:from-[#00000075] to-transparent' />
             </div>
         </div>
     )
