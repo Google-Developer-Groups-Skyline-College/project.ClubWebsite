@@ -266,12 +266,12 @@ export default function Leadership(): React.ReactNode {
         <div className='w-full h-full pb-40 text-gray-300 bg-gradient-to-b from-black via-[#031302] to-black'>
             <Element name='leadership' />
 
-            <div className='flex flex-col justify-center items-center w-full h-full px-[10px] sm:px-[7.5vw] py-[44px] lg:px-[15vw] gap-4 overflow-x-hidden'>
+            <div className='flex flex-col justify-center items-center w-full h-full py-[44px] px-[10px] sm:px-[7.5vw] lg:px-[14.2vw] gap-4 overflow-x-hidden'>
                 <div>
                     <h1 className='title-main w-full text-center text-3xl font-semibold leading-7 drop-shadow-[0_0_14px_rgba(255,255,255,0.5)]'>
                         Our Club Leadership
                     </h1>
-                    <h1 className='title-main w-full text-center text-lg font-semibold text-yellow-100 drop-shadow-[0_0_20px_rgba(255,205,60,0.9)]'>
+                    <h1 className='title-main w-full text-center text-lg font-semibold text-[#FCD690] drop-shadow-[0_0_20px_rgba(255,205,60,0.9)]'>
                         👑 2023 - 2024 👑
                     </h1>
                 </div>

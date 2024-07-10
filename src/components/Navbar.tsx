@@ -18,13 +18,11 @@ import { FiTool } from 'react-icons/fi'
 
 import { motion } from 'framer-motion'
 
+import { ANNOUNCEMENT_TEXT, ANNOUNCEMENT_GRAD_COLOR } from '@/dispositions/general'
+
 const diagonalGlideOverlay = '/assets/home/diagonal_slowglide_overlay.gif'
 const mascot = '/assets/mascot.gif'
-    
-const ANNOUNCEMENT_TEXT =
-    '🚧 Welcome! Mind the mess—our website is undergoing constant development. 👷'
-const ANNOUNCEMENT_GRAD_COLOR = 'from-[#33200d]'
-
+        
 export default function Navbar(): React.ReactNode {
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)

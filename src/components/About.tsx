@@ -59,11 +59,11 @@ export default function About(): React.ReactNode {
                     <div className='w-full h-[1px] bg-white my-3'></div>
                     <p className='my-2'>
                         Since our formation in 🍃 Fall of 2020, we have served as a platform for over <b>256 members</b> past and present.
-                        We are a club made up entirely by students, led by other fellow students, plus a diverse network of outside community members
+                        We are a club made up entirely by students, led by other fellow students, backed by a diverse network of outside community members
                         from all branches of computer science.
                     </p>
                     <p className='my-2'>
-                        Whether you are a beginner to the world of computer science, or are already deeply-immersed into the industry with the newest software and technology stacks, our club and its growing community welcome everyone of all experience levels—beginners especially!
+                        Whether you are a beginner to the industry of computer science, or are already deeply-immersed into the industry with the newest software and technology stacks, our club and its growing community welcome everyone of all experience levels—beginners especially!
                     </p>
                     <p className='my-2'>
                         This is your place to network, to explore, to experiment, and to ultimately discover yourself!
@@ -266,14 +266,10 @@ export default function About(): React.ReactNode {
                             </h1>
                             <p className='text-sm text-center py-2 px-8 leading-6'>
                                 Get the opportunity to work across a diverse set of
-                                projects in{' '}
-                                <b>
-                                    game development, web UI/UX design, and
-                                    general software
-                                </b>{' '}
-                                development! Experience <b>real-world</b>{' '}project
-                                workflows with fellow members! And—even propose and{' '}
-                                <b>lead your own projects!</b>
+                                projects in <b>game development, web design, simulations </b>
+                                and <b> standalone software! </b> Experience <b>real-world </b>
+                                project workflows with fellow students—and, even propose and
+                                {' '}<b>lead your own projects!</b>
                             </p>
                         </div>
 

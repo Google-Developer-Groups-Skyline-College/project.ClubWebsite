@@ -10,6 +10,7 @@ import { HomeAlbum } from '../dispositions/gallery'
 // components
 import IntroFade from '../components/IntroFade'
 
+import Overview from '../components/Overview'
 import Hero from '../components/Hero'
 import Technologies from '../components/Technologies'
 
@@ -41,6 +42,8 @@ export default function App() {
             <IntroFade />
 
             <Hero />
+            <Overview />
+            
             <Leadership />
 
             <Technologies />

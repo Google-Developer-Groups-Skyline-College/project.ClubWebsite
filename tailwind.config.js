@@ -57,6 +57,5 @@ module.exports = {
                 { values: theme('textShadow') }
             )
         }),
-        require("@xpd/tailwind-3dtransforms")
     ],
 }
