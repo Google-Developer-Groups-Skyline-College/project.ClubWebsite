@@ -148,7 +148,7 @@ export default function About(): React.ReactNode {
                                 Expand your development toolkit by diving hands-on
                                 through hundreds of diverse and specialized pieces of{' '}
                                 <b>libraries, services, and frameworks</b>
-                                . We'll teach you industry-leading
+                                . We&apos;ll teach you industry-leading
                                 technologies: <b>GitHub, Docker, OpenAI, Linux</b>,
                                 and more!
                             </p>
