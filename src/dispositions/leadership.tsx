@@ -14,12 +14,13 @@
 
 */
 
+// TODO prepare to add yearly leaderships
+
 import { BiCrown } from 'react-icons/bi'
 import { CgCrown } from 'react-icons/cg'
 import { GrMoney } from 'react-icons/gr'
 
 import { FaRegHandPeace } from 'react-icons/fa'
-import { HiOutlineClipboardDocumentList } from 'react-icons/hi2'
 import { LuConstruction } from 'react-icons/lu'
 
 import { AiOutlineGlobal } from 'react-icons/ai'
@@ -31,8 +32,8 @@ const dir_leaderPortraits = '/assets/home/leader_portraits/'
 
 const pfp_president = dir_leaderPortraits + 'tylerkuwadaport.png'
 const pfp_vicepresident = dir_leaderPortraits + 'jonasquiballoport.png'
-const pfp_secretary = dir_leaderPortraits + 'kailabautistaport.jpg'
-const pfp_treasurer = dir_leaderPortraits + 'jayanpintorport.jpg'
+const pfp_secretary = dir_leaderPortraits + 'kailabautistaport.png'
+const pfp_treasurer = dir_leaderPortraits + 'jayanpintorport.png'
 const pfp_projectmanager = dir_leaderPortraits + 'lanceruizport.jpg'
 
 const pfp_auxillary1 = dir_leaderPortraits + 'christseport.png'
@@ -77,7 +78,7 @@ export const leadership = {
             imgSrc: pfp_secretary,
             quote: (
                 <p className='font-bold'>
-                    {`  ㅤㅤㅤㅤ／l、ㅤmeow
+                    {`  ㅤㅤㅤㅤ／l、ㅤmow
                         （ﾟ､ ｡ ７
                         ⠀ l、ﾞ ~ヽ
                           じしf_, )ノ
@@ -129,7 +130,7 @@ export const leadership = {
             quote: ( 
                 <p>
                     A true Isaiah Rashad fan.
-                </p> 
+                </p>
             ),
             linktree: 'https://linktr.ee/isaiahrashadfan',
             instagram: 'https://www.instagram.com/cchristse',
@@ -156,15 +157,25 @@ export const leadership = {
             linkedin: 'https://www.linkedin.com/in/swartoutbryan/',
             icon: <PiHandshakeBold />,
         },
-        'Luis Prado': {
-            role: 'Club Co-Advisor',
-            imgSrc: pfp_none,
-            linktree: '',
-            discord: 'https://discordapp.com/users/373597111192911892',
-            github: '',
-            linkedin: 'https://www.linkedin.com/in/luis-jibaja-prado-82b4b9135/',
-            icon: <PiHandshakeBold />,
-        },
+        // 'Luis J. Prado': {
+        //     role: 'Club Co-Advisor',
+        //     imgSrc: pfp_none,
+        //     linktree: '',
+        //     discord: 'https://discordapp.com/users/373597111192911892',
+        //     github: '',
+        //     linkedin: 'https://www.linkedin.com/in/luis-jibaja-prado-82b4b9135/',
+        //     icon: <PiHandshakeBold />,
+        // },
+        // 'Romeo Calabia': {
+        //     role: 'King of the Pirates',
+        //     imgSrc: pfp_none,
+        //     quote: 'Once you reach the top, it can be really lonely. That\'s why a Lamborghini only has two seats.',
+        //     linktree: '',
+        //     discord: 'https://discordapp.com/users/373597111192911892',
+        //     github: '',
+        //     linkedin: 'https://www.linkedin.com/in/luis-jibaja-prado-82b4b9135/',
+        //     icon: <></>,
+        // }
     },
     minor: {
         'Web Master': {

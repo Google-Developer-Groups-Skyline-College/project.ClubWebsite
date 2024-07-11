@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Typed from 'react-typed'
+import { ReactTyped } from 'react-typed'
 import { Element } from 'react-scroll'
 
 import useSound from 'use-sound'
@@ -39,8 +39,8 @@ const sfxClick = '/assets/sound_fx/click.mp3'
 const conveyorFront = '/assets/home/conveyor_front.png'
 const kittyAstro = '/assets/home/kitty_astro.png'
 
-const TECH_TEXT_CLASSES = 'title-main my-auto mx-10 font-semibold text-2xl'
-const TECH_ICON_CLASSES = 'my-auto w-[8vh] h-full'
+const TECH_TEXT_CLASSES = 'title-main my-auto mx-10 font-semibold text-xl md:text-2xl'
+const TECH_ICON_CLASSES = 'my-auto w-[60px] md:w-[72px] h-full'
 const TECH_ICON_SHADOW = { filter: 'drop-shadow(4px 4px 2px rgba(0, 0, 0, 1))' }
 
 /*
@@ -177,11 +177,12 @@ export default function Technologies(): React.ReactNode {
             <Element name='tech' />
 
             <motion.img
-                width={80}
+                width={100}
+                height={100}
                 src={kittyAstro}
                 className='mx-auto my-4 md:my-10 hover:!scale-105 transition duration-300 ease-out'
                 initial={{ transform: 'translateY(-10%)' }}
-                animate={{ transform: `translateY(10%)` }}
+                animate={{ transform: 'translateY(10%)' }}
                 transition={{
                     repeat: Infinity,
                     repeatType: 'mirror',
@@ -192,18 +193,18 @@ export default function Technologies(): React.ReactNode {
             />
 
             {/* optional shadow for title (looks fine): drop-shadow-[0_0_20px_rgba(255,255,255,0.1)] */}
-            <h1 className='title-main mx-auto p-4 text-2xl text-center sm:text-3xl font-extrabold text-[#e7e9ef]'>
+            <h1 className='title-main mx-auto p-4 text-3xl text-center sm:text-[40px] font-extrabold text-[#e7e9ef]'>
                 <span className='text-shadow shadow-gray-700'>
-                    Join us in Exploring
-                </span>{' '}
-                <Typed
+                    Join us in Exploring{' '}
+                </span>
+                <ReactTyped
                     strings={SECTION_TYPED_KEYWORDS}
                     typeSpeed={50}
                     backSpeed={75}
                     backDelay={5000}
                     loop
                     className='bg-gradient-to-t from-yellow-300 to-green-400 bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(50,255,100,0.7)]'
-                ></Typed>
+                ></ReactTyped>
             </h1>
 
             {/* old test */}
@@ -216,13 +217,13 @@ export default function Technologies(): React.ReactNode {
                 <div className='z-10 absolute bg-gradient-to-l from-black to-transparent right-0 h-full w-[28vw] pointer-events-none'></div>
                 {/* <div className="z-10 flex my-10 h-[10vw] bg-contain bg-center" style={{backgroundImage: `url(${conveyorTreading})`}}> */}
                 <div
-                    className='flex my-10 h-[18vh] bg-repeat-x bg-bottom'
+                    className='flex my-10 h-[160px] bg-repeat-x bg-bottom'
                     style={{ backgroundImage: `url(${conveyorFront})` }}
                 >
                     <motion.div
                         className='flex h-full'
                         initial={{ transform: 'translateX(-100%)' }}
-                        animate={{ transform: `translateX(100vw)` }}
+                        animate={{ transform: 'translateX(100vw)' }}
                         transition={{
                             repeat: Infinity,
                             type: 'tween',
@@ -236,14 +237,13 @@ export default function Technologies(): React.ReactNode {
                                     <div
                                         onMouseEnter={() => playSfx_Click()}
                                         key={technology_name}
-                                        className='flex h-[70%] mx-5 hover:scale-110 duration-300 bg-[#000000bb] outline outline-1 text-white outline-white rounded-3xl pl-5'
+                                        className='flex h-[90px] md:h-[110px] mt-[22px] md:mt-0 mx-5 hover:mx-7  hover:scale-110 duration-300 bg-[#000000bb] outline outline-1 outline-white text-white rounded-xl pl-6'
                                     >
                                         {TECHNOLOGIES[technology_name]}
-                                        {/* <p className={TECH_TEXT_CLASSES}>{technology_name}</p> */}
-                                        <Typed
+                                        <ReactTyped
                                             strings={[technology_name]}
                                             className={TECH_TEXT_CLASSES}
-                                        ></Typed>
+                                        ></ReactTyped>
                                     </div>
                                 )
                             }

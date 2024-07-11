@@ -16,8 +16,8 @@ interface GalleryPiece {
 
 export const HomeAlbum: GalleryPiece[] = [
     {
-        remark: '🌇 Waking Up in Downtown San Francisco\n@ "CalHacks v10.0"',
-        imgSrc: dir_home + 'calhacks_downtown.jpg',
+        remark: '🌄 "Expand Your Horizons 2022"\nTinkerCAD 3D Design Printing',
+        imgSrc: dir_home + 'expand_print_closeup.jpg',
     },
     {
         remark: '🍽️ Mediterranean Dinner @ "CalHacks v10.0"',
@@ -32,11 +32,11 @@ export const HomeAlbum: GalleryPiece[] = [
         imgSrc: dir_home + 'calhacks_rundown.jpg',
     },
     {
-        remark: '🌄 "Expand Your Horizons 2022"\nTinkerCAD 3D Design Printing Close-Up',
-        imgSrc: dir_home + 'expand_print_closeup.jpg',
+        remark: '🌇 Waking Up in Downtown San Francisco\n@ "CalHacks v10.0"',
+        imgSrc: dir_home + 'calhacks_downtown.jpg',
     },
     {
-        remark: '🌄 "Expand Your Horizons 2022" - TinkerCAD 3D Design Workshop 1',
+        remark: '🌄 "Expand Your Horizons 2022": TinkerCAD 3D Design Workshop 1',
         imgSrc: dir_home + 'expand_tinkercad_ws1.jpg',
     },
     {
@@ -44,7 +44,7 @@ export const HomeAlbum: GalleryPiece[] = [
         imgSrc: dir_home + 'calhacks_sfarrival.png',
     },
     {
-        remark: '🌄 "Expand Your Horizons 2022" - Games with Scratch Workshop 1',
+        remark: '🌄 "Expand Your Horizons 2022": Games with Scratch Workshop 1',
         imgSrc: dir_home + 'eyh_ws1.jpg',
     },
     {
@@ -52,11 +52,11 @@ export const HomeAlbum: GalleryPiece[] = [
         imgSrc: dir_home + 'intro_arduino_2.jpg',
     },
     {
-        remark: '🔰 Our Club Leadership and Members of 2022-2023',
+        remark: '🔰 Our Club Leadership and Members of 2022 - 2023',
         imgSrc: dir_home + 'leadership_2022.png',
     },
     {
-        remark: '🔰 Our Club Officers of 2022-2023',
+        remark: '🔰 Our Club\'s Officers of 2022 - 2023',
         imgSrc: dir_home + 'officers_2022.jpg',
     },
     {
@@ -64,27 +64,27 @@ export const HomeAlbum: GalleryPiece[] = [
         imgSrc: dir_home + 'touchgrass_chase360.jpg',
     },
     {
-        remark: '🌱 "Touching Grass" Hiking Trip: Group Photo!',
-        imgSrc: dir_home + 'touchgrass_group.jpg',
+        remark: '🌄 "Expand Your Horizons 2022": Games with Scratch Workshop 2',
+        imgSrc: dir_home + 'eyh_ws2.jpg',
     },
     {
         remark: '🌱 "Touching Grass" Hiking Trip: Upward Trails',
         imgSrc: dir_home + 'touchgrass_hike.jpg',
     },
     {
-        remark: '🌱 "Touching Grass" Hiking Trip\nLeaving Campus',
+        remark: '🌱 "Touching Grass" Hiking Trip:\nLeaving Campus',
         imgSrc: dir_home + 'touchgrass_leaving.jpg',
     },
     {
-        remark: '🌄 "Expand Your Horizons 2022" - Games with Scratch Workshop 2',
-        imgSrc: dir_home + 'eyh_ws2.jpg',
+        remark: '🌱 "Touching Grass" Hiking Trip: Group Photo!',
+        imgSrc: dir_home + 'touchgrass_group.jpg',
     },
     {
-        remark: '🌄 "Expand Your Horizons 2022" - Games with Scratch Workshop Group Photo!',
+        remark: '🌄 "Expand Your Horizons 2022": Games with Scratch Workshop Group Photo!',
         imgSrc: dir_home + 'eyh_group.jpg',
     },
     {
-        remark: '🌄 "Expand Your Horizons" - TinkerCAD 3D Design Workshop 2',
+        remark: '🌄 "Expand Your Horizons": TinkerCAD 3D Design Workshop 2',
         imgSrc: dir_home + 'expand_tinkercad_ws2.jpg',
     },
     {
@@ -112,19 +112,19 @@ export const HomeAlbum: GalleryPiece[] = [
         imgSrc: dir_home + 'blender_render.png',
     },
     {
-        remark: '💪 Settling Outside Balcony Feat. Jonnald\n@ "CalHacks v10.0"',
+        remark: '💪 Settling Outside Balcony feat. Jonnald\n@ "CalHacks v10.0"',
         imgSrc: dir_home + 'calhacks_jonnald.jpg',
     },
     {
-        remark: '🧑‍💻 Our First Intercollegiate Hackathon: Contestants #1',
+        remark: '🧑‍💻 Our First Intercollegiate Hackathon: Post-Opening Ceremony',
         imgSrc: dir_home + 'hackathon_contest2.jpg',
     },
     {
-        remark: '🤖 Fieldtrip: Dexterity.AI Robotics Group Photo',
+        remark: '🤖 Fieldtrip: Dexterity.AI Robotics Group Photo!',
         imgSrc: dir_home + 'dexterity_groupphoto.jpg',
     },
     {
-        remark: '🧑‍💻 Our First Intercollegiate Hackathon: Contestants #2',
+        remark: '🧑‍💻 Our First Intercollegiate Hackathon: Pre-Opening Ceremony',
         imgSrc: dir_home + 'hackathon_contest1.jpg',
     },
     {
@@ -132,15 +132,19 @@ export const HomeAlbum: GalleryPiece[] = [
         imgSrc: dir_home + 'slac_tour.png',
     },
     {
-        remark: '🌉 Opening Night Group Photo feat. The Club and SFSU Friends @ "SFHacks 2024"',
+        remark: '🌉 Opening Night feat. The Club + SFSU Friends Group Photo! @ "SFHacks 2024"',
         imgSrc: dir_home + 'sfhacks_group.jpg',
     },
     {
-        remark: '🌱 "Touching Grass: The Sequel" Up-hill Group Photo',
+        remark: '🐍 First Intro to Python Workshop Spring 2024',
+        imgSrc: dir_home + 'python_spring2024_ws.png',
+    },
+    {
+        remark: '🌱 "Touching Grass: The Sequel" Upward Trails Group Photo!',
         imgSrc: dir_home + 'hikeof2024_groupphoto1.png',
     },
     {
-        remark: '🌱 "Touching Grass: The Sequel" National Trail Viewpoint Group Photo',
+        remark: '🌱 "Touching Grass: The Sequel" National Trail Viewpoint Group Photo!',
         imgSrc: dir_home + 'hikeof2024_groupphoto2.png',
     },
 ]
