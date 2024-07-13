@@ -12,14 +12,12 @@ import IntroFade from '../components/IntroFade'
 
 import Overview from '../components/Overview'
 import Hero from '../components/Hero'
-import Technologies from '../components/Technologies'
+import TechConveyor from '../components/TechConveyor'
 
 import About from '../components/About'
 import Gallery from '../components/Gallery'
 
-import History from '../components/History'
 import Leadership from '../components/Leadership'
-import Socials from '../components/Socials'
 
 import Recruitment from '../components/Recruitment'
 
@@ -46,7 +44,7 @@ export default function App() {
             
             <Leadership />
 
-            <Technologies />
+            <TechConveyor />
 
             <About />
 

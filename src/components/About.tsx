@@ -63,7 +63,7 @@ export default function About(): React.ReactNode {
                         from all branches of computer science.
                     </p>
                     <p className='my-2'>
-                        Whether you are a beginner to the industry of computer science, or are already deeply-immersed into the industry with the newest software and technology stacks, our club and its growing community welcome everyone of all experience levels—beginners especially!
+                        Whether you are a beginner to the field, or are already deeply-immersed into the industry with the newest software and technology stacks, our club and its growing community welcomes everyone of all experience levels—beginners included!
                     </p>
                     <p className='my-2'>
                         This is your place to network, to explore, to experiment, and to ultimately discover yourself!
