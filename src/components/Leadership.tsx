@@ -241,7 +241,7 @@ const MinorLeaderCard: React.FC<props_MinorLeaderCard> = ({
                 isInView ? { opacity: 1, transform: 'translateX(0%)' } : ''
             }
             transition={{ duration: 1.3, delay: index * 0.45, ease: 'easeOut' }}
-            className={`${isAnimating && 'pointer-events-none'} w-[244px] hover:z-20 relative leading-[21px] opacity-0 hover:w-[280px] border-b border-neutral-800 border-1 transition-all duration-300 rounded-xl bg-gradient-to-b shadow-md hover:shadow-lg ${minorLeaderDetails.color_complex} to-transparent`}
+            className={`${isAnimating && 'pointer-events-none'} w-[256px] hover:z-20 relative leading-[21px] opacity-0 hover:w-[280px] border-b border-neutral-800 border-1 transition-all duration-300 rounded-xl bg-gradient-to-b shadow-md hover:shadow-lg ${minorLeaderDetails.color_complex} to-transparent`}
             key={roleName}
         >
             {/* Role and Name of Person */}
@@ -268,10 +268,10 @@ export default function Leadership(): React.ReactNode {
 
             <div className='flex flex-col justify-center items-center w-full h-full py-[44px] px-[10px] sm:px-[7.5vw] lg:px-[14.2vw] gap-4 overflow-x-hidden'>
                 <div>
-                    <h1 className='title-main w-full text-center text-3xl font-semibold leading-7 drop-shadow-[0_0_14px_rgba(255,255,255,0.5)]'>
+                    <h1 className='title-main w-full text-center text-3xl sm:text-4xl font-semibold drop-shadow-[0_0_14px_rgba(255,255,255,0.5)]'>
                         Our Club Leadership
                     </h1>
-                    <h1 className='title-main w-full text-center text-lg font-semibold text-[#FCD690] drop-shadow-[0_0_20px_rgba(255,205,60,0.9)]'>
+                    <h1 className='title-main w-full text-center text-xl font-semibold text-[#FCD690] drop-shadow-[0_0_20px_rgba(255,205,60,0.9)]'>
                         👑 2023 - 2024 👑
                     </h1>
                 </div>
@@ -305,7 +305,7 @@ export default function Leadership(): React.ReactNode {
                     )}
                 </div>
 
-                <p className='text-neutral-700 px-6 font-Poppins font-semibold text-center'>
+                <p className='px-6 title-main text-neutral-700 text-center font-semibold'>
                     pssst! past Leadership will be shown soon!~our history books.
                 </p>
 

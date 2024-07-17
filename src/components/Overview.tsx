@@ -20,22 +20,22 @@ function getNextDayOfWeek(currentDate: Date, dayOfWeek: number) {
 const nextMeetingDate = getNextDayOfWeek(new Date(), CLUB_MEETING_DAY)
 const nextMeetingDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][CLUB_MEETING_DAY]
 
-const meetingTimeFormattedHour = new Date(nextMeetingDate + ' ' + CLUB_MEETING_HOUR).toLocaleTimeString('en', {hour: '2-digit', minute:'2-digit'})
+const meetingTimeFormattedHour = new Date(nextMeetingDate + ' ' + CLUB_MEETING_HOUR).toLocaleTimeString('en', { hour: '2-digit', minute:'2-digit' })
 
 export default function Overview(): React.ReactNode {
     return (
-        <div className='py-72 flex flex-col justify-center items-center black'>
+        <div className='py-72 flex flex-col justify-center items-center'>
 
-            <div className='w-full py-10 flex flex-col md:flex-row justify-center items-center gap-x-0 md:gap-x-16 gap-y-6'>
+            <div className='w-full max-w-[1260px] px-8 xl:px-12 py-10 flex flex-col md:flex-row justify-center items-center gap-x-0 md:gap-x-8 xl:gap-x-16 gap-y-6'>
 
-                <div className='w-full md:w-[28vw] px-6 md:px-0'>
+                <div className='w-full px-2 md:px-0'>
                     <h1 className='title-main text-4xl font-semibold'>Our Club Meetings</h1>
                     <h2 className='text-neutral-400'>In-person festivities and member meet-ups!</h2>
                     <div className='w-full h-[1px] bg-neutral-400 my-3' />
 
 
                     <h2 className='title-main text-neutral-400 font-semibold'>⏰ WHEN</h2>
-                    <h2 className='title-main text-3xl font-semibold'>
+                    <h2 className='title-main text-3xl font-semibold pr-0 md:pr-16'>
                         Weekly, <span className='text-[#FCD690] font-bold'>{nextMeetingDay}s</span> at <span className='text-blue-200 font-bold'>{meetingTimeFormattedHour}.</span>
                     </h2>
                     <div className='text-neutral-300 italic'>
@@ -52,16 +52,16 @@ export default function Overview(): React.ReactNode {
                         You can also tune-in remotely on our{' '}
                         <Link href={'https://discord.com/channels/939701223144185867/1147046718710485034'} target='_blank' className='text-purple-400 font-semibold'>Discord</Link> Stage.
                     </div>
-                    <p className='w-52 p-2 my-2 text-sm text-center font-semibold hover:animate-pulse bg-yellow-900 rounded-lg'>🔔 Sign up for reminders!</p>
+                    <p className='w-52 hover:w-56 transition-all p-2 my-2 text-sm text-center font-semibold hover:animate-pulse bg-yellow-900 rounded-lg'>🔔 Sign up for reminders!</p>
                 </div>
 
                 <div className='hidden md:block w-[1px] h-[500px] bg-neutral-500' />
 
-                <div className='w-full md:w-[28vw] px-6 md:px-0 text-right'>
+                <div className='w-full px-2 md:px-0 text-right'>
                     <h1 className='title-main text-4xl font-semibold'>Club Documentation</h1>
                     <h2 className='text-neutral-400'>Good-to-know information for student members~</h2>
                     <div className='w-full h-[1px] bg-neutral-400 my-3' />
-                    <div className='flex flex-row-reverse flex-wrap font-semibold gap-x-2 gap-y-2'>
+                    <div className='flex flex-row flex-wrap justify-end font-semibold gap-x-2 gap-y-2'>
                         <Link href='https://docs.google.com/document/d/1z8tFEMwJXxxcEVszzM8xmOp_1bGMlNBAd4mEGoOn4zU/edit?usp=sharing' target='_blank' className='flex flex-row items-center group px-3 hover:px-5 py-2 bg-fuchsia-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
                             <PiToiletPaperDuotone className='group-hover:text-lg'/>Meeting Minutes (Summaries)
                         </Link>

@@ -80,14 +80,14 @@ export default function About(): React.ReactNode {
             <div className='flex flex-col'>
                 <Image
                     src={kitty}
-                    className='z-10 hover:!scale-110 transition duration-300 ease-out mx-auto mb-6'
+                    className='z-10 w-20 md:w-24 hover:!scale-110 transition duration-300 ease-out mx-auto mb-6'
                     alt=''
                     width={128}
                     height={128}
                     unoptimized
                 />
 
-                <h1 className='title-main text-xl text-center sm:text-3xl font-extrabold text-white mb-10'>
+                <h1 className='title-main px-4 text-xl text-center sm:text-3xl font-extrabold text-white mb-10'>
                     <span>Join us in Exploring the </span>
                     <span className='text-yellow-300 animate-pulse drop-shadow-[0_0_10px_rgba(255,250,50,0.45)]'>
                         World of Computer Science
