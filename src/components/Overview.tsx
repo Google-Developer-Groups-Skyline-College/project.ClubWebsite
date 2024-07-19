@@ -1,10 +1,10 @@
 import React from 'react'
 
+import Link from 'next/link'
+
 import { BiCalendarEvent } from 'react-icons/bi'
 import { PiToiletPaperDuotone } from 'react-icons/pi'
 import { SiDiscord, SiYoutube, SiLinkedin, SiInstagram, SiGithub, SiLinktree, SiSlideshare } from 'react-icons/si'
-
-import Link from 'next/link'
 
 import { CLUB_MEETING_DAY, CLUB_MEETING_HOUR, CLUB_MEETING_LOCATION } from '../dispositions/general'
 

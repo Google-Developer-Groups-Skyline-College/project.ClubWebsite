@@ -29,17 +29,18 @@ import { MdOutlineEmojiEvents } from 'react-icons/md'
 import { PiFeatherDuotone, PiHandshakeBold } from 'react-icons/pi'
 
 const dir_leaderPortraits = '/assets/home/leader_portraits/'
+const dir_2023_2024 = dir_leaderPortraits + '2023_2024/'
 
-const pfp_president = dir_leaderPortraits + 'tylerkuwadaport.png'
-const pfp_vicepresident = dir_leaderPortraits + 'jonasquiballoport.png'
-const pfp_secretary = dir_leaderPortraits + 'kailabautistaport.png'
-const pfp_treasurer = dir_leaderPortraits + 'jayanpintorport.png'
-const pfp_projectmanager = dir_leaderPortraits + 'lanceruizport.jpg'
+const pfp_president = dir_2023_2024 + 'tylerkuwadaport.png'
+const pfp_vicepresident = dir_2023_2024 + 'jonasquiballoport.png'
+const pfp_secretary = dir_2023_2024 + 'kailabautistaport.png'
+const pfp_treasurer = dir_2023_2024 + 'jayanpintorport.png'
+const pfp_projectmanager = dir_2023_2024 + 'lanceruizport.jpg'
 
-const pfp_auxillary1 = dir_leaderPortraits + 'christseport.png'
+const pfp_auxillary1 = dir_2023_2024 + 'christseport.png'
 
-const pfp_coadvisor1 = dir_leaderPortraits + 'denisehumport.png'
-const pfp_coadvisor2 = dir_leaderPortraits + 'bryanswartoutport.png'
+const pfp_coadvisor1 = dir_2023_2024 + 'denisehumport.png'
+const pfp_coadvisor2 = dir_2023_2024 + 'bryanswartoutport.png'
 const pfp_none = dir_leaderPortraits + 'noprofile.webp'
 
 export const FALLBACK_QUOTE = (

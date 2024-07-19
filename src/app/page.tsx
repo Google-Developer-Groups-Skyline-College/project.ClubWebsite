@@ -12,7 +12,7 @@ import IntroFade from '../components/IntroFade'
 
 import Overview from '../components/Overview'
 import Hero from '../components/Hero'
-import TechConveyor from '../components/TechConveyor'
+import Techstack from '../components/Techstack'
 
 import About from '../components/About'
 import Gallery from '../components/Gallery'
@@ -44,7 +44,7 @@ export default function App() {
             
             <Leadership />
 
-            <TechConveyor />
+            <Techstack />
 
             <About />
 

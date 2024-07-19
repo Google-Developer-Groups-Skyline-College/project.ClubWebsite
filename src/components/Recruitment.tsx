@@ -3,8 +3,6 @@
 import { Element } from 'react-scroll'
 import Image from 'next/image'
 
-const kitty = '/assets/mascot.gif'
-
 export default function Recruitment(): React.ReactNode {
     return (
         <div className='w-full h-[220vh] relative overflow-hidden'>
@@ -25,7 +23,7 @@ export default function Recruitment(): React.ReactNode {
             <div className='w-full h-[110vh] flex absolute bottom-[12rem] flex-col gap-4 justify-center items-center'>
 
                 <Image
-                    src={kitty}
+                    src={'/assets/bits/mascot.gif'}
                     width={100}
                     height={100}
                     alt=''

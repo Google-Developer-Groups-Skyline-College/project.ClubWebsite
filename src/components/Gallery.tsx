@@ -7,8 +7,6 @@ import Image from 'next/image'
 import { ReactTyped } from 'react-typed'
 import { motion, useInView } from 'framer-motion'
 
-const sfx_clunk = '/assets/sound_fx/clunk.mp3'
-
 const imageClasses =
     'relative h-full w-full object-cover duration-500 active:duration-0 hover:!opacity-100 hover:!scale-110 hover:outline-[6px] active:outline-[0px] outline-0 outline-white outline rounded-xl group-hover:opacity-100 group-active:opacity-50 active:object-contain hover:drop-shadow-[0_15px_35px_rgba(255,255,255,0.5)] '
 
@@ -27,7 +25,7 @@ function GalleryPiece({
     pieceDetails: GalleryPiece
     index: number
 }): React.ReactNode {
-    const [playSfx_clunk] = useSound(sfx_clunk)
+    const [playSfx_clunk] = useSound('/assets/audio/clunk.mp3')
 
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true })

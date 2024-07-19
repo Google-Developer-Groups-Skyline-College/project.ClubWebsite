@@ -31,10 +31,6 @@ const TYPED_KEYWORDS = [
     '$ git commit',
 ]
 
-const mascotAnimated = '/assets/mascot.gif'
-const backdrop = '/assets/home/skyline_backdrop.jpg'
-const heroOverlay = '/assets/home/hero_overlay_gray.gif'
-
 export default function Hero(): React.ReactNode {
     const ref = useRef(null)
     const isInView = useInView(ref)
@@ -57,7 +53,7 @@ export default function Hero(): React.ReactNode {
                         width={1920}
                         height={1080}
                         className='absolute w-full h-full blur-[0px] object-cover'
-                        src={backdrop}
+                        src={'/assets/home/skyline_backdrop.jpg'}
                         alt=''
                         priority
                     />
@@ -66,7 +62,7 @@ export default function Hero(): React.ReactNode {
                     <Image
                         width={1920}
                         height={1080}
-                        src={heroOverlay}
+                        src={'/assets/home/hero_overlay.gif'}
                         className='absolute top-0 w-full h-full drop-shadow-lg opacity-5 sm:opacity-10'
                         alt=''
                         unoptimized
@@ -81,7 +77,7 @@ export default function Hero(): React.ReactNode {
                 <Image
                     width={80}
                     height={80}
-                    src={mascotAnimated}
+                    src={'/assets/bits/mascot.gif'}
                     alt=''
                     unoptimized
                     className='z-20 hover:scale-105 transition-all duration-300 drop-shadow-[0_0_25px_rgba(255,255,255,0.4)]'

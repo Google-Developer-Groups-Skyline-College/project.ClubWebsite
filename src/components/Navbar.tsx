@@ -12,16 +12,13 @@ import { Link as ScrollLink, animateScroll } from 'react-scroll'
 import Link from 'next/link'
 
 import { HiOutlineRocketLaunch } from 'react-icons/hi2'
-import { GoHome, GoQuestion, GoCodeOfConduct } from 'react-icons/go'
+import { GoHome, GoCodeOfConduct } from 'react-icons/go'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { FiTool } from 'react-icons/fi'
 
 import { motion } from 'framer-motion'
 
 import { ANNOUNCEMENT_TEXT, ANNOUNCEMENT_GRAD_COLOR } from '@/dispositions/general'
-
-const diagonalGlideOverlay = '/assets/home/diagonal_slowglide_overlay.gif'
-const mascot = '/assets/mascot.gif'
         
 export default function Navbar(): React.ReactNode {
     const [nav, setNav] = useState(false)
@@ -31,13 +28,14 @@ export default function Navbar(): React.ReactNode {
 
     return (
         <div className='z-50 flex flex-col fixed w-full'>
+
             {/* Announcement Banner */}
             {ANNOUNCEMENT_TEXT ? (
                 <motion.div
                     onMouseDown={() => {
                         setAnnounceDismissed(true)
                     }}
-                    className={`flex w-full px-6 h-[58px] sm:h-[40px] bg-gradient-to-b ${ANNOUNCEMENT_GRAD_COLOR} to-[#000000] justify-between items-center overflow-hidden`}
+                    className={`z-10 flex w-full px-6 h-[58px] sm:h-[40px] bg-gradient-to-b ${ANNOUNCEMENT_GRAD_COLOR} to-[#000000] justify-between items-center group/announcement_bar overflow-hidden`}
                     initial={{
                         opacity: 0,
                         translateY: '-100%',
@@ -54,18 +52,18 @@ export default function Navbar(): React.ReactNode {
                     }
                     transition={{ duration: 1, ease: 'easeOut' }}
                 >
-                    <p className='w-full font-semibold text-xs sm:text-sm text-center text-orange-200'>
+                    <p className='w-full font-semibold text-xs sm:text-sm text-center text-orange-200 group-hover/announcement_bar:animate-pulse'>
                         {ANNOUNCEMENT_TEXT}
                     </p>
                     <Image
                         width={600}
                         height={600}
-                        src={diagonalGlideOverlay}
+                        src={'/assets/home/diagonal_slowglide_overlay.gif'}
                         alt=''
-                        className='absolute w-full opacity-5'
+                        className='-z-10 absolute w-full opacity-10 group-hover/announcement_bar:opacity-20 transition-all duration-500'
                         unoptimized
                     />
-                    <p className='absolute text-neutral-600 bottom-2 text-xs lg:text-base font-semibold right-4 animate-pulse'>
+                    <p className='z-10 absolute text-neutral-600 bottom-2 text-xs lg:text-base font-semibold right-4 animate-pulse'>
                         press to dismiss
                     </p>
                 </motion.div>
@@ -75,7 +73,7 @@ export default function Navbar(): React.ReactNode {
 
             {/* Top Bar */}
             <motion.div
-                className='z-20 flex relative h-[64px] px-4 justify-between items-center text-gray-300 bg-gradient-to-b from-[#000] to-transparent'
+                className='z-20 flex relative h-[72px] px-4 justify-between items-center text-gray-300 bg-gradient-to-b from-[#000] to-transparent'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1, ease: 'easeOut' }}
@@ -83,7 +81,7 @@ export default function Navbar(): React.ReactNode {
                 <Image
                     width={48}
                     height={48}
-                    src={mascot}
+                    src={'/assets/bits/mascot.gif'}
                     alt=''
                     className='z-20 drop-shadow-lg ml-4 rounded-2xl hover:rotate-180'
                     style={{ width: '48px' }}

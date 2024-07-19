@@ -21,12 +21,6 @@ import { BiLogoTypescript } from 'react-icons/bi'
 
 import { projects, ProjectDetails } from '../dispositions/projects'
 
-const fallBackdrop = '/assets/projects/backdrops/mw2.mp4'
-
-const sfxClick = '/assets/sound_fx/click.mp3'
-const sfxClick2 = '/assets/sound_fx/click2.mp3'
-// const sfxTunedClick = '/assets/sound_fx/tuned_click.mp3'
-
 const TAG_CLASSES = 'inline mr-1 self-center'
 
 interface TagDetails {
@@ -65,8 +59,8 @@ const Tags: { [key: string]: TagDetails } = {
 }
 
 export default function Carousel() {
-    const [playSfx_click] = useSound(sfxClick)
-    const [playSfx_click2] = useSound(sfxClick2)
+    const [playSfx_click] = useSound('/assets/audio/click.mp3')
+    const [playSfx_click2] = useSound('/assets/audio/click2.mp3')
     // const [play_sfxTunedClick] = useSound(sfxTunedClick)
 
     const [currentProject, setCurrentProject] = useState(
@@ -117,7 +111,7 @@ export default function Carousel() {
                 {/* The main backdrop preview video clip */}
                 <video
                     className='w-full h-full object-cover'
-                    src={projectDetails.backdrop || fallBackdrop}
+                    src={projectDetails.backdrop || '/assets/projects/backdrops/mw2.mp4'}
                     preload='auto'
                     autoPlay
                     muted

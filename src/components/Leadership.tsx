@@ -17,10 +17,6 @@ import {
 } from 'react-icons/si'
 import { FaNetworkWired, FaQuoteLeft } from 'react-icons/fa'
 
-const sfx_clunk = '/assets/sound_fx/clunk.mp3'
-const sfx_hoverThunk = '/assets/sound_fx/muffled_hover_thunk.mp3'
-const sfx_discorda = '/assets/sound_fx/discorda.mp3'
-
 const { leadership, FALLBACK_QUOTE } = require('../dispositions/leadership.tsx')
 
 interface props_MajorLeaderCard {
@@ -37,9 +33,9 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
     leaderName,
     index,
 }) => {
-    const [playSfx_clunk] = useSound(sfx_clunk)
-    const [playSfx_hoverThunk] = useSound(sfx_hoverThunk)
-    const [playSfx_discorda] = useSound(sfx_discorda)
+    const [playSfx_clunk] = useSound('/assets/audio/clunk.mp3')
+    const [playSfx_hoverThunk] = useSound('/assets/audio/muffled_hover_thunk.mp3')
+    const [playSfx_discorda] = useSound('/assets/audio/discorda.mp3')
 
     const [displayQuote, setDisplayQuote] = useState(false)
     const [isAnimating, setIsAnimating] = useState(false)
@@ -217,7 +213,7 @@ const MinorLeaderCard: React.FC<props_MinorLeaderCard> = ({
     roleName,
     index,
 }) => {
-    const [playSfx_hoverThunk] = useSound(sfx_hoverThunk)
+    const [playSfx_hoverThunk] = useSound('/assets/audio/muffled_hover_thunk.mp3')
 
     const [isAnimating, setIsAnimating] = useState(false)
 

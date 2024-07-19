@@ -5,9 +5,6 @@ import Image from 'next/image'
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
-const kitty = '/assets/mascot.gif'
-const loader = '/assets/bits/loader.gif'
-
 export default function IntroFade(): React.ReactNode {
     const ref = useRef(null)
     const isInView = useInView(ref)
@@ -21,7 +18,7 @@ export default function IntroFade(): React.ReactNode {
             className='z-30 flex flex-col items-center justify-center pointer-events-none absolute w-full h-screen bg-black'
         >
             <Image
-                src={kitty}
+                src={'/assets/bits/mascot.gif'}
                 className='opacity-90 animate-pulse'
                 alt=''
                 width={100}
@@ -29,7 +26,7 @@ export default function IntroFade(): React.ReactNode {
                 unoptimized
             />
             <Image
-                src={loader}
+                src={'/assets/bits/loader.gif'}
                 className='opacity-70'
                 alt=''
                 width={100}
