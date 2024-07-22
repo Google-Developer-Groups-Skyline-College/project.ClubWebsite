@@ -151,15 +151,87 @@ export const HomeAlbum: GalleryPiece[] = [
 
 export const HackathonAlbum: GalleryPiece[] = [
     {
-        remark: '🪁 Blender Rendering of Skyline College',
-        imgSrc: DIR_HACKATHON_GALLERY + 'blender.jpg',
+        remark: '🎉 Game Entry: "Save the Village!"',
+        imgSrc: DIR_HACKATHON_GALLERY + 'save_the_village.png',
     },
     {
-        remark: '💪 Settling Outside Balcony Feat. Jonnald\n@ "CalHacks v10.0"',
-        imgSrc: DIR_HACKATHON_GALLERY + 'calhacks_jonnald.jpg',
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'group1.JPG',
     },
     {
-        remark: '🌉 Opening Night Group Photo feat. The Club and SFSU Friends @ "SFHacks 2024"',
-        imgSrc: DIR_HACKATHON_GALLERY + 'sfhacks_group.jpg',
+        remark: '🎉 Game Entry: "Meow Invaders!"',
+        imgSrc: DIR_HACKATHON_GALLERY + 'meow_invaders.png',
+    },
+    {
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'contestants1.jpg',
+    },
+    {
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'speaker3.jpg',
+    },
+    {
+        remark: '🎉 Game Entry: "Solitar?"',
+        imgSrc: DIR_HACKATHON_GALLERY + 'solitar1.png',
+    },
+    {
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'portrait1.jpg',
+    },
+    {
+        remark: '🎉 Roblox Studio',
+        imgSrc: DIR_HACKATHON_GALLERY + 'roblox_studio.png',
+    },
+    {
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'portrait3.jpg',
+    },
+    {
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'group2.jpg',
+    },
+    {
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'sign_in2.jpg',
+    },
+    {
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'contestants2.jpg',
+    },
+    {
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'sign_in1.jpg',
+    },
+    {
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'speaker1.JPG',
+    },
+    {
+        remark: '🎉 Game Entry: "MetalDug"',
+        imgSrc: DIR_HACKATHON_GALLERY + 'metaldug.png',
+    },
+    {
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'speaker2.jpg',
+    },
+    {
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'portrait2.jpg',
+    },
+    {
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'group4.jpg',
+    },
+    {
+        remark: '🎉 Game Entry: "Solitar?"',
+        imgSrc: DIR_HACKATHON_GALLERY + 'solitar2.png',
+    },
+    {
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'group3.jpg',
+    },
+    {
+        remark: '',
+        imgSrc: DIR_HACKATHON_GALLERY + 'speaker4.jpg',
     },
 ]

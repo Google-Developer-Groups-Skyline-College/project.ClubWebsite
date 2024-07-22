@@ -6,7 +6,7 @@ import { BiCalendarEvent } from 'react-icons/bi'
 import { PiToiletPaperDuotone } from 'react-icons/pi'
 import { SiDiscord, SiYoutube, SiLinkedin, SiInstagram, SiGithub, SiLinktree, SiSlideshare } from 'react-icons/si'
 
-import { CLUB_MEETING_DAY, CLUB_MEETING_HOUR, CLUB_MEETING_LOCATION } from '../dispositions/general'
+import { CLUB_MEETING_DAY, CLUB_MEETING_HOUR, CLUB_MEETING_LOCATION, CLUB_MEETING_LOCATION_LINK } from '../dispositions/general'
 
 import Countdown from './Countdown'
 
@@ -46,7 +46,9 @@ export default function Overview(): React.ReactNode {
 
                     <h2 className='title-main text-neutral-400 font-semibold'>📍 WHERE</h2>
                     <div className='title-main text-neutral-300 text-xl'>
-                        <span className='font-semibold'>{CLUB_MEETING_LOCATION}</span>
+                        <Link href={CLUB_MEETING_LOCATION_LINK}>
+                            <span className='font-semibold'>{CLUB_MEETING_LOCATION}</span>
+                        </Link>
                     </div>
                     <div className='text-neutral-300'>
                         You can also tune-in remotely on our{' '}

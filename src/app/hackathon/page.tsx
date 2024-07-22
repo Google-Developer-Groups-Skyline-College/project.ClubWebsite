@@ -186,7 +186,7 @@ export default function Hackathon() {
                         backSpeed={75}
                         backDelay={3000}
                         loop
-                        className='bg-gradient-to-t from-white to-[#da5fff] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(255,50,255,1)]'
+                        className='bg-gradient-to-t from-white to-[#5fff6c] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(50,250,255,1)]'
                     ></ReactTyped>
                 </h1>
 
