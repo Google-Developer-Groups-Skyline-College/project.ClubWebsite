@@ -19,7 +19,7 @@ import {
 import { FaGithub, FaTrello } from 'react-icons/fa'
 import { BiLogoTypescript } from 'react-icons/bi'
 
-import { projects, ProjectDetails } from '../dispositions/projects'
+import { projects, ProjectDetails } from '../../dispositions/projects'
 
 const TAG_CLASSES = 'inline mr-1 self-center'
 

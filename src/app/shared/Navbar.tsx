@@ -19,7 +19,7 @@ import { FiTool } from 'react-icons/fi'
 import { motion } from 'framer-motion'
 
 import { ANNOUNCEMENT_TEXT, ANNOUNCEMENT_GRAD_COLOR } from '@/dispositions/general'
-        
+
 export default function Navbar(): React.ReactNode {
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)

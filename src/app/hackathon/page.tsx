@@ -10,9 +10,9 @@ import { useState, useEffect } from 'react'
 import { HackathonAlbum } from '../../dispositions/gallery'
 
 // components
-import Footer from '../../components/Footer'
-import IntroFade from '../../components/IntroFade'
-import Gallery from '../../components/Gallery'
+import Footer from '../shared/Footer'
+import IntroFade from '../shared/IntroFade'
+import Gallery from '../shared/Gallery'
 
 const backdrop = '/assets/hackathon/backdrop.png'
 const herologo = '/assets/hackathon/herologo.png'

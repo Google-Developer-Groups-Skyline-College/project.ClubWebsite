@@ -1,8 +1,8 @@
 import React from 'react'
 
-import IntroFade from '../../components/IntroFade'
+import IntroFade from '../shared/IntroFade'
 
-import ProjectCarousel from '../../components/Carousel'
+import ProjectCarousel from '../components/Carousel'
 
 export default function Projects() {
     return (

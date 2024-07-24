@@ -17,7 +17,7 @@ import {
 } from 'react-icons/si'
 import { FaNetworkWired, FaQuoteLeft } from 'react-icons/fa'
 
-const { leadership, FALLBACK_QUOTE } = require('../dispositions/leadership.tsx')
+const { leadership, FALLBACK_QUOTE } = require('@/dispositions/leadership.tsx')
 
 interface props_MajorLeaderCard {
     leaderName: string

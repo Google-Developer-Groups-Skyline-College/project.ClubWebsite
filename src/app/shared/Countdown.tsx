@@ -24,7 +24,7 @@ function formatMsToTime(seconds: number): formattedTime {
         'seconds': (negative ? '-' : '') + s.toString().padStart(2, '0')
     })
 }
-    
+
 export default function Countdown({ timestamp, className }: { timestamp: number, className: string }): React.ReactNode {
 
     const [currentTimeDelta, setTimeDelta] = useState(timestamp - Date.now())

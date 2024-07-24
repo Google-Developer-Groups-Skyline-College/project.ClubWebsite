@@ -5,23 +5,23 @@ import React from 'react'
 import { Element } from 'react-scroll'
 import { ReactTyped } from 'react-typed'
 
-import { HomeAlbum } from '../dispositions/gallery'
+import { HomeAlbum } from '@/dispositions/gallery'
 
 // components
-import IntroFade from '../components/IntroFade'
+import { IntroFade } from '../shared/IntroFade'
 
-import Overview from '../components/Overview'
-import Hero from '../components/Hero'
-import Techstack from '../components/Techstack'
+import Overview from './components/Overview'
+import Hero from './components/Hero'
+import Techstack from './components/Techstack'
 
-import About from '../components/About'
-import Gallery from '../components/Gallery'
+import About from './components/About'
+import Gallery from '../shared/Gallery'
 
-import Leadership from '../components/Leadership'
+import Leadership from './components/Leadership'
 
-import Recruitment from '../components/Recruitment'
+import Recruitment from './components/Recruitment'
 
-import Footer from '../components/Footer'
+import Footer from '../shared/Footer'
 
 const GALLERY_TYPED_WORDS = [
     'Social Events',

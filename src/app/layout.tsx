@@ -5,7 +5,7 @@ import { Inter, Poppins, Ubuntu, Rubik, Open_Sans } from 'next/font/google'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from '@vercel/analytics/react'
 
-import Navbar from '../components/Navbar'
+import Navbar from './shared/Navbar'
 
 const inter = Inter({
     subsets: ['latin'],

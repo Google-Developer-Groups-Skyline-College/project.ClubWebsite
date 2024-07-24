@@ -19,7 +19,8 @@
             }
         ],
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": ["./src/*"],
+            "shared/*": ["./src/app/shared/*"]
         }
     },
     "include": [
@@ -27,14 +28,8 @@
         "**/*.ts",
         "**/*.tsx",
         ".next/types/**/*.ts",
-        "src/app/page.tsx",
-        "src/app/layout.tsx",
         "tailwind.config.js",
-        "src/components/About.tsx",
-        "src/components/Carousel.tsx",
         "next.config.js",
-        "src/app/api/[...slug].js",
-        "src/app/hackathon/[slug]/page.tsx"
     ],
     "exclude": ["node_modules", ".eslintrc.js"]
 }

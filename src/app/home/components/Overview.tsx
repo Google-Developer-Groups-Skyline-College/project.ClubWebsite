@@ -6,9 +6,9 @@ import { BiCalendarEvent } from 'react-icons/bi'
 import { PiToiletPaperDuotone } from 'react-icons/pi'
 import { SiDiscord, SiYoutube, SiLinkedin, SiInstagram, SiGithub, SiLinktree, SiSlideshare } from 'react-icons/si'
 
-import { CLUB_MEETING_DAY, CLUB_MEETING_HOUR, CLUB_MEETING_LOCATION, CLUB_MEETING_LOCATION_LINK } from '../dispositions/general'
+import { CLUB_MEETING_DAY, CLUB_MEETING_HOUR, CLUB_MEETING_LOCATION, CLUB_MEETING_LOCATION_LINK } from '@/dispositions/general'
 
-import Countdown from './Countdown'
+import Countdown from 'shared/Countdown'
 
 function getNextDayOfWeek(currentDate: Date, dayOfWeek: number) {
     const resultDate = new Date(currentDate.getTime())
@@ -26,7 +26,7 @@ export default function Overview(): React.ReactNode {
     return (
         <div className='py-72 flex flex-col justify-center items-center'>
 
-            <div className='w-full max-w-[1260px] px-8 xl:px-12 py-10 flex flex-col md:flex-row justify-center items-center gap-x-0 md:gap-x-8 xl:gap-x-16 gap-y-6'>
+            <div className='w-full max-w-[1260px] px-8 xl:px-12 py-10 flex flex-col md:flex-row justify-center items-center gap-x-0 md:gap-x-8 gap-y-6 xl:gap-x-16'>
 
                 <div className='w-full px-2 md:px-0'>
                     <h1 className='title-main text-4xl font-semibold'>Our Club Meetings</h1>
@@ -80,6 +80,8 @@ export default function Overview(): React.ReactNode {
                 </div>
 
             </div>
+
+
 
             <div className='border-t-[1px] py-8 px-4 text-center border-neutral-600'>
                 <p className='text-lg'>🤝</p>
