@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useState } from 'react'
 
 interface formattedTime {
@@ -25,7 +27,7 @@ function formatMsToTime(seconds: number): formattedTime {
     })
 }
 
-export default function Countdown({ timestamp, className }: { timestamp: number, className: string }): React.ReactNode {
+export function Countdown({ timestamp, className }: { timestamp: number, className: string }): React.ReactNode {
 
     const [currentTimeDelta, setTimeDelta] = useState(timestamp - Date.now())
     const [currentFormat, setFormat] = useState(blankTime)
@@ -40,11 +42,11 @@ export default function Countdown({ timestamp, className }: { timestamp: number,
     }, [currentTimeDelta])
 
     return (
-        <div className={`flex flex-row gap-x-1 sm:gap-x-2 xl:gap-x-4 ${className}`}>
-            <div className='p-2 sm:p-3 xl:p-6 title-main text-center font-bold text-2xl bg-neutral-800 rounded-xl'>{currentFormat.days}<p className='text-xs sm:text-sm text-neutral-400'>days</p></div>
-            <div className='p-2 sm:p-3 xl:p-6 title-main text-center font-bold text-2xl bg-neutral-800 rounded-xl'>{currentFormat.hours}<p className='text-xs sm:text-sm text-neutral-400'>hours</p></div>
-            <div className='p-2 sm:p-3 xl:p-6 title-main text-center font-bold text-2xl bg-neutral-800 rounded-xl'>{currentFormat.minutes}<p className='text-xs sm:text-sm text-neutral-400'>mins</p></div>
-            <div className='p-2 sm:p-3 xl:p-6 title-main text-center font-bold text-2xl bg-neutral-800 rounded-xl'>{currentFormat.seconds}<p className='text-xs sm:text-sm text-neutral-400'>secs</p></div>
+        <div className={`flex flex-row gap-x-2 sm:gap-x-4 ${className}`}>
+            <div className='p-4 sm:p-6 title-main text-center font-bold text-2xl bg-neutral-800 rounded-xl'>{currentFormat.days}<p className='text-xs sm:text-sm text-neutral-400'>days</p></div>
+            <div className='p-4 sm:p-6 title-main text-center font-bold text-2xl bg-neutral-800 rounded-xl'>{currentFormat.hours}<p className='text-xs sm:text-sm text-neutral-400'>hours</p></div>
+            <div className='p-4 sm:p-6 title-main text-center font-bold text-2xl bg-neutral-800 rounded-xl'>{currentFormat.minutes}<p className='text-xs sm:text-sm text-neutral-400'>mins</p></div>
+            <div className='p-4 sm:p-6 title-main text-center font-bold text-2xl bg-neutral-800 rounded-xl'>{currentFormat.seconds}<p className='text-xs sm:text-sm text-neutral-400'>secs</p></div>
         </div>
     )
 }

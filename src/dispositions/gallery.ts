@@ -151,87 +151,87 @@ export const HomeAlbum: GalleryPiece[] = [
 
 export const HackathonAlbum: GalleryPiece[] = [
     {
-        remark: '🎉 Game Entry: "Save the Village!"',
+        remark: '🎉 Game Entry: "Save the Village!" Gameplay',
         imgSrc: DIR_HACKATHON_GALLERY + 'save_the_village.png',
     },
     {
-        remark: '',
+        remark: '🧑‍🚀 Explorers! Group Photo #1',
         imgSrc: DIR_HACKATHON_GALLERY + 'group1.JPG',
     },
     {
-        remark: '🎉 Game Entry: "Meow Invaders!"',
+        remark: '🎉 Game Entry: "Meow Invaders!" Gameplay',
         imgSrc: DIR_HACKATHON_GALLERY + 'meow_invaders.png',
     },
     {
-        remark: '',
+        remark: '🧑‍🚀 Explorers! Contestants Photo #1',
         imgSrc: DIR_HACKATHON_GALLERY + 'contestants1.jpg',
     },
     {
-        remark: '',
+        remark: '🔊 Event Speakers (Lance Ruiz, Edan Barrios)',
         imgSrc: DIR_HACKATHON_GALLERY + 'speaker3.jpg',
     },
     {
-        remark: '🎉 Game Entry: "Solitar?"',
+        remark: '🎉 Game Entry: "Solitar?" Gameplay #1',
         imgSrc: DIR_HACKATHON_GALLERY + 'solitar1.png',
     },
     {
-        remark: '',
+        remark: '🖼️ Explorer Portrait #1 (Sean)',
         imgSrc: DIR_HACKATHON_GALLERY + 'portrait1.jpg',
     },
     {
-        remark: '🎉 Roblox Studio',
+        remark: '🎉 Game Development Software: Roblox Studio',
         imgSrc: DIR_HACKATHON_GALLERY + 'roblox_studio.png',
     },
     {
-        remark: '',
+        remark: '🖼️ Explorer Portrait #1 (Oscar)',
         imgSrc: DIR_HACKATHON_GALLERY + 'portrait3.jpg',
     },
     {
-        remark: '',
+        remark: '🧑‍🚀 Pioneer Explorers! Group Photo #2',
         imgSrc: DIR_HACKATHON_GALLERY + 'group2.jpg',
     },
     {
-        remark: '',
+        remark: '📋 The Sign-in Booth',
         imgSrc: DIR_HACKATHON_GALLERY + 'sign_in2.jpg',
     },
     {
-        remark: '',
+        remark: '🧑‍🚀 Pioneer Explorers! Contestants Photo #2',
         imgSrc: DIR_HACKATHON_GALLERY + 'contestants2.jpg',
     },
     {
-        remark: '',
+        remark: '📋 The Sign-in Booth (entering POV)',
         imgSrc: DIR_HACKATHON_GALLERY + 'sign_in1.jpg',
     },
     {
-        remark: '',
+        remark: '🔊 Event Speakers (Edan Barrios)',
         imgSrc: DIR_HACKATHON_GALLERY + 'speaker1.JPG',
     },
     {
-        remark: '🎉 Game Entry: "MetalDug"',
+        remark: '🎉 Game Entry: "MetalDug" Developer Art',
         imgSrc: DIR_HACKATHON_GALLERY + 'metaldug.png',
     },
     {
-        remark: '',
+        remark: '🔊 The Organizers (Lance Ruiz, Tyler Kuwada, Edan Barrios, Brendan Keane)',
         imgSrc: DIR_HACKATHON_GALLERY + 'speaker2.jpg',
     },
     {
-        remark: '',
+        remark: '🖼️ Explorer Portrait #2 (Jonas)',
         imgSrc: DIR_HACKATHON_GALLERY + 'portrait2.jpg',
     },
     {
-        remark: '',
+        remark: '🧑‍🚀 Pioneer Explorers! Group Photo #3',
         imgSrc: DIR_HACKATHON_GALLERY + 'group4.jpg',
     },
     {
-        remark: '🎉 Game Entry: "Solitar?"',
+        remark: '🎉 Game Entry: "Solitar?" Gameplay #2',
         imgSrc: DIR_HACKATHON_GALLERY + 'solitar2.png',
     },
     {
-        remark: '',
+        remark: '🧑‍🚀 Pioneer Explorers! Group Photo #4',
         imgSrc: DIR_HACKATHON_GALLERY + 'group3.jpg',
     },
     {
-        remark: '',
+        remark: '🔊 Event Speakers (Tyler Kuwada)',
         imgSrc: DIR_HACKATHON_GALLERY + 'speaker4.jpg',
     },
 ]

@@ -1,18 +1,17 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
-
 import { ReactTyped } from 'react-typed'
 
 import { useState, useEffect } from 'react'
 
-import { HackathonAlbum } from '../../dispositions/gallery'
+import { HackathonAlbum } from '@/dispositions/gallery'
 
 // components
-import Footer from '../shared/Footer'
-import IntroFade from '../shared/IntroFade'
-import Gallery from '../shared/Gallery'
+import Image from 'next/image'
+
+import { Podiums } from './components/_modules'
+import { Footer, IntroFade, Gallery } from 'shared/_modules'
 
 const backdrop = '/assets/hackathon/backdrop.png'
 const herologo = '/assets/hackathon/herologo.png'
@@ -176,6 +175,8 @@ export default function Hackathon() {
                 </div>
 
             </div>
+
+            <Podiums />
 
             {/* <Gallery /> */}
             <div className='w-full bg-gradient-to-b from-slate-900 via-black to-black py-20'>

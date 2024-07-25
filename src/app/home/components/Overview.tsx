@@ -8,7 +8,7 @@ import { SiDiscord, SiYoutube, SiLinkedin, SiInstagram, SiGithub, SiLinktree, Si
 
 import { CLUB_MEETING_DAY, CLUB_MEETING_HOUR, CLUB_MEETING_LOCATION, CLUB_MEETING_LOCATION_LINK } from '@/dispositions/general'
 
-import Countdown from 'shared/Countdown'
+import { Countdown } from 'shared/_modules'
 
 function getNextDayOfWeek(currentDate: Date, dayOfWeek: number) {
     const resultDate = new Date(currentDate.getTime())
@@ -22,7 +22,7 @@ const nextMeetingDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 
 
 const meetingTimeFormattedHour = new Date(nextMeetingDate + ' ' + CLUB_MEETING_HOUR).toLocaleTimeString('en', { hour: '2-digit', minute:'2-digit' })
 
-export default function Overview(): React.ReactNode {
+export function Overview(): React.ReactNode {
     return (
         <div className='py-72 flex flex-col justify-center items-center'>
 
@@ -30,7 +30,7 @@ export default function Overview(): React.ReactNode {
 
                 <div className='w-full px-2 md:px-0'>
                     <h1 className='title-main text-4xl font-semibold'>Our Club Meetings</h1>
-                    <h2 className='text-neutral-400'>In-person festivities and member meet-ups!</h2>
+                    <h2 className='text-neutral-400'>In-person festivities, fun events, and student member meet-ups!</h2>
                     <div className='w-full h-[1px] bg-neutral-400 my-3' />
 
 
@@ -38,16 +38,16 @@ export default function Overview(): React.ReactNode {
                     <h2 className='title-main text-3xl font-semibold pr-0 md:pr-16'>
                         Weekly, <span className='text-[#FCD690] font-bold'>{nextMeetingDay}s</span> at <span className='text-blue-200 font-bold'>{meetingTimeFormattedHour}.</span>
                     </h2>
-                    <div className='text-neutral-300 italic'>
-                        Next meeting will be on {nextMeetingDate}, which is in:
+                    <div className='text-neutral-300'>
+                        Next meeting will be on <span className='underline underline-offset-2'>{nextMeetingDate}</span> which is in:
                     </div>
                     <Countdown timestamp={new Date(`${nextMeetingDate} ${CLUB_MEETING_HOUR}`).getTime()} className='my-4'/>
 
 
                     <h2 className='title-main text-neutral-400 font-semibold'>📍 WHERE</h2>
                     <div className='title-main text-neutral-300 text-xl'>
-                        <Link href={CLUB_MEETING_LOCATION_LINK}>
-                            <span className='font-semibold'>{CLUB_MEETING_LOCATION}</span>
+                        <Link className='font-semibold text-white hover:text-pink-300 duration-150' href={CLUB_MEETING_LOCATION_LINK}>
+                            {CLUB_MEETING_LOCATION}
                         </Link>
                     </div>
                     <div className='text-neutral-300'>
@@ -61,20 +61,29 @@ export default function Overview(): React.ReactNode {
 
                 <div className='w-full px-2 md:px-0 text-right'>
                     <h1 className='title-main text-4xl font-semibold'>Club Documentation</h1>
-                    <h2 className='text-neutral-400'>Good-to-know information for student members~</h2>
+                    <h2 className='text-neutral-400'>Good-to-know information for student members~!</h2>
                     <div className='w-full h-[1px] bg-neutral-400 my-3' />
                     <div className='flex flex-row flex-wrap justify-end font-semibold gap-x-2 gap-y-2'>
-                        <Link href='https://docs.google.com/document/d/1z8tFEMwJXxxcEVszzM8xmOp_1bGMlNBAd4mEGoOn4zU/edit?usp=sharing' target='_blank' className='flex flex-row items-center group px-3 hover:px-5 py-2 bg-fuchsia-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
+                        <Link href='https://docs.google.com/document/d/1z8tFEMwJXxxcEVszzM8xmOp_1bGMlNBAd4mEGoOn4zU/edit?usp=sharing' target='_blank' className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-fuchsia-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
                             <PiToiletPaperDuotone className='group-hover:text-lg'/>Meeting Minutes (Summaries)
                         </Link>
-                        <Link href='https://drive.google.com/drive/folders/1PTXDZAXJRQUPQWG8amUQyvEYumFVJe5k?usp=sharing' target='_blank' className='flex flex-row items-center group px-3 hover:px-5 py-2 bg-green-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
+                        <Link 
+                            href='https://drive.google.com/drive/folders/1PTXDZAXJRQUPQWG8amUQyvEYumFVJe5k?usp=sharing' 
+                            target='_blank' 
+                            className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-green-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
                             <SiSlideshare className='group-hover:text-lg'/>Meeting Slides
                         </Link>
-                        <Link href='https://docs.google.com/document/d/1z8tFEMwJXxxcEVszzM8xmOp_1bGMlNBAd4mEGoOn4zU/edit?usp=sharing' target='_blank' className='flex flex-row items-center group px-3 hover:px-5 py-2 bg-blue-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
+                        <Link
+                            href='https://docs.google.com/document/d/1z8tFEMwJXxxcEVszzM8xmOp_1bGMlNBAd4mEGoOn4zU/edit?usp=sharing' 
+                            target='_blank' 
+                            className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-blue-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
                             <BiCalendarEvent className='group-hover:text-lg'/>Club Events Timeline
                         </Link>
-                        <Link href='https://docs.google.com/forms/d/e/1FAIpQLSc_rpt_CnEXA7beq_UKktr415J97dPa3-xntnE4OCJ1zbpSqg/viewform?usp=sf_link' target='_blank' className='flex flex-row items-center group px-3 hover:px-5 py-2 bg-yellow-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
-                            <SiGithub className='group-hover:text-lg'/>Apply to GitHub Organization
+                        <Link 
+                            href='https://docs.google.com/forms/d/e/1FAIpQLSc_rpt_CnEXA7beq_UKktr415J97dPa3-xntnE4OCJ1zbpSqg/viewform?usp=sf_link' 
+                            target='_blank' 
+                            className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-yellow-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
+                            <SiGithub className='group-hover:text-lg'/>Join our GitHub Organization
                         </Link>
                     </div>
                 </div>

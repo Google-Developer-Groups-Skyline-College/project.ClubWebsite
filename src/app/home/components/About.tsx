@@ -13,7 +13,7 @@ import { FcCollaboration, FcElectronics, FcIdea } from 'react-icons/fc'
 
 const CARD_BASE_CLASSES = 'hover:z-10 z-0 w-[350px] hover:w-[420px] h-[430px] active:!scale-100 hover:outline-[8px] outline-[3px] outline hover:outline-double transition-all duration-300 ease-out bg-gradient-to-t rounded-3xl'
 
-export default function About(): React.ReactNode {
+export function About(): React.ReactNode {
     const [playSfx_clunk] = useSound('/assets/audio/clunk.mp3')
 
     const ref = useRef(null)

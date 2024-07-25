@@ -1,15 +1,14 @@
 import React from 'react'
 
-import IntroFade from '../shared/IntroFade'
+import { IntroFade } from 'shared/_modules'
 
-import ProjectCarousel from '../components/Carousel'
+import { Carousel } from './components/_modules'
 
-export default function Projects() {
+export default function Projects(): React.ReactNode {
     return (
-        <div>
+        <>
             <IntroFade />
-
-            <ProjectCarousel />
-        </div>
+            <Carousel />
+        </>
     )
 }

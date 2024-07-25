@@ -3,7 +3,7 @@
 import { Element } from 'react-scroll'
 import Image from 'next/image'
 
-export default function Recruitment(): React.ReactNode {
+export function Recruitment(): React.ReactNode {
     return (
         <div className='w-full h-[220vh] relative overflow-hidden'>
             {/* top        */}

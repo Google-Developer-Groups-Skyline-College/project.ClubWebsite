@@ -8,20 +8,8 @@ import { ReactTyped } from 'react-typed'
 import { HomeAlbum } from '@/dispositions/gallery'
 
 // components
-import { IntroFade } from '../shared/IntroFade'
-
-import Overview from './components/Overview'
-import Hero from './components/Hero'
-import Techstack from './components/Techstack'
-
-import About from './components/About'
-import Gallery from '../shared/Gallery'
-
-import Leadership from './components/Leadership'
-
-import Recruitment from './components/Recruitment'
-
-import Footer from '../shared/Footer'
+import { IntroFade, Gallery, Footer } from '../shared/_modules'
+import { Overview, Hero, Techstack, About, Leadership, Recruitment } from './components/_modules'
 
 const GALLERY_TYPED_WORDS = [
     'Social Events',

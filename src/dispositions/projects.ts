@@ -13,8 +13,6 @@
 
 */
 
-const drop1 = '/assets/projects/backdrops/mw2019_cleanhouse.mp4'
-
 const clubWebsiteBack = '/assets/projects/backdrops/club_website.webm'
 const robloxGameDevelopBack =
     '/assets/projects/backdrops/roblox_development.mp4'
@@ -35,7 +33,7 @@ export interface ProjectDetails {
 
 export const projects: { [key: string]: ProjectDetails } = {
     'Join us on GitHub & Trello': {
-        backdrop: drop1,
+        backdrop: '/assets/projects/backdrops/mw2019_cleanhouse.mp4',
         thumbnail: '/assets/kitty_banner.png',
         description:
             'Stay up-to-date in both interacting with and contributing towards our projects!\n\n📥 Join our GitHub organization below to get started!',

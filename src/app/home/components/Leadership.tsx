@@ -256,7 +256,7 @@ const MinorLeaderCard: React.FC<props_MinorLeaderCard> = ({
 
 
 
-export default function Leadership(): React.ReactNode {
+export function Leadership(): React.ReactNode {
     return (
         // bg-[radial-gradient(#000_1px,transparent_1px)]
         <div className='w-full h-full pb-40 text-gray-300 bg-gradient-to-b from-black via-[#031302] to-black'>

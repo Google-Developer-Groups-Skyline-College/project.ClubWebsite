@@ -200,7 +200,7 @@ const TECHNOLOGIES: { [key: string]: JSX.Element } = {
     ),
 }
 
-export default function Technologies(): React.ReactNode {
+export function Techstack(): React.ReactNode {
     const [playSfx_Click] = useSound('/assets/audio/click.mp3')
 
     return (
@@ -265,7 +265,7 @@ export default function Technologies(): React.ReactNode {
                                     <div
                                         onMouseEnter={() => playSfx_Click()}
                                         key={techName}
-                                        className='flex flex-row justify-center items-center gap-x-7 px-7 h-[90px] md:h-[112px] md:mt-0 md:hover:mx-5 hover:scale-110 duration-300 bg-[#000000bb] outline outline-1 outline-white text-white rounded-xl'
+                                        className='flex flex-row justify-center items-center gap-x-7 px-7 sm:hover:px-12 h-[90px] md:h-[112px] md:mt-0 duration-300 bg-[#000000bb] outline outline-1 outline-white text-white rounded-xl'
                                     >
                                         <div className={TECH_ICON_CLASSES}>
                                             {TECHNOLOGIES[techName]}

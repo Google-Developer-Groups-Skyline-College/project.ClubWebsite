@@ -1,10 +1,9 @@
 import Link from 'next/link'
-
 import Image from 'next/image'
 
 import { SiDiscord, SiLinkedin, SiGithub, SiLinktree } from 'react-icons/si'
 
-export default function Footer() {
+export function Footer() {
     return (
         <div className='w-full h-full bg-gradient-to-b from-neutral-800 dark:from-neutral-950 to-neutral-950 dark:to-black text-lg font-semibold pt-4 text-center'>
             

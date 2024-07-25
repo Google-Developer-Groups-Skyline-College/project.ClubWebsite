@@ -31,7 +31,7 @@ const TYPED_KEYWORDS = [
     '$ git commit',
 ]
 
-export default function Hero(): React.ReactNode {
+export function Hero(): React.ReactNode {
     const ref = useRef(null)
     const isInView = useInView(ref)
 

@@ -65,7 +65,7 @@ function GalleryPiece({
                 src={pieceDetails.imgSrc}
             />
             <ReactTyped
-                className='z-20 translate-y-8 absolute w-full text-xs md:text-base group-hover/inner:opacity-100 group-hover/inner:block hidden py-2 px-2 opacity-0 rounded-2xl bottom-0 text-center transition-all duration-300 font-semibold text-shadow-lg !leading-tight shadow-black bg-[#000000ee] pointer-events-none'
+                className='z-20 translate-y-8 absolute w-full text-xs md:text-base group-hover/inner:opacity-100 group-hover/inner:block hidden py-2 px-2 opacity-0 rounded-2xl bottom-0 text-center transition-all duration-300 font-semibold text-shadow-lg whitespace-pre-line !leading-tight shadow-black bg-[#000000ee] pointer-events-none'
                 strings={[pieceDetails.remark]}
                 typeSpeed={2}
                 startWhenVisible
@@ -74,7 +74,7 @@ function GalleryPiece({
     )
 }
 
-export default function Gallery({
+export function Gallery({
     album,
 }: {
     album: Array<GalleryPiece>
