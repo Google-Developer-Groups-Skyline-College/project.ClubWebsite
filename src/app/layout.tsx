@@ -22,7 +22,7 @@ const poppins = Poppins({
     subsets: ['latin'],
     display: 'swap',
     variable: '--font-poppins',
-    weight: ['500'],
+    weight: ['300', '500'],
 })
 
 const ubuntu = Ubuntu({

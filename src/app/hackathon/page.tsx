@@ -77,7 +77,7 @@ export default function Hackathon() {
         <>
             <IntroFade />
 
-            <div className='flex flex-col w-full h-screen justify-center items-center overflow-hidden'>
+            <div className='relative flex flex-col w-full h-screen justify-center items-center overflow-hidden'>
                 <motion.div
                     initial={{ transform: 'translateY(3%)' }}
                     animate={{ transform: 'translateY(-3%)' }}
@@ -98,7 +98,7 @@ export default function Hackathon() {
                 </motion.div>
 
                 <motion.div
-                    className='-z-10 absolute w-full h-screen pointer-events-none'
+                    className='-z-10 absolute w-full h-screen pointer-events-none blur-sm'
                     initial={{ transform: 'translateY(10%)' }}
                     animate={{ transform: 'translateY(0%)' }}
                     transition={{ duration: 3, ease: 'backOut' }}
@@ -174,6 +174,7 @@ export default function Hackathon() {
                     </a>
                 </div>
 
+                <div className='absolute bottom-0 w-full h-[20%] bg-gradient-to-t from-black to-transparent' />
             </div>
 
             <Podiums />
