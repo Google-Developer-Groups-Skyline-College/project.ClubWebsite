@@ -181,20 +181,10 @@ export function Carousel() {
                                 <button
                                     onMouseDown={() => playSfx_click2()}
                                     onMouseUp={() => {
-                                        console.log(
-                                            "Clicked to show project: '" +
-                                                projectName +
-                                                "'"
-                                        )
                                         playSfx_click2()
                                         setCurrentProject(projectName)
                                     }}
                                     onMouseEnter={() => {
-                                        console.log(
-                                            "Hovered to preview project: '" +
-                                                projectName +
-                                                "'"
-                                        )
                                         playSfx_click()
                                     }}
                                     key={projectName}
