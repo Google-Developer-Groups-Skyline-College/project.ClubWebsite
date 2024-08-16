@@ -129,7 +129,7 @@ export function Overview(): React.ReactNode {
                     </Link>
 
                     <Link
-                        href='https://www.linkedin.com/company/computer-science-club-skyline/'
+                        href='https://www.instagram.com/skylinecsc/'
                         target='_blank'
                     >
                         <button className='flex group w-[160px] sm:w-[180px] sm:hover:w-[200px] justify-center bg-neutral-700 dark:bg-neutral-900 bg-opacity-80 rounded-md gap-2 py-3 2 active:scale-95 hover:bg-purple-600 hover:outline-4 hover:text-white text-xl font-bold active:outline-2 hover:outline-double outline-white border-[1px] border-neutral-800 hover:outline-purple-400 active:outline-neutral-200 duration-200 active:duration-200'>
