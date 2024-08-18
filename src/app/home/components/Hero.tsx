@@ -111,11 +111,11 @@ export function Hero(): React.ReactNode {
                     smooth={true}
                     offset={-140}
                     duration={1500}
-                    className='z-20 mt-2 relative group w-[230px] active:scale-95 duration-150 hover:border-green-900 border-white rounded-2xl hover:outline hover:outline-[4px] active:outline-4 text-white text-lg title-main drop-shadow-[0_16px_20px_rgba(0,0,0,0.7)] overflow-hidden'
+                    className='z-20 mt-3 relative group w-[230px] active:scale-95 duration-150 hover:border-green-900 border-white rounded-xl hover:outline hover:outline-[4px] active:outline-4 text-white text-lg title-main drop-shadow-[0_16px_20px_rgba(0,0,0,0.7)] overflow-hidden'
                 >
                     <IoMdArrowRoundDown className='absolute w-full h-full group-hover:translate-y-0 -translate-y-[100%] duration-300 bg-gradient-to-t from-[#16a34aec] to-[#ffffff91] pointer-events-none' />
-                    <button className='flex w-full justify-center p-2 font-semibold text-shadow-lg shadow-black hover:bg-green-600 bg-neutral-900 bg-opacity-50 duration-300 hover:border-green-300 overflow-hidden'>
-                        <p className='text-center'>I&apos;m Interested</p>
+                    <button className='flex w-full justify-center p-2 font-semibold text-center text-shadow-lg shadow-black hover:bg-green-600 bg-neutral-900 bg-opacity-50 duration-300 hover:border-green-300 overflow-hidden'>
+                        <p>I&apos;m Interested</p>
                     </button>
                 </Link>
             </div>

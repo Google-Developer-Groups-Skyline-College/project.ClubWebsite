@@ -95,7 +95,7 @@ export function Overview(): React.ReactNode {
             <div className='border-t-[1px] py-8 px-4 text-center border-neutral-600'>
                 <p className='text-lg'>🤝</p>
                 <p className='title-main font-semibold text-xl'>Let&apos;s connect.</p>
-                <p className='title-main text-neutral-500 font-semibold'>Expand your network.</p>
+                <p className='title-main text-neutral-500 font-semibold'>Expand your network with us.</p>
 
                 <div className='flex flex-row flex-wrap gap-3 justify-center py-4'>
                     <Link
@@ -109,7 +109,7 @@ export function Overview(): React.ReactNode {
                     </Link>
 
                     <Link
-                        href='https://www.linkedin.com/company/computer-science-club-skyline/'
+                        href='https://www.youtube.com/@skylinecsc'
                         target='_blank'
                     >
                         <button className='flex group w-[160px] sm:w-[180px] sm:hover:w-[200px] justify-center bg-neutral-700 dark:bg-neutral-900 bg-opacity-80 rounded-md gap-2 py-3 2 active:scale-95 hover:bg-red-900 hover:outline-4 hover:text-white text-xl font-bold active:outline-2 hover:outline-double outline-white border-[1px] border-neutral-800 hover:outline-red-700 active:outline-neutral-200 duration-200 active:duration-200'>
@@ -155,6 +155,7 @@ export function Overview(): React.ReactNode {
                         </button>
                     </Link>
                 </div>
+                
             </div>
             
         </div>

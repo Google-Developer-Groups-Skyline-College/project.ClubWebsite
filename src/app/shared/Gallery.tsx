@@ -8,10 +8,10 @@ import { ReactTyped } from 'react-typed'
 import { motion, useInView } from 'framer-motion'
 
 const imageClasses =
-    'relative h-full w-full object-cover duration-500 active:duration-0 hover:!opacity-100 hover:!scale-110 hover:outline-[6px] active:outline-[0px] outline-0 outline-white outline rounded-xl group-hover:opacity-100 group-active:opacity-50 active:object-contain hover:drop-shadow-[0_15px_35px_rgba(255,255,255,0.5)] '
+    'relative h-full w-full object-cover duration-500 active:duration-0 hover:!opacity-100 sm:hover:!scale-110 hover:outline-[6px] active:outline-[0px] outline-0 outline-white outline rounded-xl group-hover:opacity-100 group-active:opacity-50 active:object-contain hover:drop-shadow-[0_15px_35px_rgba(255,255,255,0.5)] '
 
 const listItemClasses =
-    'flex-grow p-[1px] md:p-1 min-h-[120px] h-[24vw] md:h-[27vw] lg:h-[14vw] wide:h-[16vw] uwide:h-[12vw] hover:z-10 group/inner duration-500 hover:!z-10 active:!scale-[125%] xl:active:!scale-[150%] uwide:active:!scale-[170%]'
+    'flex-grow p-[1px] md:p-1 min-h-[120px] h-[24vw] md:h-[27vw] lg:h-[14vw] wide:h-[16vw] uwide:h-[12vw] group/inner duration-500 hover:!z-10 active:!scale-[125%] xl:active:!scale-[150%] uwide:active:!scale-[170%]'
 
 interface GalleryPiece {
     remark: string

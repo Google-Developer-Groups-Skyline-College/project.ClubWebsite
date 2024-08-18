@@ -73,7 +73,7 @@ export function Navbar(): React.ReactNode {
 
             {/* Top Bar */}
             <motion.div
-                className='z-20 flex relative h-[72px] px-4 justify-between items-center text-gray-300 bg-gradient-to-b from-[#000] to-transparent'
+                className='z-20 flex relative h-[72px] px-4 items-center text-gray-300 bg-gradient-to-b from-[#000] to-transparent'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1, ease: 'easeOut' }}
@@ -83,42 +83,40 @@ export function Navbar(): React.ReactNode {
                     height={48}
                     src={'/assets/bits/mascot.gif'}
                     alt=''
-                    className='z-20 drop-shadow-lg ml-4 rounded-2xl hover:rotate-180'
-                    style={{ width: '48px' }}
+                    className='absolute drop-shadow-lg ml-4 hover:rotate-180'
                     unoptimized
                 />
 
                 {/* Navigation */}
-                <ul className='hidden md:flex text-[15px]'>
-                    <li className='text-white font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
+                <div className='hidden md:flex flex-row text-[15px] w-full justify-center gap-x-2'>
+
+                    <Link
+                        href='/'
+                        onMouseUp={() => {
+                            animateScroll.scrollToTop()
+                        }}
+                        className='text-white font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-neutral-700/50 py-1 px-3 rounded-lg transition duration-300 ease-out'
+                    >
                         <GoHome className='my-auto mr-2' />
-                        <Link
-                            href='/'
-                            onMouseUp={() => {
-                                animateScroll.scrollToTop()
-                            }}
-                        >
-                            Home
-                        </Link>
-                    </li>
+                        <p>Home</p>
+                    </Link>
 
-                    <li className='text-white font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
-                        <FiTool className='my-auto mr-2' />
-                        <Link href='/projects'>Projects</Link>
-                    </li>
+                    <Link href='/projects' className='text-white font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-neutral-700/50 py-1 px-3 rounded-lg transition duration-300 ease-out'>
+                    <FiTool className='my-auto mr-2' />
+                        <p>Projects</p>
+                    </Link>
 
-                    <li className='text-yellow-300 font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
+                    <Link href='/hackathon' className='text-yellow-300 font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-yellow-700/50 py-1 px-3 rounded-lg transition duration-300 ease-out'>
                         <HiOutlineRocketLaunch className='my-auto mr-2' />
-                        <Link href='/hackathon'>
-                            The Intercollegiate Hackathon
-                        </Link>
-                    </li>
+                        <p>The Intercollegiate Hackathon</p>
+                    </Link>
 
-                    <li className='text-white font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
-                        <GoCodeOfConduct className='my-auto mr-2' />
-                        <ScrollLink to='recruitment' offset={-1200} smooth={true} duration={2500}>Join Us!</ScrollLink>
-                    </li>
-                </ul>
+                    <Link href='https://discord.gg/z5P9kccwRh' className='text-white font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-green-400/30 py-1 px-3 rounded-lg transition duration-300 ease-out'>
+                        <GoCodeOfConduct className='my-auto mr-2'/>
+                        <p>Join Us!</p>
+                    </Link>
+                        {/* <ScrollLink to='recruitment' offset={-1200} smooth={true} duration={2500}>Join Us!</ScrollLink> */}
+                </div>
 
                 {/* Mobile Menu */}
                 {/* Mobile Menu */}
