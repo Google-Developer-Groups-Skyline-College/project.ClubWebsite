@@ -64,11 +64,11 @@ export function Overview(): React.ReactNode {
                     <h2 className='text-neutral-400'>Good-to-know information for student members~!</h2>
                     <div className='w-full h-[1px] bg-neutral-400 my-3' />
                     <div className='flex flex-row flex-wrap justify-end font-semibold gap-x-2 gap-y-2'>
-                        <Link href='https://docs.google.com/document/d/1z8tFEMwJXxxcEVszzM8xmOp_1bGMlNBAd4mEGoOn4zU/edit?usp=sharing' target='_blank' className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-fuchsia-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
+                        <Link href='https://drive.google.com/drive/folders/1nsHksTsINdWxe2cKOZEXn-GUyLHsyEed?usp=sharing' target='_blank' className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-fuchsia-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
                             <PiToiletPaperDuotone className='group-hover:text-lg'/>Meeting Minutes (Summaries)
                         </Link>
                         <Link 
-                            href='https://drive.google.com/drive/folders/1PTXDZAXJRQUPQWG8amUQyvEYumFVJe5k?usp=sharing' 
+                            href='https://docs.google.com/document/d/1nBZeViExQHcVYPfgMnJ0GkXtWJp2EMf4AGZBt4d53VQ/edit?usp=sharing' 
                             target='_blank' 
                             className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-green-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
                             <SiSlideshare className='group-hover:text-lg'/>Meeting Slides

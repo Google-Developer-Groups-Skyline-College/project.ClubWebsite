@@ -3,7 +3,7 @@
 const backdrop = '/assets/hackathon/backdrop.png'
 const herologo = '/assets/hackathon/herologo.png'
 
-import IntroFade from '../../../components/IntroFade'
+import { IntroFade } from 'shared/_modules'
 
 import { Scanner, useDeviceList } from '@yudiel/react-qr-scanner'
 
