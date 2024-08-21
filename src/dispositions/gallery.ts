@@ -156,7 +156,7 @@ export const HackathonAlbum: GalleryPiece[] = [
     },
     {
         remark: '🧑‍🚀 Explorers! Group Photo #1',
-        imgSrc: DIR_HACKATHON_GALLERY + 'group1.JPG',
+        imgSrc: DIR_HACKATHON_GALLERY + 'group1.jpg',
     },
     {
         remark: '🎉 Game Entry: "Meow Invaders!" Gameplay',
@@ -204,7 +204,7 @@ export const HackathonAlbum: GalleryPiece[] = [
     },
     {
         remark: '🔊 Event Speakers (Edan Barrios)',
-        imgSrc: DIR_HACKATHON_GALLERY + 'speaker1.JPG',
+        imgSrc: DIR_HACKATHON_GALLERY + 'speaker1.jpg',
     },
     {
         remark: '🎉 Game Entry: "MetalDug" Developer Art',

@@ -55,14 +55,16 @@ export function Navbar(): React.ReactNode {
                     <p className='w-full font-semibold text-xs sm:text-sm text-center text-orange-200 group-hover/announcement_bar:animate-pulse'>
                         {ANNOUNCEMENT_TEXT}
                     </p>
+                    
                     <Image
                         width={600}
                         height={600}
-                        src={'/assets/home/diagonal_slowglide_overlay.gif'}
+                        src={'/assets/bits/diagonal_slowglide_overlay.gif'}
                         alt=''
-                        className='-z-10 absolute w-full opacity-10 group-hover/announcement_bar:opacity-20 transition-all duration-500'
+                        className='-z-10 absolute w-full opacity-5 group-hover/announcement_bar:opacity-20 transition-all duration-500'
                         unoptimized
                     />
+                
                     <p className='z-10 absolute text-neutral-600 bottom-2 text-xs lg:text-base font-semibold right-4 animate-pulse'>
                         press to dismiss
                     </p>
@@ -78,14 +80,16 @@ export function Navbar(): React.ReactNode {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1, ease: 'easeOut' }}
             >
-                <Image
-                    width={48}
-                    height={48}
-                    src={'/assets/bits/mascot.gif'}
-                    alt=''
-                    className='absolute drop-shadow-lg ml-4 hover:rotate-180'
-                    unoptimized
-                />
+                <Link href={'/'}>
+                    <Image
+                        width={48}
+                        height={48}
+                        src={'/assets/bits/mascot.gif'}
+                        alt=''
+                        className='absolute drop-shadow-lg ml-4 hover:rotate-180 active:animate-pulse duration-500'
+                        unoptimized
+                    />
+                </Link>
 
                 {/* Navigation */}
                 <div className='hidden md:flex flex-row text-[15px] w-full justify-center gap-x-2'>
@@ -121,7 +125,7 @@ export function Navbar(): React.ReactNode {
                 {/* Mobile Menu */}
                 {/* Mobile Menu */}
                 {/* Mobile Menu */}
-                <div onClick={handleClick} className='md:hidden z-10'>
+                <div onClick={handleClick} className='absolute md:hidden z-10 right-0 mr-6 text-2xl'>
                     {!nav ? <FaBars /> : <FaTimes />}
                 </div>
 
@@ -129,7 +133,7 @@ export function Navbar(): React.ReactNode {
                     className={
                         !nav
                             ? 'hidden'
-                            : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
+                            : 'absolute md:hidden top-0 left-0 w-full h-screen bg-neutral-900/95 flex flex-col justify-center items-center'
                     }
                 >
                     <div className='flex flex-col gap-4'>
