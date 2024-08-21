@@ -102,7 +102,7 @@ export function Navbar(): React.ReactNode {
                     </Link>
 
                     <Link href='/projects' className='text-white font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-neutral-700/50 py-1 px-3 rounded-lg transition duration-300 ease-out'>
-                    <FiTool className='my-auto mr-2' />
+                        <FiTool className='my-auto mr-2' />
                         <p>Projects</p>
                     </Link>
 
@@ -162,12 +162,12 @@ export function Navbar(): React.ReactNode {
 
                         <div className='text-2xl text-white font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
                             <GoCodeOfConduct className='my-auto mr-2' />
-                            <a
+                            <Link
                                 href='https://discord.gg/z5P9kccwRh'
                                 onMouseUp={handleClick}
                             >
                                 Join Us!
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

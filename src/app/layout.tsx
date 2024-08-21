@@ -51,10 +51,6 @@ export default function RootLayout({
         <html className={`${inter.variable} ${poppins.variable} ${ubuntu.variable} ${rubik.variable} ${open_sans.variable}`}>
             <SpeedInsights />
             <Analytics />
-            <head>
-                <meta charSet="utf-8" />
-                <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossOrigin="anonymous"></script>
-            </head>
             <body>
                 <Navbar />
                 {children}
