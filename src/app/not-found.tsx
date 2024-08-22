@@ -12,7 +12,7 @@ export default function NotFound(): React.ReactNode {
             <IntroFade />
             <div className='absolute flex flex-col items-center justify-center gap-y-4 px-8 w-full h-screen bg-black'>
                 <Image
-                    src={'/assets/bits/kitty4044.png'}
+                    src={'/assets/bits/kitty404.png'}
                     className='w-[600px]'
                     alt=''
                     width={1000}
