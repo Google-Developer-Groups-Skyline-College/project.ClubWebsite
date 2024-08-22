@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from 'react'
 import { Element } from 'react-scroll'
+import { ReactTyped } from 'react-typed'
 
 import { motion, useInView } from 'framer-motion'
 import { useSound } from 'use-sound'
@@ -92,7 +93,7 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
 
                     <div className='aspect-square w-full flex items-center px-1 sm:px-6 font-semibold text-shadow-lg shadow-black'>
                         {/* whitespace-pre-line enables usage of \n below */}
-                        <div className='text-center text-white whitespace-pre-line leading-[14px] sm:leading-5 text-sm'>
+                        <div className='text-center whitespace-pre-line leading-[14px] sm:leading-5 text-sm'>
                             {majorLeaderDetails.quote
                                 ? majorLeaderDetails.quote
                                 : FALLBACK_QUOTE}
@@ -112,12 +113,12 @@ const MajorLeaderCard: React.FC<props_MajorLeaderCard> = ({
             {/* Leader Name and Role */}
             <div className='rounded-xl p-2 py-3 group-hover/majorcard:pb-0'>
                 <div className='absolute text-[10px] sm:text-[16px]'>{majorLeaderDetails.icon}</div>
-                <h1 className='title-main text-[16px] sm:text-[19px] font-semibold text-center group-hover/majorcard:drop-shadow-[0_0_6px_rgba(255,255,255,0.8)] duration-300 group-hover/majorcard:animate-pulse'>
+                <p className='title-main text-[16px] sm:text-[19px] font-semibold text-center group-hover/majorcard:drop-shadow-[0_0_6px_rgba(255,255,255,0.8)] duration-300 group-hover/majorcard:animate-pulse'>
                     {leaderName}
-                </h1>
-                <h2 className='text-[13px] sm:text-[15px] font-semibold text-center drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]'>
+                </p>
+                <p className='text-[13px] sm:text-[15px] font-semibold text-center text-neutral-300 drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]'>
                     {majorLeaderDetails.role}
-                </h2>
+                </p>
             </div>
 
             {/* Leader socials and other links, dynamically generated */}
@@ -237,18 +238,18 @@ const MinorLeaderCard: React.FC<props_MinorLeaderCard> = ({
                 isInView ? { opacity: 1, transform: 'translateX(0%)' } : ''
             }
             transition={{ duration: 1.3, delay: index * 0.45, ease: 'easeOut' }}
-            className={`${isAnimating && 'pointer-events-none'} w-[256px] hover:z-20 relative leading-[21px] opacity-0 hover:w-[280px] border-b border-neutral-800 border-1 transition-all duration-300 rounded-xl bg-gradient-to-b shadow-md hover:shadow-lg ${minorLeaderDetails.color_complex} to-transparent`}
+            className={`${isAnimating && 'pointer-events-none'} w-[256px] hover:z-20 relative leading-[21px] opacity-0 hover:w-[280px] border-b border-neutral-800 border-1 transition-all duration-300 rounded-xl select-none shadow-md hover:shadow-lg ${minorLeaderDetails.color_complex} bg-gradient-to-b to-transparent`}
             key={roleName}
         >
             {/* Role and Name of Person */}
             <div className='rounded-xl p-3'>
                 <div className='absolute text-xl'>{minorLeaderDetails.icon}</div>
-                <h1 className='title-main text-lg sm:text-xl font-semibold text-center'>
+                <p className='title-main text-lg sm:text-xl font-semibold text-center'>
                     {roleName}
-                </h1>
-                <h2 className='text-base font-semibold text-center'>
+                </p>
+                <p className='text-base font-semibold text-center text-neutral-300'>
                     {minorLeaderDetails.label}
-                </h2>
+                </p>
             </div>
         </motion.div>
     )
@@ -259,17 +260,21 @@ const MinorLeaderCard: React.FC<props_MinorLeaderCard> = ({
 export function Leadership(): React.ReactNode {
     return (
         // bg-[radial-gradient(#000_1px,transparent_1px)]
-        <div className='w-full h-full pb-40 text-gray-300 bg-gradient-to-b from-black via-[#031302] to-black'>
+        <div className='w-full h-full flex justify-center items-center pb-40 bg-gradient-to-b from-black via-[#031302] to-black'>
             <Element name='leadership' />
 
-            <div className='flex flex-col justify-center items-center w-full h-full py-[44px] px-[10px] sm:px-[7.5vw] lg:px-[14.2vw] gap-4 overflow-x-hidden'>
+            <div className='max-w-[1280px] flex flex-col justify-center items-center w-full h-full py-[44px] px-[10px] gap-4 overflow-x-hidden'>
                 <div>
-                    <h1 className='title-main w-full text-center text-3xl sm:text-4xl font-semibold'>
-                        Our Club Leadership
-                    </h1>
-                    <h1 className='title-main w-full text-center text-xl font-semibold text-[#FCD690] drop-shadow-[0_0_4px_rgba(255,205,60,0.5)]'>
-                        2023 — 2024
-                    </h1>
+                    <ReactTyped
+                        className='title-main w-full text-center text-3xl sm:text-4xl font-semibold'
+                        strings={['Our Club Leadership']}
+                        typeSpeed={75}
+                        cursorChar=''
+                        startWhenVisible
+                    />
+                    <p className='title-main w-full text-center text-xl font-semibold text-[#ffea76] drop-shadow-[0_0_4px_rgba(255,205,60,0.5)]'>
+                        {'< 2023 — 2024 >'}
+                    </p>
                 </div>
 
                 {/* <div className="grid grid-cols-4 gap-6 my-4 mx-[20%]"> */}
@@ -308,7 +313,6 @@ export function Leadership(): React.ReactNode {
                 <div className='w-full text-4xl font-semibold border-b-2 border-[#345222] drop-shadow-[0_0_30px_rgba(50,255,50,1)]'></div>
             </div>
 
-            
         </div>
     )
 }

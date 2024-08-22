@@ -19,8 +19,8 @@ export function Recruitment(): React.ReactNode {
                 className='-z-10 bg-white object-cover aspect-auto` absolute w-full h-full opacity-[80%]'
                 priority
             />
-
-            <div className='w-full h-[110vh] flex absolute bottom-[12rem] flex-col gap-4 justify-center items-center'>
+f
+            <div className='w-full h-[110vh] absolute flex flex-col bottom-[12rem] justify-center items-center'>
 
                 <Image
                     src={'/assets/bits/mascot.gif'}
@@ -31,8 +31,8 @@ export function Recruitment(): React.ReactNode {
                     unoptimized
                 />
 
-                <div className='pt-4 pb-10'>
-                    <h1 className='title-main w-full text-center text-4xl font-semibold'>
+                <div className='flex flex-col gap-2 md:gap-4 pt-4 px-4 pb-10'>
+                    <h1 className='title-main w-full text-center text-xl md:text-4xl font-semibold'>
                         <span className='text-green-400 drop-shadow-[0_0_10px_rgba(50,250,50,0.45)]'>
                             Join Us.{' '}
                         </span>
@@ -40,10 +40,10 @@ export function Recruitment(): React.ReactNode {
                             The Computer Science Club.
                         </span>
                     </h1>
-                    <h1 className='title-main w-full text-center text-3xl md:text-5xl font-semibold mt-4 drop-shadow-[0_0_12px_rgba(255,255,255,0.2)]'>
-                        Open to all for 2024 - 2025.
+                    <h1 className='title-main w-full text-center text-2xl md:text-5xl font-semibold drop-shadow-[0_0_12px_rgba(255,255,255,0.2)]'>
+                        Open to all for 2024—2025.
                     </h1>
-                    <h1 className='title-main w-full text-center text-xl font-semibold mt-4 drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] animate-pulse'>
+                    <h1 className='title-main w-full text-center text-xl font-semibold drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] animate-pulse'>
                         Join our Community on Discord now below!
                     </h1>
                 </div>

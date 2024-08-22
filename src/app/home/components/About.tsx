@@ -38,6 +38,7 @@ export function About(): React.ReactNode {
                         src='/assets/home/aboutCinematic.mp4'
                         className='outline-[#030303] mx-auto outline outline-4'
                         preload='auto'
+                        disablePictureInPicture
                         autoPlay
                         playsInline
                         muted
@@ -55,7 +56,7 @@ export function About(): React.ReactNode {
                     />
                     <h2>📍 San Bruno, San Mateo County, California</h2>
                     <div className='w-full h-[1px] bg-white my-3'></div>
-                    <div className='flex flex-col gap-y-4 '>
+                    <div className='flex flex-col gap-y-4 font-semibold lg:font-normal'>
                         <p className=''>
                             Since our formation in 🍃 Fall of 2020, we have served as a platform for over <b>256 members</b> past and present.
                             We are a club made up entirely by students, led by other fellow students, backed by a diverse network of outside community members

@@ -27,7 +27,7 @@ export function Navbar(): React.ReactNode {
     const [announceDismissed, setAnnounceDismissed] = useState(false)
 
     return (
-        <div className='z-50 flex flex-col fixed w-full'>
+        <nav className='z-50 flex flex-col fixed w-full'>
 
             {/* Announcement Banner */}
             {ANNOUNCEMENT_TEXT ? (
@@ -125,7 +125,7 @@ export function Navbar(): React.ReactNode {
                 {/* Mobile Menu */}
                 {/* Mobile Menu */}
                 {/* Mobile Menu */}
-                <div onClick={handleClick} className='absolute md:hidden z-10 right-0 mr-6 text-2xl'>
+                <div onClick={handleClick} className='absolute md:hidden z-10 right-0 mr-6 text-2xl hover:cursor-pointer'>
                     {!nav ? <FaBars /> : <FaTimes />}
                 </div>
 
@@ -137,7 +137,7 @@ export function Navbar(): React.ReactNode {
                     }
                 >
                     <div className='flex flex-col gap-4'>
-                        <div className='text-2xl text-white font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
+                        <div className='text-2xl text-white font-semibold flex active:scale-90'>
                             <GoHome className='my-auto mr-2' />
                             <Link
                                 href='.'
@@ -150,21 +150,21 @@ export function Navbar(): React.ReactNode {
                             </Link>
                         </div>
 
-                        <div className='text-2xl text-white font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
+                        <div className='text-2xl text-white font-semibold flex active:scale-90'>
                             <FiTool className='my-auto mr-2' />
                             <Link href='./projects' onMouseUp={handleClick}>
                                 Projects
                             </Link>
                         </div>
 
-                        <div className='text-2xl text-yellow-300 font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
+                        <div className='text-2xl text-yellow-300 font-semibold flex active:scale-90'>
                             <HiOutlineRocketLaunch className='my-auto mr-2' />
                             <Link href='./hackathon' onMouseUp={handleClick}>
                                 The Intercollegiate Hackathon
                             </Link>
                         </div>
 
-                        <div className='text-2xl text-white font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
+                        <div className='text-2xl text-white font-semibold flex active:scale-90'>
                             <GoCodeOfConduct className='my-auto mr-2' />
                             <Link
                                 href='https://discord.gg/z5P9kccwRh'
@@ -176,6 +176,6 @@ export function Navbar(): React.ReactNode {
                     </div>
                 </div>
             </motion.div>
-        </div>
+        </nav>
     )
 }

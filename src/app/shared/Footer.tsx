@@ -5,8 +5,8 @@ import { SiDiscord, SiYoutube, SiLinkedin, SiInstagram, SiGithub, SiLinktree, Si
 
 export function Footer() {
     return (
-        <div className='w-full h-full bg-gradient-to-b from-neutral-800 dark:from-neutral-950 to-neutral-950 dark:to-black text-lg font-semibold pt-4 text-center'>
-            
+        <footer className='w-full bg-gradient-to-b from-neutral-800 dark:from-neutral-950 to-neutral-950 dark:to-black text-lg font-semibold pt-4 text-center'>
+
             <p className='text-lg'>🤝</p>
             <p className='title-main font-semibold text-xl'>Let&apos;s connect.</p>
             <p className='title-main text-neutral-500 font-semibold'>Expand your network with us.</p>
@@ -99,6 +99,6 @@ export function Footer() {
                     Copyright ©️ Skyline Computer Science Club 2022-2025
                 </p>
             </div>
-        </div>
+        </footer>
     )
 }
