@@ -84,12 +84,12 @@ export function Hero(): React.ReactNode {
                 />
 
                 {/* The main texts */}
-                <h1 className='z-20 title-main text-center text-[18px] sm:text-[32px] md:text-[38px] xl:text-[52px] text-shadow shadow-black font-bold text-white mx-4 my-[2px] sm:my-[-8px]'>
+                <h1 className='z-20 title-main text-center text-[20px] sm:text-[32px] md:text-[38px] xl:text-[52px] text-shadow shadow-black font-bold text-white mx-4 my-[2px] sm:my-[-8px]'>
                     The Computer Science Club at Skyline
                 </h1>
 
                 <div className='z-20 title-main w-full text-white text-center text-shadow shadow-black text-lg sm:text-xl'>
-                    <p>Elevate Your Code—the Sky&apos;s the Limit.</p>
+                    <p>Elevate Your Code — the Sky&apos;s the Limit.</p>
                     <h1 className='title-main font-bold sm:text-[24px] text-2xl sm:pt-[10px]'>
                         {'>'} We{' '}
                         <ReactTyped

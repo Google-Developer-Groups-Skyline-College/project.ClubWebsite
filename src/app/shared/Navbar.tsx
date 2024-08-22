@@ -75,18 +75,17 @@ export function Navbar(): React.ReactNode {
 
             {/* Top Bar */}
             <motion.div
-                className='z-20 flex relative h-[72px] px-4 items-center text-gray-300 bg-gradient-to-b from-[#000] to-transparent'
+                className='z-20 h-[72px] px-4 flex justify-center items-center text-gray-300 bg-gradient-to-b from-[#000] to-transparent'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1, ease: 'easeOut' }}
             >
-                <Link href={'/'}>
+                <Link href='/' className='absolute left-0 drop-shadow-lg ml-4 hover:rotate-180 active:animate-pulse duration-500'>
                     <Image
                         width={48}
                         height={48}
                         src={'/assets/bits/mascot.gif'}
                         alt=''
-                        className='absolute drop-shadow-lg ml-4 hover:rotate-180 active:animate-pulse duration-500'
                         unoptimized
                     />
                 </Link>
@@ -99,23 +98,23 @@ export function Navbar(): React.ReactNode {
                         onMouseUp={() => {
                             animateScroll.scrollToTop()
                         }}
-                        className='text-white font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-neutral-700/50 py-1 px-3 rounded-lg transition duration-300 ease-out'
+                        className='font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-neutral-700/50 py-1 px-3 rounded-lg transition duration-300 ease-out'
                     >
                         <GoHome className='my-auto mr-2' />
                         <p>Home</p>
                     </Link>
 
-                    <Link href='/projects' className='text-white font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-neutral-700/50 py-1 px-3 rounded-lg transition duration-300 ease-out'>
+                    <Link href='/projects' className='font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-neutral-700/50 py-1 px-3 rounded-lg transition duration-300 ease-out'>
                         <FiTool className='my-auto mr-2' />
                         <p>Projects</p>
                     </Link>
 
-                    <Link href='/hackathon' className='text-yellow-300 font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-yellow-700/50 py-1 px-3 rounded-lg transition duration-300 ease-out'>
-                        <HiOutlineRocketLaunch className='my-auto mr-2' />
+                    <Link href='/hackathon' className='font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-yellow-700/50 py-1 px-3 rounded-lg transition duration-300 ease-out'>
+                        <HiOutlineRocketLaunch className='my-auto mr-2 text-yellow-300' />
                         <p>The Intercollegiate Hackathon</p>
                     </Link>
 
-                    <Link href='https://discord.gg/z5P9kccwRh' className='text-white font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-green-400/30 py-1 px-3 rounded-lg transition duration-300 ease-out'>
+                    <Link href='https://discord.gg/z5P9kccwRh' className='font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-green-400/30 py-1 px-3 rounded-lg transition duration-300 ease-out'>
                         <GoCodeOfConduct className='my-auto mr-2'/>
                         <p>Join Us!</p>
                     </Link>
@@ -137,10 +136,10 @@ export function Navbar(): React.ReactNode {
                     }
                 >
                     <div className='flex flex-col gap-4'>
-                        <div className='text-2xl text-white font-semibold flex active:scale-90'>
+                        <div className='text-2xl font-semibold flex active:scale-90'>
                             <GoHome className='my-auto mr-2' />
                             <Link
-                                href='.'
+                                href='/'
                                 onMouseUp={() => {
                                     animateScroll.scrollToTop()
                                     handleClick()
@@ -150,21 +149,21 @@ export function Navbar(): React.ReactNode {
                             </Link>
                         </div>
 
-                        <div className='text-2xl text-white font-semibold flex active:scale-90'>
+                        <div className='text-2xl font-semibold flex active:scale-90'>
                             <FiTool className='my-auto mr-2' />
                             <Link href='./projects' onMouseUp={handleClick}>
                                 Projects
                             </Link>
                         </div>
 
-                        <div className='text-2xl text-yellow-300 font-semibold flex active:scale-90'>
-                            <HiOutlineRocketLaunch className='my-auto mr-2' />
+                        <div className='text-2xl font-semibold flex active:scale-90'>
+                            <HiOutlineRocketLaunch className='my-auto mr-2 text-yellow-300' />
                             <Link href='./hackathon' onMouseUp={handleClick}>
                                 The Intercollegiate Hackathon
                             </Link>
                         </div>
 
-                        <div className='text-2xl text-white font-semibold flex active:scale-90'>
+                        <div className='text-2xl font-semibold flex active:scale-90'>
                             <GoCodeOfConduct className='my-auto mr-2' />
                             <Link
                                 href='https://discord.gg/z5P9kccwRh'

@@ -96,7 +96,7 @@ export function Footer() {
                     </p>
                 </Link>
                 <p className='text-neutral-500 text-sm sm:text-lg'>
-                    Copyright ©️ Skyline Computer Science Club 2022-2025
+                    Copyright ©️ Skyline Computer Science Club 2022-2024
                 </p>
             </div>
         </footer>

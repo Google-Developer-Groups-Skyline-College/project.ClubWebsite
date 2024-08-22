@@ -34,7 +34,7 @@ export interface ProjectDetails {
 export const projects: { [key: string]: ProjectDetails } = {
     'Join us on GitHub & Trello': {
         backdrop: '/assets/projects/backdrops/mw2019_cleanhouse.mp4',
-        thumbnail: '/assets/kitty_banner.png',
+        thumbnail: '/assets/projects/thumbnails/github_trello.png',
         description:
             'Stay up-to-date in both interacting with and contributing towards our projects!\n\n📥 Join our GitHub organization below to get started!',
         tags: [],
@@ -59,11 +59,11 @@ export const projects: { [key: string]: ProjectDetails } = {
         github: 'https://github.com/Skyline-College-Computer-Science-Club/project.GameDevelop',
         trello: 'https://trello.com/b/IbBcq4DY/🚧-project-game-development',
     },
-    'Generic Project 3': {
+    'Skyline Shines RSS Feed': {
         backdrop: previewArt2,
         thumbnail: previewArt3,
-        description: 'Skyline Shines',
-        tags: ['Python'],
+        description: `A small-scale project linking between Skyline's Weekly Newsletter RSS feed and setting it up to relay into our/another Discord server via a Discord webhook.`,
+        tags: ['JavaScript'],
         github: '',
         trello: '',
     },
