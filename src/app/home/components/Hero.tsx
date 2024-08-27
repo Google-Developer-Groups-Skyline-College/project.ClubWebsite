@@ -13,20 +13,23 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const TYPED_KEYWORDS = [
+    'Build Websites',
     'Design Projects',
-    'Pioneer',
-    'Optimize',
-    'Build',
-    'Compile',
+    'Pioneer Developers',
+    'Optimize Code',
+    'Compile Programs',
     'Web Design',
+    'Gain Experience',
     '$ yarn build',
+    'Grow Your Portfolio',
     '3D-Model',
     'Deploy',
     'Problem-Solve',
+    '$ npm install',
     'Interpret',
+    'Expand Your Network',
     'Game Design',
     'Collaborate',
-    'Develop',
     'Delegate',
     '$ git commit',
 ]
@@ -63,7 +66,7 @@ export function Hero(): React.ReactNode {
                         width={1920}
                         height={1080}
                         src={'/assets/home/hero_overlay.gif'}
-                        className='absolute top-0 w-full h-full drop-shadow-lg opacity-5 sm:opacity-10'
+                        className='absolute top-0 w-full h-full drop-shadow-lg opacity-5 lg:opacity-10'
                         alt=''
                         unoptimized
                         priority
@@ -84,21 +87,23 @@ export function Hero(): React.ReactNode {
                 />
 
                 {/* The main texts */}
-                <h1 className='z-20 title-main text-center text-[20px] sm:text-[32px] md:text-[38px] xl:text-[52px] text-shadow shadow-black font-bold text-white mx-4 my-[2px] sm:my-[-8px]'>
+                <h1 className='z-20 title-main text-center text-[4.6vw] xl:text-[52px] text-shadow shadow-black font-bold text-white mx-4 my-[2px] sm:my-[-8px]'>
                     The Computer Science Club at Skyline
                 </h1>
+                {/* <h1 className='z-20 title-main text-center text-[20px] sm:text-[32px] md:text-[38px] xl:text-[52px] text-shadow shadow-black font-bold text-white mx-4 my-[2px] sm:my-[-8px]'>
+                    The Computer Science Club at Skyline
+                </h1> */}
 
-                <div className='z-20 title-main w-full text-white text-center text-shadow shadow-black text-lg sm:text-xl'>
+                <div className='z-20 title-main w-full text-white text-center text-shadow shadow-black text-[3.25vw] sm:text-xl'>
                     <p>Elevate Your Code — the Sky&apos;s the Limit.</p>
-                    <h1 className='title-main font-bold sm:text-[24px] text-2xl sm:pt-[10px]'>
+                    <h1 className='title-main font-bold text-2xl sm:pt-[4px]'>
                         {'>'} We{' '}
                         <ReactTyped
                             className='text-[#FCD690] drop-shadow-[0_0_12px_rgba(245,210,140,210)]'
                             strings={TYPED_KEYWORDS}
-                            typeSpeed={120}
-                            backSpeed={80}
+                            typeSpeed={50}
+                            backSpeed={60}
                             backDelay={2000}
-                            fadeOut={true}
                             loop
                         />{' '}
                         {'<'}
@@ -111,16 +116,16 @@ export function Hero(): React.ReactNode {
                     smooth={true}
                     offset={-140}
                     duration={1500}
-                    className='z-20 mt-3 relative group w-[230px] active:scale-95 duration-150 hover:border-green-900 border-white rounded-xl hover:outline hover:outline-[4px] active:outline-4 text-white text-lg title-main drop-shadow-[0_16px_20px_rgba(0,0,0,0.7)] overflow-hidden'
+                    className='z-20 mt-3 relative group w-[210px] hover:w-[240px] active:scale-95 duration-150 hover:border-green-900 border-white rounded-xl hover:outline hover:outline-[4px] active:outline-4 text-white text-lg title-main drop-shadow-[0_16px_20px_rgba(0,0,0,0.7)] overflow-hidden'
                 >
                     <IoMdArrowRoundDown className='absolute w-full h-full group-hover:translate-y-0 -translate-y-[100%] duration-300 bg-gradient-to-t from-[#16a34aec] to-[#ffffff91] pointer-events-none' />
-                    <button className='flex w-full justify-center p-2 font-semibold text-center text-shadow-lg shadow-black hover:bg-green-600 bg-neutral-900 bg-opacity-50 duration-300 hover:border-green-300 overflow-hidden'>
+                    <button className='flex w-full h-full justify-center py-[6px] font-semibold text-center text-shadow-lg shadow-black hover:bg-green-600 bg-neutral-900 bg-opacity-50 duration-300 hover:border-green-300 overflow-hidden'>
                         <p>I&apos;m Interested</p>
                     </button>
-                </Link>
+                </Link> 
             </div>
 
-            <div>
+            <div className='absolute w-full h-full'>
                 {/* top        */}
                 <div className='absolute top-0 w-full h-[15%] bg-gradient-to-b from-black to-transparent' />
                 {/* bottom     */}
@@ -129,6 +134,11 @@ export function Hero(): React.ReactNode {
                 <div className=' absolute top-0 left-[25%] w-[25%] h-screen bg-gradient-to-l from-[#00000035] sm:from-[#00000075] to-transparent' />
                 {/* cent-right */}
                 <div className=' absolute top-0 right-[25%] w-[25%] h-screen bg-gradient-to-r from-[#00000035] sm:from-[#00000075] to-transparent' />
+            </div>
+
+            <div className='w-full flex flex-col items-center justify-center absolute bottom-8 mx-auto text-center font-semibold opacity-55'>
+                <IoMdArrowRoundDown className='text-2xl' />
+                <p className='animate-pulse select-none'>Scroll Down to Enter</p>
             </div>
         </div>
     )

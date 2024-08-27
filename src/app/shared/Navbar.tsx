@@ -5,7 +5,7 @@
         Add context pull-out section for hovering over announcement bar
 */
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 import { Link as ScrollLink, animateScroll } from 'react-scroll'
@@ -25,9 +25,24 @@ export function Navbar(): React.ReactNode {
     const handleClick = () => setNav(!nav)
 
     const [announceDismissed, setAnnounceDismissed] = useState(false)
+    const [sticky, setSticky] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setSticky(window.scrollY > 40 || announceDismissed)
+        }
+
+        handleScroll()
+
+        window.addEventListener("scroll", handleScroll)
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll)
+        }
+    }, [announceDismissed])
 
     return (
-        <nav className='z-50 flex flex-col fixed w-full'>
+        <div className='z-50 absolute flex flex-col w-full'>
 
             {/* Announcement Banner */}
             {ANNOUNCEMENT_TEXT ? (
@@ -35,7 +50,7 @@ export function Navbar(): React.ReactNode {
                     onMouseDown={() => {
                         setAnnounceDismissed(true)
                     }}
-                    className={`z-10 flex w-full px-6 h-[58px] sm:h-[40px] bg-gradient-to-b ${ANNOUNCEMENT_GRAD_COLOR} to-[#000000] justify-between items-center group/announcement_bar overflow-hidden`}
+                    className={`z-10 w-full h-[58px] sm:h-[40px] px-6 absolute flex justify-between items-center bg-gradient-to-b ${ANNOUNCEMENT_GRAD_COLOR} to-black group/announcement_bar overflow-hidden`}
                     initial={{
                         opacity: 0,
                         translateY: '-100%',
@@ -47,7 +62,7 @@ export function Navbar(): React.ReactNode {
                             : {
                                 opacity: 0,
                                 translateY: '-100%',
-                                position: 'absolute',
+                                position: 'absolute'
                             }
                     }
                     transition={{ duration: 1, ease: 'easeOut' }}
@@ -65,7 +80,7 @@ export function Navbar(): React.ReactNode {
                         unoptimized
                     />
                 
-                    <p className='z-10 absolute text-neutral-600 bottom-2 text-xs lg:text-base font-semibold right-4 animate-pulse'>
+                    <p className='z-10 right-4 absolute text-neutral-600 text-xs lg:text-base font-semibold select-none animate-pulse'>
                         press to dismiss
                     </p>
                 </motion.div>
@@ -75,7 +90,7 @@ export function Navbar(): React.ReactNode {
 
             {/* Top Bar */}
             <motion.div
-                className='z-20 h-[72px] px-4 flex justify-center items-center text-gray-300 bg-gradient-to-b from-[#000] to-transparent'
+                className={(sticky ? 'fixed ' : '') + 'z-20 w-full h-[72px] px-4 flex justify-center items-center bg-gradient-to-b from-black/90 to-transparent'}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1, ease: 'easeOut' }}
@@ -90,44 +105,49 @@ export function Navbar(): React.ReactNode {
                     />
                 </Link>
 
-                {/* Navigation */}
-                <div className='hidden md:flex flex-row text-[15px] w-full justify-center gap-x-2'>
+                {/* Navigation button row */}
+                <div className='hidden md:flex flex-row text-[15px] font-semibold w-full justify-center gap-x-2 opacity-35 hover:opacity-100 transition-opacity duration-300'>
 
                     <Link
                         href='/'
                         onMouseUp={() => {
                             animateScroll.scrollToTop()
                         }}
-                        className='font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-neutral-700/50 py-1 px-3 rounded-lg transition duration-300 ease-out'
+                        className='py-1 px-3 hover:px-6 active:scale-90 flex bg-neutral-950/25 hover:bg-neutral-700/50 rounded-lg transition-all duration-300'
                     >
                         <GoHome className='my-auto mr-2' />
                         <p>Home</p>
                     </Link>
 
-                    <Link href='/projects' className='font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-neutral-700/50 py-1 px-3 rounded-lg transition duration-300 ease-out'>
+                    <Link href='/projects' className='py-1 px-3 hover:px-6 active:scale-90 flex bg-neutral-950/25 hover:bg-neutral-700/50 rounded-lg transition-all duration-300'>
                         <FiTool className='my-auto mr-2' />
                         <p>Projects</p>
                     </Link>
 
-                    <Link href='/hackathon' className='font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-yellow-700/50 py-1 px-3 rounded-lg transition duration-300 ease-out'>
+                    <Link href='/hackathon' className='py-1 px-3 hover:px-6 active:scale-90 flex bg-neutral-950/25 hover:bg-yellow-700/50 rounded-lg transition-all duration-300'>
                         <HiOutlineRocketLaunch className='my-auto mr-2 text-yellow-300' />
                         <p>The Intercollegiate Hackathon</p>
                     </Link>
 
-                    <Link href='https://discord.gg/z5P9kccwRh' className='font-semibold flex active:scale-90 hover:scale-105 bg-neutral-950/25 hover:bg-green-400/30 py-1 px-3 rounded-lg transition duration-300 ease-out'>
-                        <GoCodeOfConduct className='my-auto mr-2'/>
+                    <Link href='/promotion' className='py-1 px-3 hover:px-6 active:scale-90 flex bg-neutral-950/25 hover:bg-pink-400/30 rounded-lg transition-all duration-300'>
+                        <GoCodeOfConduct className='my-auto mr-2 text-pink-300'/>
                         <p>Join Us!</p>
                     </Link>
                         {/* <ScrollLink to='recruitment' offset={-1200} smooth={true} duration={2500}>Join Us!</ScrollLink> */}
                 </div>
 
-                {/* Mobile Menu */}
-                {/* Mobile Menu */}
-                {/* Mobile Menu */}
+
+
+
+
+                {/* Mobile menu */}
+
+                {/* Mobile menu button */}
                 <div onClick={handleClick} className='absolute md:hidden z-10 right-0 mr-6 text-2xl hover:cursor-pointer'>
                     {!nav ? <FaBars /> : <FaTimes />}
                 </div>
 
+                {/* Mobile menu */}
                 <div
                     className={
                         !nav
@@ -135,46 +155,44 @@ export function Navbar(): React.ReactNode {
                             : 'absolute md:hidden top-0 left-0 w-full h-screen bg-neutral-900/95 flex flex-col justify-center items-center'
                     }
                 >
-                    <div className='flex flex-col gap-4'>
-                        <div className='text-2xl font-semibold flex active:scale-90'>
-                            <GoHome className='my-auto mr-2' />
-                            <Link
-                                href='/'
-                                onMouseUp={() => {
-                                    animateScroll.scrollToTop()
-                                    handleClick()
-                                }}
-                            >
+                    <div className='flex flex-col gap-4 font-semibold text-2xl'>
+                        <Link
+                            href='/'
+                            onMouseUp={() => {
+                                animateScroll.scrollToTop()
+                                handleClick()
+                            }}
+                        >
+                            <div className='p-3 hover:px-5 flex bg-neutral-950/25 hover:bg-neutral-700/50 rounded-lg transition-all'>
+                                <GoHome className='my-auto mr-2' />
                                 Home
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
 
-                        <div className='text-2xl font-semibold flex active:scale-90'>
-                            <FiTool className='my-auto mr-2' />
-                            <Link href='./projects' onMouseUp={handleClick}>
+                        <Link href='./projects' onMouseUp={handleClick}>
+                            <div className='p-3 hover:px-5 flex bg-neutral-950/25 hover:bg-neutral-700/50 rounded-lg transition-all'>
+                                <FiTool className='my-auto mr-2' />
                                 Projects
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
 
-                        <div className='text-2xl font-semibold flex active:scale-90'>
-                            <HiOutlineRocketLaunch className='my-auto mr-2 text-yellow-300' />
-                            <Link href='./hackathon' onMouseUp={handleClick}>
+                        <Link href='./hackathon' onMouseUp={handleClick}>
+                            <div className='p-3 hover:px-5 flex bg-neutral-950/25 hover:bg-yellow-700/50 rounded-lg transition-all'>
+                                <HiOutlineRocketLaunch className='my-auto mr-2 text-yellow-300' />
                                 The Intercollegiate Hackathon
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
 
-                        <div className='text-2xl font-semibold flex active:scale-90'>
-                            <GoCodeOfConduct className='my-auto mr-2' />
-                            <Link
-                                href='https://discord.gg/z5P9kccwRh'
-                                onMouseUp={handleClick}
-                            >
+                        <Link href='https://discord.gg/z5P9kccwRh' onMouseUp={handleClick}>
+                            <div className='p-3 hover:px-5 flex bg-neutral-950/25 hover:bg-pink-400/30 rounded-lg transition-all'>
+                                <GoCodeOfConduct className='my-auto mr-2 text-pink-300' />
                                 Join Us!
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
+
                     </div>
                 </div>
             </motion.div>
-        </nav>
+        </div>
     )
 }

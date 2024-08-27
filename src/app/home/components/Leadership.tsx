@@ -264,12 +264,39 @@ export function Leadership(): React.ReactNode {
             <Element name='leadership' />
 
             <div className='max-w-[1280px] flex flex-col justify-center items-center w-full h-full py-[44px] px-[10px] gap-4 overflow-x-hidden'>
+
+                <div className='flex flex-row mb-[-8px]'>
+                    <Image
+                        src={'/assets/bits/kits/kitty_bubbles.png'}
+                        className='z-10 w-10 md:w-12 hover:!scale-110 transition duration-300 ease-out'
+                        alt=''
+                        width={32}
+                        height={32}
+                        unoptimized
+                    />
+                    <Image
+                        src={'/assets/bits/kits/kitty_think.png'}
+                        className='z-10 w-10 md:w-12 hover:!scale-110 transition duration-300 ease-out'
+                        alt=''
+                        width={32}
+                        height={32}
+                        unoptimized
+                    />
+                    <Image
+                        src={'/assets/bits/kits/kitty_cook.png'}
+                        className='z-10 w-10 md:w-12 hover:!scale-110 transition duration-300 ease-out'
+                        alt=''
+                        width={32}
+                        height={32}
+                        unoptimized
+                    />
+                </div>
+
                 <div>
                     <ReactTyped
                         className='title-main w-full text-center text-3xl sm:text-4xl font-semibold'
                         strings={['Our Club Leadership']}
                         typeSpeed={75}
-                        cursorChar=''
                         startWhenVisible
                     />
                     <p className='title-main w-full text-center text-xl font-semibold text-[#ffea76] drop-shadow-[0_0_4px_rgba(255,205,60,0.5)]'>

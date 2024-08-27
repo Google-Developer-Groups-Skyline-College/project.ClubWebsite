@@ -3,10 +3,10 @@ import Image from 'next/image'
 import { useReward } from 'react-rewards'
 
 export function Podiums() {
-    const { reward, isAnimating } = useReward('rewardId', 'confetti', { position: 'absolute', decay: 0.965, startVelocity: 18, spread: 180, lifetime: 200 })
+    const { reward, isAnimating } = useReward('rewardId', 'confetti', { position: 'absolute', decay: 0.978, startVelocity: 18, spread: 90, lifetime: 600 })
 
     return (
-        <div className='w-full h-[1000px] my-60 flex flex-col justify-center items-center bg-black'>
+        <div className='w-full h-[1000px] my-60 flex flex-col justify-center items-center bg-black overflow-hidden'>
 
             <Image
                 src={'/assets/hackathon/galaxy.jpg'}

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Link from 'next/link'
 
 import Image from 'next/image'
 import useSound from 'use-sound'
@@ -16,6 +17,11 @@ import {
     SiReact,
     SiBlender,
 } from 'react-icons/si'
+
+import {
+    FaAngleDoubleUp
+} from 'react-icons/fa'
+
 import { FaGithub, FaTrello } from 'react-icons/fa'
 import { BiLogoTypescript } from 'react-icons/bi'
 
@@ -61,7 +67,6 @@ const Tags: { [key: string]: TagDetails } = {
 export function Carousel() {
     const [playSfx_click] = useSound('/assets/audio/click.mp3')
     const [playSfx_click2] = useSound('/assets/audio/click2.mp3')
-    // const [play_sfxTunedClick] = useSound(sfxTunedClick)
 
     const [currentProject, setCurrentProject] = useState(
         Object.keys(projects)[0]
@@ -72,7 +77,7 @@ export function Carousel() {
         <div className='w-full translate-y-20 h-[calc(100vh-80px)] overflow-y-hidden bg-[#0a192f] text-gray-300'>
             {/* Vignette overlay */}
             <div>
-                {/* top    */}{' '}
+                {/* top    */}
                 <div
                     className='bg-gradient-to-b from-black to-transparent'
                     style={{
@@ -82,7 +87,7 @@ export function Carousel() {
                         height: '10%',
                     }}
                 ></div>
-                {/* bottom */}{' '}
+                {/* bottom */}
                 <div
                     className='bg-gradient-to-t from-black to-transparent'
                     style={{
@@ -92,7 +97,7 @@ export function Carousel() {
                         height: '25%',
                     }}
                 ></div>
-                {/* left   */}{' '}
+                {/* left   */}
                 <div
                     className='bg-gradient-to-r from-black to-transparent'
                     style={{
@@ -110,6 +115,7 @@ export function Carousel() {
                 src={projectDetails.backdrop || '/assets/projects/backdrops/mw2.mp4'}
                 preload='auto'
                 autoPlay
+                disablePictureInPicture
                 muted
                 loop
             />
@@ -147,31 +153,29 @@ export function Carousel() {
 
                 {/* Project Links */}
                 <div className='py-4'>
-                    <a
+                    <Link
                         href={projectDetails.github}
                         target='_blank'
-                        rel='noreferrer'
                     >
                         <FaGithub className='inline mx-1' size={30} />
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href={projectDetails.trello}
                         target='_blank'
-                        rel='noreferrer'
                     >
                         <FaTrello className='inline mx-1' size={30} />
-                    </a>
+                    </Link>
                 </div>
             </div>
 
             {/* Bottom projects drawer selector, along with left-side project details */}
             <div
-                className='mx-2'
+                className='px-2 w-full'
                 style={{ position: 'absolute', bottom: 0 }}
             >
-                <div className='translate-y-20 hover:translate-y-0 transition duration-700 ease-out'>
-                    {/* <FaAngleDoubleUp className="-translate-y-[10] mx-auto" size={30}/> */}
-                    <div className='flex group'>
+                <div className='translate-y-20 hover:translate-y-0 transition duration-700 group'>
+                    <FaAngleDoubleUp className='group-hover:mb-2 mx-auto opacity-50 transition-all' size={30}/>
+                    <div className='h-48 flex flex-row justify-center group'>
                         {Object.entries(projects).map(([projectName]) => (
                             <button
                                 onMouseDown={() => playSfx_click2()}
@@ -186,18 +190,18 @@ export function Carousel() {
                             >
                                 <div
                                     key={projectName}
-                                    className='m-1 relative rounded-xl opacity-25 hover:!opacity-100 hover:border-double group-hover:opacity-70 active:translate-y-4 hover:-translate-y-2 transition duration-400 ease-out'
+                                    className='w-80 hover:w-96 active:w-[420px] h-40 hover:h-48 m-1 relative rounded-xl opacity-25 hover:!opacity-100 hover:border-double group-hover:opacity-70 active:-translate-y-3 hover:-translate-y-2 border-b-2 border-b-black hover:border-b-white transition-all duration-300'
                                 >
                                     <Image
                                         width={1280}
                                         height={720}
-                                        className='object-cover w-80 h-40 rounded-xl'
+                                        className='object-cover w-full h-full rounded-xl'
                                         src={
                                             projects[projectName].thumbnail
                                         }
-                                        alt={projectName}
+                                        alt=''
                                     />
-                                    <p className='z-10 p-2 font-bold text-gray-200 absolute bottom-0'>
+                                    <p className='absolute bottom-0 z-10 p-2 font-bold text-gray-200'>
                                         {projectName}
                                     </p>
                                     <div className='z-0 absolute top-0 w-full h-full bg-gradient-to-t from-black to-transparent'></div>

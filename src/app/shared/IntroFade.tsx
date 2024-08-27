@@ -15,7 +15,7 @@ export function IntroFade(): React.ReactNode {
             initial={{ opacity: 1 }}
             animate={isInView ? { opacity: 0 } : { opacity: 1 }}
             transition={{ duration: 1.4, delay: 0.4, ease: 'easeOut' }}
-            className='z-30 flex flex-col items-center justify-center pointer-events-none absolute w-full h-screen bg-black'
+            className='z-30 w-full h-screen fixed flex flex-col items-center justify-center pointer-events-none bg-black'
         >
             <Image
                 src={'/assets/bits/mascot.gif'}

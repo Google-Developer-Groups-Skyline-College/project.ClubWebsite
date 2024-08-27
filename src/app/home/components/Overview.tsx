@@ -24,47 +24,66 @@ const meetingTimeFormattedHour = new Date(nextMeetingDate + ' ' + CLUB_MEETING_H
 
 export function Overview(): React.ReactNode {
     return (
-        <div className='py-72 flex flex-col justify-center items-center'>
+        <div className='py-72 flex flex-col justify-center items-center bg-black'>
 
-            <div className='w-full max-w-[1260px] px-8 xl:px-12 py-10 flex flex-col md:flex-row justify-center items-center gap-x-0 md:gap-x-8 gap-y-6 xl:gap-x-16'>
+            <div className='w-full max-w-[1260px] px-8 xl:px-12 py-10 flex flex-col md:flex-row justify-center items-center gap-x-0 md:gap-x-8 gap-y-12 xl:gap-x-16'>
 
-                <div className='w-full px-2 md:px-0'>
-                    <h1 className='title-main text-4xl font-semibold'>Our Club Meetings</h1>
-                    <h2 className='text-neutral-400'>In-person festivities, fun events, and student member meet-ups!</h2>
-                    <div className='w-full h-[1px] bg-neutral-400 my-3' />
-
-
-                    <h2 className='title-main text-neutral-400 font-semibold'>⏰ WHEN</h2>
-                    <h2 className='title-main text-3xl font-semibold pr-0 md:pr-16'>
-                        Weekly, <span className='text-[#FCD690] font-bold'>{nextMeetingDay}s</span> at <span className='text-blue-200 font-bold'>{meetingTimeFormattedHour}.</span>
-                    </h2>
-                    <div className='text-neutral-300'>
-                        Next meeting will be on <span className='underline underline-offset-2'>{nextMeetingDate}</span> which is in:
+                <div className='flex flex-col gap-y-4 w-full px-2 md:px-0'>
+                    <div>
+                        <h1 className='title-main text-4xl inline-flex font-semibold'>
+                            Our Club Meetings
+                            <span>
+                                <img src='/assets/bits/kits/kitty_astro.png' height={32} width={32} className='ml-3 mt-1' />
+                            </span>
+                        </h1>
+                        <h2 className='text-neutral-400'>In-person festivities, fun events, and student member meet-ups!</h2>
+                        <div className='w-full h-[1px] bg-neutral-400 my-3' />
                     </div>
-                    <Countdown timestamp={new Date(`${nextMeetingDate} ${CLUB_MEETING_HOUR}`).getTime()} className='my-4'/>
 
+                    <div>
+                        <h2 className='title-main text-neutral-400 font-semibold'>⏰ WHEN</h2>
+                        <h2 className='title-main text-3xl font-semibold pr-0 md:pr-16'>
+                            Weekly, <span className='text-[#FCD690] font-bold'>{nextMeetingDay}s</span> at <span className='text-blue-200 font-bold'>{meetingTimeFormattedHour}.</span>
+                        </h2>
+                        <div className='text-neutral-300'>
+                            Next meeting will be on <span className='underline underline-offset-2'>{nextMeetingDate}</span> which is in:
+                        </div>
+                        <Countdown timestamp={new Date(`${nextMeetingDate} ${CLUB_MEETING_HOUR}`).getTime()} className='my-4'/>
+                    </div>
 
-                    <h2 className='title-main text-neutral-400 font-semibold'>📍 WHERE</h2>
-                    <div className='title-main text-neutral-300 text-xl'>
-                        <Link className='font-semibold text-white hover:text-pink-300 duration-150' href={CLUB_MEETING_LOCATION_LINK}>
-                            {CLUB_MEETING_LOCATION}
+                    <div>
+                        <h2 className='title-main text-neutral-400 font-semibold'>📍 WHERE</h2>
+                        <div className='title-main text-neutral-300 text-xl'>
+                            <Link className='font-semibold text-white hover:text-pink-300 duration-150' href={CLUB_MEETING_LOCATION_LINK}>
+                                {CLUB_MEETING_LOCATION}
+                            </Link>
+                        </div>
+                        <div className='text-neutral-300'>
+                            You can also tune-in remotely on our{' '}
+                            <Link href='https://discord.com/channels/939701223144185867/1147046718710485034' target='_blank' className='text-purple-400 font-semibold'>Discord</Link> Stage.
+                        </div>
+                        <Link href='https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NmJmNnBsb2M0N2Q2amhmaWU5YnBndHFhNDdfMjAyNDA4MzBUMjAxMDAwWiBza3lsaW5lY29tcHNjaWNsdWJAbQ&amp;tmsrc=skylinecompsciclub%40gmail.com&amp;scp=ALL' target='_blank'>
+                            <p className='w-52 hover:w-56 transition-all p-2 my-2 text-sm text-center font-semibold hover:animate-pulse bg-yellow-900 rounded-lg'>🔔 Sign up for reminders!</p>
                         </Link>
                     </div>
-                    <div className='text-neutral-300'>
-                        You can also tune-in remotely on our{' '}
-                        <Link href={'https://discord.com/channels/939701223144185867/1147046718710485034'} target='_blank' className='text-purple-400 font-semibold'>Discord</Link> Stage.
-                    </div>
-                    <p className='w-52 hover:w-56 transition-all p-2 my-2 text-sm text-center font-semibold hover:animate-pulse bg-yellow-900 rounded-lg'>🔔 Sign up for reminders!</p>
                 </div>
 
                 <div className='hidden md:block w-[1px] h-[500px] bg-neutral-500' />
 
                 <div className='w-full px-2 md:px-0 text-right'>
-                    <h1 className='title-main text-4xl font-semibold'>Club Documentation</h1>
+                    <h1 className='title-main text-4xl inline-flex font-semibold'>
+                        <span>
+                            <img src='/assets/bits/kits/kitty_read.png' height={32} width={32} className='mr-3 mt-1' />
+                        </span>
+                        Club Documentation
+                    </h1>
                     <h2 className='text-neutral-400'>Good-to-know information for student members~!</h2>
                     <div className='w-full h-[1px] bg-neutral-400 my-3' />
                     <div className='flex flex-row flex-wrap justify-end font-semibold gap-x-2 gap-y-2'>
-                        <Link href='https://drive.google.com/drive/folders/1nsHksTsINdWxe2cKOZEXn-GUyLHsyEed?usp=sharing' target='_blank' className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-fuchsia-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
+                        <Link 
+                            href='https://drive.google.com/drive/folders/1nsHksTsINdWxe2cKOZEXn-GUyLHsyEed?usp=sharing' 
+                            target='_blank' 
+                            className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-fuchsia-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
                             <PiToiletPaperDuotone className='group-hover:text-lg'/>Meeting Minutes (Summaries)
                         </Link>
                         <Link 

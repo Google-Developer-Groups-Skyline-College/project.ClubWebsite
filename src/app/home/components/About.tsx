@@ -49,7 +49,7 @@ export function About(): React.ReactNode {
 
                 <div className='w-[80%] lg:w-[35%] text-sm xl:text-base'>
                     <ReactTyped
-                        className='title-main text-base md:text-3xl font-bold text-white'
+                        className='title-main text-[4vw] md:text-3xl font-bold text-white'
                         strings={['Our Community at Skyline College']}
                         typeSpeed={50}
                         startWhenVisible
@@ -79,7 +79,7 @@ export function About(): React.ReactNode {
 
             <div className='w-full h-[180px] bg-[#040404]'></div>
 
-            <div className='flex flex-col'>
+            <div className='flex flex-col pt-20'>
                 <Image
                     src={'/assets/bits/mascot.gif'}
                     className='z-10 w-20 md:w-24 hover:!scale-110 transition duration-300 ease-out mx-auto mb-6'
