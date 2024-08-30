@@ -72,8 +72,8 @@ export function Navbar(): React.ReactNode {
                     </p>
                     
                     <Image
-                        width={600}
-                        height={600}
+                        width={256}
+                        height={128}
                         src={'/assets/bits/diagonal_slowglide_overlay.gif'}
                         alt=''
                         className='-z-10 absolute w-full opacity-5 group-hover/announcement_bar:opacity-20 transition-all duration-500'
@@ -95,7 +95,7 @@ export function Navbar(): React.ReactNode {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1, ease: 'easeOut' }}
             >
-                <Link href='/' className='absolute left-0 drop-shadow-lg ml-4 hover:rotate-180 active:animate-pulse duration-500'>
+                <Link href='/' className='z-10 absolute left-0 drop-shadow-lg ml-4 hover:rotate-180 active:animate-pulse duration-500'>
                     <Image
                         width={48}
                         height={48}

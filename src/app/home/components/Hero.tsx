@@ -53,8 +53,8 @@ export function Hero(): React.ReactNode {
 
                     {/* Actual backdrop image */}
                     <Image
-                        width={1920}
-                        height={1080}
+                        width={1280}
+                        height={720}
                         className='absolute w-full h-full blur-[0px] object-cover'
                         src={'/assets/home/skyline_backdrop.jpg'}
                         alt=''
@@ -63,8 +63,8 @@ export function Hero(): React.ReactNode {
 
                     {/* Hero .gif overlay */}
                     <Image
-                        width={1920}
-                        height={1080}
+                        width={1280}
+                        height={720}
                         src={'/assets/home/hero_overlay.gif'}
                         className='absolute top-0 w-full h-full drop-shadow-lg opacity-5 lg:opacity-10'
                         alt=''
@@ -95,7 +95,7 @@ export function Hero(): React.ReactNode {
                 </h1> */}
 
                 <div className='z-20 title-main w-full text-white text-center text-shadow shadow-black text-[3.25vw] sm:text-xl'>
-                    <p>Elevate Your Code — the Sky&apos;s the Limit.</p>
+                    <p className='group'>Elevate Your Code — the <span className='group-hover:text-red-300 group-hover:font-bold transition delay-100'>Sky&apos;s</span> <span className='group-hover:text-red-300 group-hover:font-bold transition delay-300'>the</span> <span className='group-hover:text-red-300 group-hover:font-bold transition delay-500'>Limit.</span></p>
                     <h1 className='title-main font-bold text-2xl sm:pt-[4px]'>
                         {'>'} We{' '}
                         <ReactTyped
