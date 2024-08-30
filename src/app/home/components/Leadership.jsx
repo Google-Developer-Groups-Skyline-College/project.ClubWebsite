@@ -241,12 +241,11 @@ function MinorLeaderCard({ details, index }) {
 
 
 
-export function Leadership(): React.ReactNode {
+export function Leadership() {
 
     const [currentPage, setCurrentPage] = useState(0)
 
     return (
-        // bg-[radial-gradient(#000_1px,transparent_1px)]
         <div className='w-full h-full flex justify-center items-center pb-40 bg-gradient-to-b from-black via-[#031302] to-black'>
             <Element name='leadership' />
 
@@ -308,7 +307,7 @@ export function Leadership(): React.ReactNode {
                     <div className='flex flex-col'>
                         {leadership.map(
                             (section, index) => (
-                                <div className={currentPage == index ? 'block' : 'hidden'}>
+                                <div className={currentPage == index ? 'block' : 'hidden'} key={section.toString()}>
 
                                     {/* Major Leadership Role Cards */}
                                     <div className='flex flex-row flex-wrap justify-center align-middle gap-x-4 sm:gap-x-7 gap-y-[18px] group/majorcards'>

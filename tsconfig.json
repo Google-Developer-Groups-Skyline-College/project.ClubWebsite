@@ -29,7 +29,7 @@
         "**/*.tsx",
         ".next/types/**/*.ts",
         "tailwind.config.js",
-        "next.config.js",
+        "next.config.js", "src/app/home/components/Leadership.jsx",
     ],
     "exclude": ["node_modules", ".eslintrc.js"]
 }
