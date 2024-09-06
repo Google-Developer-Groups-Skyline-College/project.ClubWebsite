@@ -1,16 +1,17 @@
 'use client'
 
-import Gallery from '../../components/Gallery'
-import { HackathonAlbum } from '../../dispositions/gallery'
-
-import IntroFade from '../../components/IntroFade'
-
 import { motion } from 'framer-motion'
-import Image from 'next/image'
-
 import { ReactTyped } from 'react-typed'
 
 import { useState, useEffect } from 'react'
+
+import { HackathonAlbum } from '@/dispositions/gallery'
+
+// components
+import Image from 'next/image'
+
+import { Podiums } from './components/_modules'
+import { Footer, IntroFade, Gallery } from 'shared/_modules'
 
 const backdrop = '/assets/hackathon/backdrop.png'
 const herologo = '/assets/hackathon/herologo.png'
@@ -75,7 +76,8 @@ export default function Hackathon() {
     return (
         <>
             <IntroFade />
-            <div className='flex flex-col w-full h-screen justify-center items-center overflow-hidden'>
+
+            <div className='relative flex flex-col w-full h-screen justify-center items-center overflow-hidden'>
                 <motion.div
                     initial={{ transform: 'translateY(3%)' }}
                     animate={{ transform: 'translateY(-3%)' }}
@@ -96,7 +98,7 @@ export default function Hackathon() {
                 </motion.div>
 
                 <motion.div
-                    className='-z-10 absolute w-full h-screen pointer-events-none'
+                    className='-z-10 absolute w-full h-screen pointer-events-none blur-sm'
                     initial={{ transform: 'translateY(10%)' }}
                     animate={{ transform: 'translateY(0%)' }}
                     transition={{ duration: 3, ease: 'backOut' }}
@@ -137,7 +139,7 @@ export default function Hackathon() {
 
                 <div className='flex flex-col sm:flex-row mt-4 gap-3'>
                     {/* <a href='https://forms.gle/k9y4ZKbnatqiS  BFRA'> */}
-                    <div className='flex bg-[#c51a1a75] rounded-2xl sm:w-40 h-10 font-semibold transition-all hover:scale-105 text-center'>
+                    <div className='flex bg-[#c51a1a75] rounded-xl sm:w-40 h-10 font-semibold transition-all hover:scale-105 text-center'>
                         <span className='absolute flex h-3 w-3'>
                             <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ff4d40] opacity-75'></span>
                             <span className='relative inline-flex rounded-full h-3 w-3 bg-[#ff4d40]'></span>
@@ -148,12 +150,12 @@ export default function Hackathon() {
                     </div>
                     {/* </a> */}
                     <a href='https://drive.google.com/file/d/1H9kzRPuWqiKmZSB3WRJo_PqzxrOWLSpB/view?usp=sharing'>
-                        <div className='bg-[#ffd035a4] rounded-2xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center'>
+                        <div className='bg-[#ffd035a4] rounded-xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center'>
                             🕒 The Timeline
                         </div>
                     </a>
                     <a href='https://docs.google.com/document/d/15pP7UGDzaynIAKgSyr7UfDeE1j1VzpseOmH3kx6Ukv0/edit?usp=sharing'>
-                        <div className='bg-[#cc00ff75] rounded-2xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center'>
+                        <div className='bg-[#cc00ff75] rounded-xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center'>
                             📖 Hacker Handbook
                         </div>
                     </a>
@@ -161,17 +163,21 @@ export default function Hackathon() {
 
                 <div className='flex flex-col sm:flex-row mt-2 gap-2'>
                     <a href='https://discord.gg/z5P9kccwRh'>
-                        <div className='bg-[#23156475] rounded-2xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center'>
+                        <div className='bg-[#00000075] rounded-xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center'>
                             Join Skyline's CSC Discord
                         </div>
                     </a>
                     <a href='https://discord.gg/g8dvmWCXPB'>
-                        <div className='bg-[#23156475] rounded-2xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center'>
+                        <div className='bg-[#00000075] rounded-xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center'>
                             Join San Mateo's CSC Discord
                         </div>
                     </a>
                 </div>
+
+                <div className='absolute bottom-0 w-full h-[20%] bg-gradient-to-t from-black to-transparent' />
             </div>
+
+            <Podiums />
 
             {/* <Gallery /> */}
             <div className='w-full bg-gradient-to-b from-slate-900 via-black to-black py-20'>
@@ -182,12 +188,13 @@ export default function Hackathon() {
                         backSpeed={75}
                         backDelay={3000}
                         loop
-                        className='bg-gradient-to-t from-white to-[#da5fff] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(255,50,255,1)]'
+                        className='bg-gradient-to-t from-white to-[#5fff6c] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(50,250,255,1)]'
                     ></ReactTyped>
                 </h1>
 
                 <Gallery album={HackathonAlbum} />
             </div>
+            <Footer />
         </>
     )
 }
