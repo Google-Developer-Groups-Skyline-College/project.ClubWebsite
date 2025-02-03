@@ -2,7 +2,7 @@
 
     ! NOTICE: Per leader dict entry, follow this key order. Leave each string value empty if not applicable.
         'role': 'Projects Manager',
-        'imgSrc': pfp_projectmanager,
+        'imgSrc': dir_2023_2024 + 'majedportrait.jpg',
         'quote': (<p>This is for the record. History is written by the victor. History is filled with liars.</p>),
         SOCIALS START HERE
         'linktree': 'https://www.linktr.ee/devalto',
@@ -14,12 +14,13 @@
 
 */
 
-// TODO prepare to add yearly leaderships
+// TODO prepare to add yearly leaderships ✅
 
 import { BiCrown } from 'react-icons/bi'
 import { CgCrown } from 'react-icons/cg'
 import { GrMoney } from 'react-icons/gr'
-
+import { BsLightningCharge } from 'react-icons/bs';
+import { IoShareSocialOutline } from 'react-icons/io5';
 import { FaRegHandPeace } from 'react-icons/fa'
 import { LuConstruction } from 'react-icons/lu'
 
@@ -30,17 +31,8 @@ import { PiFeatherDuotone, PiHandshakeBold } from 'react-icons/pi'
 
 const dir_leaderPortraits = '/assets/home/leader_portraits/'
 const dir_2023_2024 = dir_leaderPortraits + '2023_2024/'
+const dir_2024_2025 = dir_leaderPortraits + '2024_2025/'
 
-const pfp_president = dir_2023_2024 + 'tylerkuwadaport.png'
-const pfp_vicepresident = dir_2023_2024 + 'jonasquiballoport.png'
-const pfp_secretary = dir_2023_2024 + 'kailabautistaport.png'
-const pfp_treasurer = dir_2023_2024 + 'jayanpintorport.png'
-const pfp_projectmanager = dir_2023_2024 + 'lanceruizport.jpg'
-
-const pfp_auxillary1 = dir_2023_2024 + 'christseport.png'
-
-const pfp_coadvisor1 = dir_2023_2024 + 'denisehumport.png'
-const pfp_coadvisor2 = dir_2023_2024 + 'bryanswartoutport.png'
 const pfp_none = dir_leaderPortraits + 'noprofile.webp'
 
 export const FALLBACK_QUOTE = (
@@ -55,103 +47,95 @@ export const leadership = [
         title: '2024 — 2025',
         major: [
             {
-                name: 'Tyler Kuwada',
-                role: 'The President',
-                imgSrc: pfp_president,
-                quote: (
-                    <p>
-                        Oh, these weren't homemade, they were made in a factory.
-                        A bomb factory. They're bombs.
-                    </p>
-                ),
-                linktree: '',
-                instagram: 'https://www.instagram.com/tyler_kuwada/',
-                discord: 'https://discordapp.com/users/227633077545992192',
-                icon: <BiCrown />,
-            },
-            {
-                name: 'Jonas Quiballo',
-                role: 'The Vice President',
-                imgSrc: pfp_vicepresident,
-                quote: <p>Told myself I was gonna lock-in. Still locking-in.</p>,
-                linktree: '',
-                github: 'https://github.com/Waffly10',
-                instagram: 'https://www.instagram.com/_.waffly._/',
-                icon: <CgCrown />,
-            },
-            {
-                name: 'Kaila Bautista',
-                role: 'The Club Secretary',
-                imgSrc: pfp_secretary,
-                quote: (
-                    <p className='font-bold'>
-                        {`  ㅤㅤㅤㅤ／l、ㅤmow
-                            （ﾟ､ ｡ ７
-                            ⠀ l、ﾞ ~ヽ
-                              じしf_, )ノ
-                        `}
-                    </p>
-                ),
-                linktree: '',
-                instagram: 'https://instagram.com/kqilamae',
-                icon: <PiFeatherDuotone />,
-            },
-            {
-                name: 'Jayan Pintor',
-                role: 'The Club Treasurer',
-                imgSrc: pfp_treasurer,
-                quote: (
-                    <p>
-                        We all live in a coded world of if-statements... never knowing
-                        the conditions of each until interpretation.
-                    </p>
-                ),
-                linktree: '',
-                github: 'https://github.com/CoderLearnerTime',
-                linkedin: 'https://www.linkedin.com/in/jayanthony-pintor/',
-                instagram: 'https://www.instagram.com/0p_photos/',
-                website: 'https://www.jayanthonypintor.study',
-                icon: <GrMoney />,
-            },
-            {
                 name: 'Lance Ruiz',
-                role: 'The Projects Manager',
-                imgSrc: pfp_projectmanager,
-                quote: (
-                    <p>
-                        This is for the record. History is written by the victor.
-                        History is filled with liars.
-                        <br />
-                        - Captain $
-                    </p>
-                ),
+                role: 'Chapter Lead President',
+                imgSrc:  dir_2024_2025 + 'lance.jpg',
+                quote: '"Anyone who has never made a mistake has never tried anything new" - Albert Eintstein',
+                email: 'mailto:skylinecompsciclub@gmail.com',
                 linktree: 'https://www.linktr.ee/devalto',
                 instagram: '',
                 discord: 'https://discordapp.com/users/168406210687533056',
                 github: 'https://www.github.com/dev-alto',
                 linkedin: 'https://www.linkedin.com/in/lance-ruiz',
                 website: 'https://the-devalto-experiments.000webhostapp.com/',
+                icon: <BiCrown />,
+            },
+            {
+                name: 'Jonnald Hernandez',
+                role: 'Chapter Vice-President',
+                imgSrc: dir_2024_2025 + 'jonnald.png',
+                quote: '',
+                linktree: '',
+                github: '',
+                instagram: '',
+                icon: <CgCrown />,
+            },
+            {
+                name: 'Yuting Duan',
+                role: 'Chapter Secretary',
+                imgSrc: dir_2024_2025 + 'yuting.png',
+                quote: '',
+                linktree: '',
+                instagram: '',
+                icon: <PiFeatherDuotone />,
+            },
+            {
+                name: 'Oscar Meza',
+                role: 'Capital Treasurer',
+                imgSrc: dir_2024_2025 + 'oscar.jpeg',
+                quote: '',
+                linktree: '',
+                github: '',
+                linkedin: '',
+                instagram: '',
+                website: '',
+                icon: <GrMoney />,
+            },
+            {
+                name: 'Assem Alghaithi',
+                role: 'Software Projects Manager',
+                imgSrc: dir_2024_2025 + 'sam.jpg',
+                quote: (
+                    <p>
+                        "The human brain, such an enigma." - Majed
+                    </p>
+                ),
+                linktree: '',
+                instagram: '',
+                discord: '',
+                github: '',
+                linkedin: '',
+                website: '',
                 icon: <LuConstruction />,
             },
             {
-                name: 'Chris Tse',
-                role: 'Club SOCC Deputy',
-                imgSrc: pfp_auxillary1,
+                name: 'Majed Elqossari',
+                role: 'Associate Project Manager',
+                imgSrc: dir_2024_2025 + 'majed.png',
                 quote: ( 
                     <p>
-                        A true Isaiah Rashad fan.
+                        "Strive always to excel in virtue and truth." - Prophet Muhammed
                     </p>
                 ),
-                linktree: 'https://linktr.ee/isaiahrashadfan',
-                instagram: 'https://www.instagram.com/cchristse',
-                discord: 'https://discordapp.com/users/85194740890337280',
-                linkedin: 'https://www.linkedin.com/in/chris-tse-irf/',
-                icon: <FaRegHandPeace />,
+                github: 'https://www.github.com/CptnMaj',
+                instagram: 'https://www.instagram.com/majidali.77',
+                discord: 'https://discordapp.com/users/928831417734004746',
+                linkedin: 'https://www.linkedin.com/in/majedelqossari/',
+                icon: <LuConstruction />,
+            },
+            {
+                name: 'Amapola Garcia-Gomez',
+                role: 'Social Outreach Coordinator',
+                imgSrc: dir_2024_2025 + 'amapola.png',
+                quote: '',
+                discord: '',
+                github: '',
+                icon: <IoShareSocialOutline />,
             },
             {
                 name: 'Denise Hum',
-                role: 'Club Co-Advisor',
-                imgSrc: pfp_coadvisor1,
+                role: 'Chapter Faculty Advisor',
+                imgSrc: dir_2023_2024 + 'denisehumport.png',
                 quote: 'Data are summaries of thousands of stories. Tell a few of those stories to help make the data meaningful.',
                 linktree: '',
                 discord: 'https://discordapp.com/users/735277805662765066',
@@ -160,15 +144,37 @@ export const leadership = [
                 icon: <PiHandshakeBold />,
             },
             {
-                name: 'Bryan Swartout',
-                role: 'Club Co-Advisor',
-                imgSrc: pfp_coadvisor2,
-                linktree: '',
-                discord: 'https://discordapp.com/users/316816595668172800',
-                github: '',
-                linkedin: 'https://www.linkedin.com/in/swartoutbryan/',
-                icon: <PiHandshakeBold />,
+                name: 'Lynn Aung',
+                role: 'Chapter Technologist',
+                imgSrc: dir_2024_2025 + 'lynn.png',
+                quote: (
+                    <p>
+                        "The only time I look down is when I tie my shoe." - Lynn Aung
+                    </p>
+                ),
+                discord: 'https://discordapp.com/users/1134930369230147685',
+                github: 'https://github.com/loofsan',
+                icon: <BsLightningCharge />,
             },
+            {
+                name: 'Rae-Angela Vera Cruz',
+                role: 'Chapter Technologist',
+                imgSrc: dir_2024_2025 + 'raeangela.webp',
+                quote: '',
+                discord: '',
+                github: '',
+                icon: <BsLightningCharge />,
+            },
+            {
+                name: 'Michael Tse',
+                role: 'Chapter Technologist',
+                imgSrc: dir_2024_2025 + 'michael.png',
+                quote: '',
+                discord: '',
+                github: '',
+                icon: <BsLightningCharge />,
+            },
+            
             // 'Luis J. Prado': {
             //     role: 'Club Co-Advisor',
             //     imgSrc: pfp_none,
@@ -197,14 +203,14 @@ export const leadership = [
                 icon: <AiOutlineGlobal />,
             },
             {
-                title: 'Social Outreach',
-                label: 'Chris Tse & Kaila Bautista',
+                title: 'ASSC Deputy',
+                label: 'Oscar Meza',
                 color_complex: 'from-[#651e94] shadow-[#651e94]',
                 icon: <PiHandshakeBold />,
             },
             {
-                title: 'Event Planners',
-                label: 'Tyler Kuwada & Lance Ruiz',
+                title: 'Quality Control',
+                label: 'To Be Announced',
                 color_complex: 'from-[#9c710c] shadow-[#9c710c]',
                 icon: <MdOutlineEmojiEvents />,
             },
@@ -215,9 +221,9 @@ export const leadership = [
         title: '2023 — 2024',
         major: [
             {
-                name: 'Tyler Kuwada2',
+                name: 'Tyler Kuwada',
                 role: 'The President',
-                imgSrc: pfp_president,
+                imgSrc: dir_2023_2024 + 'tylerkuwadaport.png',
                 quote: (
                     <p>
                         Oh, these weren't homemade, they were made in a factory.
@@ -230,9 +236,9 @@ export const leadership = [
                 icon: <BiCrown />,
             },
             {
-                name: 'Jonas Quiballo2',
+                name: 'Jonas Quiballo',
                 role: 'The Vice President',
-                imgSrc: pfp_vicepresident,
+                imgSrc: dir_2023_2024 + 'jonasquiballoport.png',
                 quote: <p>Told myself I was gonna lock-in. Still locking-in.</p>,
                 linktree: '',
                 github: 'https://github.com/Waffly10',
@@ -240,9 +246,9 @@ export const leadership = [
                 icon: <CgCrown />,
             },
             {
-                name: 'Kaila Bautista2',
+                name: 'Kaila Bautista',
                 role: 'The Club Secretary',
-                imgSrc: pfp_secretary,
+                imgSrc: dir_2023_2024 + 'kailabautistaport.png',
                 quote: (
                     <p className='font-bold'>
                         {`  ㅤㅤㅤㅤ／l、ㅤmow
@@ -257,9 +263,9 @@ export const leadership = [
                 icon: <PiFeatherDuotone />,
             },
             {
-                name: 'Jayan Pintor2',
+                name: 'Jayan Pintor',
                 role: 'The Club Treasurer',
-                imgSrc: pfp_treasurer,
+                imgSrc: dir_2023_2024 + 'jayanpintorport.png',
                 quote: (
                     <p>
                         We all live in a coded world of if-statements... never knowing
@@ -274,9 +280,9 @@ export const leadership = [
                 icon: <GrMoney />,
             },
             {
-                name: 'Lance Ruiz2',
+                name: 'Lance Ruiz',
                 role: 'The Projects Manager',
-                imgSrc: pfp_projectmanager,
+                imgSrc: dir_2023_2024 + 'lanceruizport.jpg',
                 quote: (
                     <p>
                         This is for the record. History is written by the victor.
@@ -294,9 +300,9 @@ export const leadership = [
                 icon: <LuConstruction />,
             },
             {
-                name: 'Chris Tse2',
+                name: 'Chris Tse',
                 role: 'Club SOCC Deputy',
-                imgSrc: pfp_auxillary1,
+                imgSrc: dir_2023_2024 + 'christseport.png',
                 quote: ( 
                     <p>
                         A true Isaiah Rashad fan.
@@ -306,12 +312,13 @@ export const leadership = [
                 instagram: 'https://www.instagram.com/cchristse',
                 discord: 'https://discordapp.com/users/85194740890337280',
                 linkedin: 'https://www.linkedin.com/in/chris-tse-irf/',
+                website: 'https://chrisrtse.com',
                 icon: <FaRegHandPeace />,
             },
             {
-                name: 'Denise Hum2',
+                name: 'Denise Hum',
                 role: 'Club Co-Advisor',
-                imgSrc: pfp_coadvisor1,
+                imgSrc: dir_2023_2024 + 'denisehumport.png',
                 quote: 'Data are summaries of thousands of stories. Tell a few of those stories to help make the data meaningful.',
                 linktree: '',
                 discord: 'https://discordapp.com/users/735277805662765066',
@@ -320,9 +327,9 @@ export const leadership = [
                 icon: <PiHandshakeBold />,
             },
             {
-                name: 'Bryan Swartout2',
+                name: 'Bryan Swartout',
                 role: 'Club Co-Advisor',
-                imgSrc: pfp_coadvisor2,
+                imgSrc: dir_2023_2024 + 'bryanswartoutport.png',
                 linktree: '',
                 discord: 'https://discordapp.com/users/316816595668172800',
                 github: '',

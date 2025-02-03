@@ -9,11 +9,10 @@ module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
 
     theme: {
-
         fontFamily: {
             Poppins: ['var(--font-poppins)', ...defaultTheme.fontFamily.sans],
-
         },
+
     },
 
     variants: {

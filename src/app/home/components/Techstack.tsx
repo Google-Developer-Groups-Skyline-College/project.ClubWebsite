@@ -24,17 +24,21 @@ import { GrReactjs } from 'react-icons/gr'
 const DIR_TECHSTACK = '/assets/home/techstack/'
 
 const SECTION_TYPED_KEYWORDS = [
-    'Design',
-    'Libraries',
+    'Software Design',
+    'Open Source Libraries',
     '3D-Modeling Software',
     'Development Suites',
-    'Frameworks',
+    'Software Frameworks',
     'Markdown Languages',
-    'Version Control Software',
-    'Serverless Services',
+    'User Interface Design',
+    'Collaborative Projects',
+    'Unit Testing Software',
+    'Version Control Systems',
+    'Serverless Platforms',
     'Linux Distributions',
-    'Databases',
+    'Database Design',
     'Programming Languages',
+    'User Experience Design',
 ]
 
 const TECH_TEXT_CLASSES = 'title-main font-semibold text-xl md:text-2xl'

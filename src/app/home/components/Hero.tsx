@@ -63,8 +63,8 @@ export function Hero(): React.ReactNode {
 
                     {/* Hero .gif overlay */}
                     <Image
-                        width={1280}
-                        height={720}
+                        width={800}
+                        height={450}
                         src={'/assets/home/hero_overlay.gif'}
                         className='absolute top-0 w-full h-full drop-shadow-lg opacity-5 lg:opacity-10'
                         alt=''
@@ -90,9 +90,6 @@ export function Hero(): React.ReactNode {
                 <h1 className='z-20 title-main text-center text-[4.6vw] xl:text-[52px] text-shadow shadow-black font-bold text-white mx-4 my-[2px] sm:my-[-8px]'>
                     The Computer Science Club at Skyline
                 </h1>
-                {/* <h1 className='z-20 title-main text-center text-[20px] sm:text-[32px] md:text-[38px] xl:text-[52px] text-shadow shadow-black font-bold text-white mx-4 my-[2px] sm:my-[-8px]'>
-                    The Computer Science Club at Skyline
-                </h1> */}
 
                 <div className='z-20 title-main w-full text-white text-center text-shadow shadow-black text-[3.25vw] sm:text-xl'>
                     <p className='group'>Elevate Your Code — the <span className='group-hover:text-red-300 group-hover:font-bold transition delay-100'>Sky&apos;s</span> <span className='group-hover:text-red-300 group-hover:font-bold transition delay-300'>the</span> <span className='group-hover:text-red-300 group-hover:font-bold transition delay-500'>Limit.</span></p>

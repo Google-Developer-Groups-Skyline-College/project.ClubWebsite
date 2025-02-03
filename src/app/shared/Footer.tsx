@@ -9,7 +9,7 @@ export function Footer() {
 
             <p className='text-lg'>🤝</p>
             <p className='title-main font-semibold text-xl'>Let&apos;s connect.</p>
-            <p className='title-main text-neutral-500 font-semibold'>Expand your network with us.</p>
+            <p className='title-main text-neutral-500 font-semibold'>Expand your professional network with us.</p>
 
             <div className='flex flex-row flex-wrap gap-3 justify-center py-4'>
                 <Link

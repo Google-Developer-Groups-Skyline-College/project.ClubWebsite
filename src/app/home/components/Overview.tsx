@@ -31,7 +31,7 @@ export function Overview(): React.ReactNode {
                 <div className='flex flex-col gap-y-4 w-full px-2 md:px-0'>
                     <div>
                         <h1 className='title-main text-4xl inline-flex font-semibold'>
-                            Our Club Meetings
+                            Our Member Meetings
                             <span>
                                 <img src='/assets/bits/kits/kitty_astro.png' height={32} width={32} className='ml-3 mt-1' />
                             </span>
@@ -70,40 +70,53 @@ export function Overview(): React.ReactNode {
 
                 <div className='hidden md:block w-[1px] h-[500px] bg-neutral-500' />
 
-                <div className='w-full px-2 md:px-0 text-right'>
-                    <h1 className='title-main text-4xl inline-flex font-semibold'>
-                        <span>
-                            <img src='/assets/bits/kits/kitty_read.png' height={32} width={32} className='mr-3 mt-1' />
-                        </span>
-                        Club Documentation
-                    </h1>
-                    <h2 className='text-neutral-400'>Good-to-know information for student members~!</h2>
-                    <div className='w-full h-[1px] bg-neutral-400 my-3' />
-                    <div className='flex flex-row flex-wrap justify-end font-semibold gap-x-2 gap-y-2'>
-                        <Link 
-                            href='https://drive.google.com/drive/folders/1nsHksTsINdWxe2cKOZEXn-GUyLHsyEed?usp=sharing' 
-                            target='_blank' 
-                            className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-fuchsia-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
-                            <PiToiletPaperDuotone className='group-hover:text-lg'/>Meeting Minutes (Summaries)
-                        </Link>
-                        <Link 
-                            href='https://docs.google.com/document/d/1nBZeViExQHcVYPfgMnJ0GkXtWJp2EMf4AGZBt4d53VQ/edit?usp=sharing' 
-                            target='_blank' 
-                            className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-green-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
-                            <SiSlideshare className='group-hover:text-lg'/>Meeting Slides
-                        </Link>
-                        <Link
-                            href='https://docs.google.com/document/d/1z8tFEMwJXxxcEVszzM8xmOp_1bGMlNBAd4mEGoOn4zU/edit?usp=sharing' 
-                            target='_blank' 
-                            className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-blue-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
-                            <BiCalendarEvent className='group-hover:text-lg'/>Club Events Timeline
-                        </Link>
-                        <Link 
-                            href='https://docs.google.com/forms/d/e/1FAIpQLSc_rpt_CnEXA7beq_UKktr415J97dPa3-xntnE4OCJ1zbpSqg/viewform?usp=sf_link' 
-                            target='_blank' 
-                            className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-yellow-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
-                            <SiGithub className='group-hover:text-lg'/>Join our GitHub Organization
-                        </Link>
+                <div className='flex flex-col gap-7 w-full px-2 md:px-0 text-right'>
+                    {/* <div>
+                        <h1 className='title-main text-4xl inline-flex font-semibold'>
+                            <span>
+                                <img src='/assets/bits/kits/kitty_read.png' height={32} width={32} className='mr-3 mt-1' />
+                            </span>
+                            Announcement
+                        </h1>
+                        <h2 className='text-neutral-400'>Good-to-know information for student members~! and the public!</h2>
+                        <div className='w-full h-[1px] bg-neutral-400 my-3' />
+                    </div> */}
+
+                    <div>
+                        <h1 className='title-main text-4xl inline-flex font-semibold'>
+                            <span>
+                                <img src='/assets/bits/kits/kitty_read.png' height={32} width={32} className='mr-3 mt-1' />
+                            </span>
+                            Member Information Hub
+                        </h1>
+                        <h2 className='text-neutral-400'>Good-to-know information for current and future student members~!</h2>
+                        <div className='w-full h-[1px] bg-neutral-400 my-3' />
+                        <div className='flex flex-row flex-wrap justify-end font-semibold gap-x-2 gap-y-2'>
+                            <Link 
+                                href='https://drive.google.com/drive/folders/1nsHksTsINdWxe2cKOZEXn-GUyLHsyEed?usp=sharing' 
+                                target='_blank' 
+                                className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-fuchsia-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
+                                <PiToiletPaperDuotone className='group-hover:text-lg'/>Meeting Minutes (Summaries)
+                            </Link>
+                            <Link 
+                                href='https://docs.google.com/document/d/1nBZeViExQHcVYPfgMnJ0GkXtWJp2EMf4AGZBt4d53VQ/edit?usp=sharing' 
+                                target='_blank' 
+                                className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-green-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
+                                <SiSlideshare className='group-hover:text-lg'/>Meeting Slides
+                            </Link>
+                            <Link
+                                href='https://docs.google.com/document/d/1z8tFEMwJXxxcEVszzM8xmOp_1bGMlNBAd4mEGoOn4zU/edit?usp=sharing' 
+                                target='_blank' 
+                                className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-blue-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
+                                <BiCalendarEvent className='group-hover:text-lg'/>Club Events Timeline
+                            </Link>
+                            <Link 
+                                href='https://docs.google.com/forms/d/e/1FAIpQLSc_rpt_CnEXA7beq_UKktr415J97dPa3-xntnE4OCJ1zbpSqg/viewform?usp=sf_link' 
+                                target='_blank' 
+                                className='flex flex-row items-center group px-3 sm:hover:px-5 py-2 bg-yellow-950 bg-opacity-60 hover:bg-opacity-80 transition-all rounded-lg gap-x-2'>
+                                <SiGithub className='group-hover:text-lg'/>Join our GitHub Organization
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -114,7 +127,7 @@ export function Overview(): React.ReactNode {
             <div className='border-t-[1px] py-8 px-4 text-center border-neutral-600'>
                 <p className='text-lg'>🤝</p>
                 <p className='title-main font-semibold text-xl'>Let&apos;s connect.</p>
-                <p className='title-main text-neutral-500 font-semibold'>Expand your network with us.</p>
+                <p className='title-main text-neutral-500 font-semibold'>Expand your professional network with us.</p>
 
                 <div className='flex flex-row flex-wrap gap-3 justify-center py-4'>
                     <Link

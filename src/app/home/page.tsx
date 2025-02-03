@@ -19,6 +19,7 @@ const GALLERY_TYPED_WORDS = [
     'Technology Workshops',
     'Field Trips',
     'Club Projects',
+    'Hosting Workshops',
     'Community Collaborations',
 ]
 
@@ -39,7 +40,7 @@ export default function App() {
             <div className='w-full bg-gradient-to-b from-neutral-900 via-black to-black py-14'>
                 <h1 className='title-main mx-auto text-3xl text-center sm:text-4xl font-extrabold text-white'>
                     <span className='text-shadow shadow-gray-700'>
-                        Journey with us in&nbsp;
+                        Heyo! Journey with us in&nbsp;
                     </span>
                     <ReactTyped
                         strings={GALLERY_TYPED_WORDS}
@@ -47,7 +48,7 @@ export default function App() {
                         backSpeed={75}
                         backDelay={3000}
                         loop
-                        className='bg-gradient-to-t from-yellow-300 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(225,200,255,0.5)]'
+                        className='bg-gradient-to-t from-yellow-300 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(225,200,150,0.3)]'
                     ></ReactTyped>
                 </h1>
 
