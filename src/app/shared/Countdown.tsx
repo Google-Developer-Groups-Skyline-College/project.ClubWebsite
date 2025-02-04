@@ -39,7 +39,7 @@ export function Countdown({ timestamp, className }: { timestamp: number, classNa
         }, 1000)
 
         return () => clearInterval(interval)
-    }, [currentTimeDelta])
+    }, [currentTimeDelta, timestamp])
 
     return (
         <div className={`flex flex-row gap-x-2 sm:gap-x-4 ${className}`}>

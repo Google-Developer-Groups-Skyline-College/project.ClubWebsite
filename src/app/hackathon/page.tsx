@@ -164,12 +164,12 @@ export default function Hackathon() {
                 <div className='flex flex-col sm:flex-row mt-2 gap-2'>
                     <a href='https://discord.gg/z5P9kccwRh'>
                         <div className='bg-[#00000075] rounded-xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center'>
-                            Join Skyline's CSC Discord
+                            Join Skyline&apos;s CSC Discord
                         </div>
                     </a>
                     <a href='https://discord.gg/g8dvmWCXPB'>
                         <div className='bg-[#00000075] rounded-xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center'>
-                            Join San Mateo's CSC Discord
+                            Join San Mateo&apos;s CSC Discord
                         </div>
                     </a>
                 </div>

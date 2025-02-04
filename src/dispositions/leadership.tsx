@@ -214,8 +214,8 @@ export const leadership = [
                 imgSrc: dir_2023_2024 + 'tylerkuwadaport.png',
                 quote: (
                     <p>
-                        Oh, these weren't homemade, they were made in a factory.
-                        A bomb factory. They're bombs.
+                        Oh, these weren&apos;t homemade, they were made in a factory.
+                        A bomb factory. They&apos;re bombs.
                     </p>
                 ),
                 linktree: '',
