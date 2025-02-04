@@ -50,7 +50,7 @@ export const leadership = [
                 name: 'Lance Ruiz',
                 role: 'Chapter Lead President',
                 imgSrc:  dir_2024_2025 + 'lance.jpg',
-                quote: '"Anyone who has never made a mistake has never tried anything new" - Albert Eintstein',
+                quote: '"Anyone who has never made a mistake has never tried anything new." - Albert Einstein',
                 email: 'mailto:skylinecompsciclub@gmail.com',
                 linktree: 'https://www.linktr.ee/devalto',
                 instagram: '',
@@ -95,11 +95,7 @@ export const leadership = [
                 name: 'Assem Alghaithi',
                 role: 'Software Projects Manager',
                 imgSrc: dir_2024_2025 + 'sam.jpg',
-                quote: (
-                    <p>
-                        "The human brain, such an enigma." - Majed
-                    </p>
-                ),
+                quote: '"The human brain, such an enigma." - Majed',
                 linktree: '',
                 instagram: '',
                 discord: '',
@@ -112,11 +108,7 @@ export const leadership = [
                 name: 'Majed Elqossari',
                 role: 'Associate Project Manager',
                 imgSrc: dir_2024_2025 + 'majed.png',
-                quote: ( 
-                    <p>
-                        "Strive always to excel in virtue and truth." - Prophet Muhammed
-                    </p>
-                ),
+                quote: '"Strive always to excel in virtue and truth." - Prophet Muhammed',
                 github: 'https://www.github.com/CptnMaj',
                 instagram: 'https://www.instagram.com/majidali.77',
                 discord: 'https://discordapp.com/users/928831417734004746',
@@ -147,17 +139,13 @@ export const leadership = [
                 name: 'Lynn Aung',
                 role: 'Chapter Technologist',
                 imgSrc: dir_2024_2025 + 'lynn.png',
-                quote: (
-                    <p>
-                        "The only time I look down is when I tie my shoe." - Lynn Aung
-                    </p>
-                ),
+                quote: '"The only time I look down is when I tie my shoe." - Lynn Aung',
                 discord: 'https://discordapp.com/users/1134930369230147685',
                 github: 'https://github.com/loofsan',
                 icon: <BsLightningCharge />,
             },
             {
-                name: 'Rae-Angela Vera Cruz',
+                name: 'Rea Angela Vera Cruz',
                 role: 'Chapter Technologist',
                 imgSrc: dir_2024_2025 + 'raeangela.webp',
                 quote: '',
@@ -203,7 +191,7 @@ export const leadership = [
                 icon: <AiOutlineGlobal />,
             },
             {
-                title: 'ASSC Deputy',
+                title: 'SOCC Deputy',
                 label: 'Oscar Meza',
                 color_complex: 'from-[#651e94] shadow-[#651e94]',
                 icon: <PiHandshakeBold />,

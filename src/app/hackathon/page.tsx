@@ -133,7 +133,7 @@ export default function Hackathon() {
 
                 <div className='text-sm sm:text-xl text-center font-bold mt-4 bg-[#44444470] rounded-2xl p-2 px-12 whitespace-pre-line'>
                     {
-                        'Our Exploration Mission has come to an end!\nThanks for participating in this historic event! See you next year!'
+                        'Coming back soon for Spring 2024. Stay tuned on our Discord and other social media outlets for future details.'
                     }
                 </div>
 

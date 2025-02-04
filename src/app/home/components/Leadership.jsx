@@ -51,7 +51,7 @@ function MajorLeaderCard ({ details, index }) {
             }
             transition={{ duration: 1.25, delay: index * 0.15, ease: 'easeOut' }}
             // w-[200px] sm:w-[240px]
-            className={`${isAnimating && 'pointer-events-none'} hover:z-20 sm:hover:mx-4 w-[220px] sm:w-[260px] ring-2 ring-green-950 relative group/majorcard hover:rounded-b-none sm:hover:!scale-[115%] transition-all duration-500 select-none rounded-t-xl rounded-b-lg bg-gradient-to-t from-[#040404] via-green-950 to-green-950 shadow-md hover:shadow-2xl shadow-black hover:shadow-green-300`}
+            className={`${isAnimating && 'pointer-events-none'} hover:z-20 sm:hover:mx-4 w-[220px] sm:w-[270px] ring-2 ring-green-950 relative group/majorcard hover:rounded-b-none sm:hover:!scale-[115%] transition-all duration-500 select-none rounded-t-xl rounded-b-lg bg-gradient-to-t from-[#040404] via-green-950 to-green-950 shadow-md hover:shadow-2xl shadow-black hover:shadow-green-300`}
             key={details.leaderName}
         >
             {/* Leader Portrait + Leader Quote Overlay */}
@@ -109,7 +109,7 @@ function MajorLeaderCard ({ details, index }) {
             {/* Leader Name and Role */}
             <div className='rounded-xl p-2 py-3 group-hover/majorcard:pb-0'>
                 {/* <div className='absolute text-[10px] sm:text-[16px]'>{details.icon}</div> */}
-                <div className='absolute text-lg subpixel-antialiased'>{details.icon}</div>
+                <div className='absolute text-sm sm:text-lg subpixel-antialiased'>{details.icon}</div>
                 <p className='title-main text-[16px] sm:text-[18px] font-semibold text-center group-hover/majorcard:drop-shadow-[0_0_6px_rgba(255,255,255,0.8)] duration-300 group-hover/majorcard:animate-pulse tracking-tight text-balance'>
                     {details.name}
                 </p>
