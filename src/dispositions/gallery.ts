@@ -117,7 +117,7 @@ export const HomeAlbum: GalleryPiece[] = [
     },
     {
         remark: '🧑‍💻 Our First Intercollegiate Hackathon: Post-Opening Ceremony',
-        imgSrc: DIR_HOME_GALLERY + 'hackathon_contest2.jpg',
+        imgSrc: DIR_HOME_GALLERY + 'hackathon_contest2.webp',
     },
     {
         remark: '🤖 Fieldtrip: Dexterity.AI Robotics Group Photo!',
@@ -125,7 +125,7 @@ export const HomeAlbum: GalleryPiece[] = [
     },
     {
         remark: '🧑‍💻 Our First Intercollegiate Hackathon: Pre-Opening Ceremony',
-        imgSrc: DIR_HOME_GALLERY + 'hackathon_contest1.jpg',
+        imgSrc: DIR_HOME_GALLERY + 'hackathon_contest1.webp',
     },
     {
         remark: '🔬 Fieldtrip: SLAC Linear Accelerator Tour feat. Physics Astronomy Club',
@@ -156,7 +156,7 @@ export const HackathonAlbum: GalleryPiece[] = [
     },
     {
         remark: '🧑‍🚀 Explorers! Group Photo #1',
-        imgSrc: DIR_HACKATHON_GALLERY + 'group1.jpg',
+        imgSrc: DIR_HACKATHON_GALLERY + 'group1.webp',
     },
     {
         remark: '🎉 Game Entry: "Meow Invaders!" Gameplay',
@@ -192,7 +192,7 @@ export const HackathonAlbum: GalleryPiece[] = [
     },
     {
         remark: '📋 The Sign-in Booth',
-        imgSrc: DIR_HACKATHON_GALLERY + 'sign_in2.jpg',
+        imgSrc: DIR_HACKATHON_GALLERY + 'sign_in2.webp',
     },
     {
         remark: '🧑‍🚀 Pioneer Explorers! Contestants Photo #2',
@@ -204,7 +204,7 @@ export const HackathonAlbum: GalleryPiece[] = [
     },
     {
         remark: '🔊 Event Speakers (Edan Barrios)',
-        imgSrc: DIR_HACKATHON_GALLERY + 'speaker1.jpg',
+        imgSrc: DIR_HACKATHON_GALLERY + 'speaker1.webp',
     },
     {
         remark: '🎉 Game Entry: "MetalDug" Developer Art',
@@ -220,7 +220,7 @@ export const HackathonAlbum: GalleryPiece[] = [
     },
     {
         remark: '🧑‍🚀 Pioneer Explorers! Group Photo #3',
-        imgSrc: DIR_HACKATHON_GALLERY + 'group4.jpg',
+        imgSrc: DIR_HACKATHON_GALLERY + 'group4.webp',
     },
     {
         remark: '🎉 Game Entry: "Solitar?" Gameplay #2',
@@ -232,6 +232,6 @@ export const HackathonAlbum: GalleryPiece[] = [
     },
     {
         remark: '🔊 Event Speakers (Tyler Kuwada)',
-        imgSrc: DIR_HACKATHON_GALLERY + 'speaker4.jpg',
+        imgSrc: DIR_HACKATHON_GALLERY + 'speaker4.webp',
     },
 ]

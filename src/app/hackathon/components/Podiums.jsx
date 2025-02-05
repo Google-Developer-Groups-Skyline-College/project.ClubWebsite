@@ -1,6 +1,9 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { useReward } from 'react-rewards'
+
+const { SUBMISSIONS } = require('@/dispositions/hackathon')
 
 export function Podiums() {
     const { reward, isAnimating } = useReward('rewardId', 'confetti', { position: 'absolute', decay: 0.978, startVelocity: 18, spread: 90, lifetime: 600 })
@@ -112,20 +115,21 @@ export function Podiums() {
 
                     <div className='my-2 flex flex-wrap justify-center items-center gap-y-4 gap-x-4'>
                         
+                        {SUBMISSIONS.map(
+                            (entry, index) => (
+                                <div className='group relative px-24 h-[100px] flex flex-col justify-center items-center bg-gradient-to-r from-black  to-neutral-800 transition-all rounded-[32px]' key={index}>
+                                    <Image
+                                        src={entry.image}
+                                        alt=''
+                                        width={800}
+                                        height={800}
+                                        className='z-0 absolute w-full h-full rounded-[32px] object-cover opacity-10 group-hover:opacity-15 transition duration-500'
+                                    />
+                                    <Link href={entry.link} className='z-10 title-main text-[32px] font-semibold'>{entry.name}</Link>
+                                </div>
+                            )
+                        )}
 
-                        <div className='group relative px-24 h-[100px] flex flex-col justify-center items-center bg-gradient-to-r from-black  to-neutral-800 transition-all rounded-[32px]'>
-                            <Image
-                                src={''}
-                                alt=''
-                                width={800}
-                                height={800}
-                                className='z-0 absolute w-full h-full rounded-[32px] object-cover opacity-10 group-hover:opacity-15 transition duration-500'
-                            />
-                            <p className='z-10 title-main text-[32px] font-semibold'>Falling A&apos;s</p>
-                        </div>
-                        
-
-                        
                     </div>
 
                 </div>
