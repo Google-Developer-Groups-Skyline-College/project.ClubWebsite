@@ -81,7 +81,7 @@ function MajorLeaderCard ({ details, index }) {
                         <FaQuoteLeft size={26} className='p-1 sm:p-0 m-2 sm:m-4' />
                     </motion.div>
 
-                    <div className='w-full h-full flex items-center px-1 sm:px-8 font-semibold text-shadow-lg shadow-black text-center whitespace-pre-line leading-[14px] sm:leading-5 text-[18px] text-balance'>
+                    <div className='w-full h-full flex items-center px-1 sm:px-8 font-semibold text-shadow-lg shadow-black text-center whitespace-pre-line leading-[14px] sm:leading-5 text-[16px] text-balance'>
                         {details.quote
                             ? details.quote
                             : FALLBACK_QUOTE}

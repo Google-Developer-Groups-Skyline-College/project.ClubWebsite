@@ -10,6 +10,7 @@ import { SiDiscord, SiYoutube, SiLinkedin, SiInstagram, SiGithub, SiLinktree, Si
 import { CLUB_MEETING_DAY, CLUB_MEETING_HOUR, CLUB_MEETING_LOCATION, CLUB_MEETING_LOCATION_LINK } from '@/dispositions/general'
 
 import { Countdown } from 'shared/_modules'
+import { MdOutlineEmail } from 'react-icons/md'
 
 function getNextDayOfWeek(currentDate: Date, dayOfWeek: number) {
     const resultDate = new Date(currentDate.getTime())
@@ -181,10 +182,10 @@ export function Overview(): React.ReactNode {
                         </button>
                     </Link>
 
-                    <Link href='https://linktr.ee/skylinecsc' target='_blank'>
+                    <Link href='mailto:skylinecompsciclub+website@gmail.com' target='_blank'>
                         <button className='flex group w-[160px] sm:w-[180px] sm:hover:w-[200px] justify-center bg-neutral-700 dark:bg-neutral-900 bg-opacity-80 rounded-md gap-2 py-3 2 active:scale-95 hover:bg-green-900 hover:outline-4 hover:text-white text-xl font-bold active:outline-2 hover:outline-double outline-white border-[1px] border-neutral-800 hover:outline-green-700 active:outline-neutral-200 duration-200 active:duration-200'>
-                            <SiLinktree className='my-auto group-hover:text-white group-hover:text-2xl transition-all duration-300' />
-                            LinkTree
+                            <MdOutlineEmail className='my-auto group-hover:text-white group-hover:text-2xl transition-all duration-300' />
+                            Email
                         </button>
                     </Link>
                 </div>
