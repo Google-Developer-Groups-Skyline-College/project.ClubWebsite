@@ -3,7 +3,7 @@
 const backdrop = '/assets/hackathon/backdrop.png'
 const herologo = '/assets/hackathon/herologo.png'
 
-import IntroFade from '../../../components/IntroFade'
+import { IntroFade } from 'shared/_modules'
 
 import { Scanner, useDeviceList } from '@yudiel/react-qr-scanner'
 
@@ -37,7 +37,7 @@ async function queryDatabase(email) {
 
 const LOAD_TIME = Date.now()
 
-export default function ({ params }) {
+export default function Slug({ params }) {
     const router = useRouter()
 
     const [targetCamera, setTargetCamera] = useState(null)
@@ -82,7 +82,7 @@ export default function ({ params }) {
         if (cameras.length > 0 && targetCamera == null) {
             setTargetCamera(cameras[0].deviceId)
         }
-    }, [cameras])
+    }, [cameras, targetCamera])
 
     const [data, setData] = useState('Nothing')
 
@@ -142,7 +142,7 @@ export default function ({ params }) {
                 </div>
 
                 <p className='text-xl font-semibold font-Ubuntu my-1 bg-[#00000075] rounded-2xl px-6 py-1'>
-                    This <span className='text-pink-500'>Explorer's</span> Deets
+                    This <span className='text-pink-500'>Explorer&apos;s</span> Deets
                 </p>
 
                 <div className='flex flex-col my-1 gap-3 items-center'>
