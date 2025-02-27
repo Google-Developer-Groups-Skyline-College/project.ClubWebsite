@@ -23,7 +23,7 @@ export function Footer() {
                 </Link>
 
                 <Link
-                    href='https://www.youtube.com/@skylinecsc'
+                    href='https://www.youtube.com/@skylinegdg'
                     target='_blank'
                 >
                     <div className='flex group w-[120px] sm:w-[134px] sm:hover:w-[140px] justify-center bg-neutral-700 dark:bg-neutral-900 bg-opacity-80 rounded-md gap-2 py-2 2 active:scale-95 hover:bg-red-900 hover:outline-4 hover:text-white text-lg font-semibold active:outline-2 hover:outline-double outline-white border-[1px] border-neutral-800 hover:outline-red-700 active:outline-neutral-200 duration-200 active:duration-200'>
@@ -53,7 +53,7 @@ export function Footer() {
                 </Link>
 
                 <Link
-                    href='https://github.com/Skyline-College-Computer-Science-Club/'
+                    href='https://github.com/Google-Developer-Groups-Skyline-College'
                     target='_blank'
                 >
                     <div className='flex group w-[120px] sm:w-[134px] sm:hover:w-[140px] justify-center bg-neutral-700 dark:bg-neutral-900 bg-opacity-80 rounded-md gap-1 py-2 2 active:scale-95 hover:bg-yellow-700 hover:outline-4 hover:text-white text-lg font-semibold active:outline-2 hover:outline-double outline-white border-[1px] border-neutral-800 hover:outline-yellow-700 active:outline-neutral-200 duration-200 active:duration-200'>

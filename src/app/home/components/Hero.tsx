@@ -87,11 +87,11 @@ export function Hero(): React.ReactNode {
                 />
 
                 {/* The main texts */}
-                <h1 className='z-20 title-main text-center text-[4.6vw] xl:text-[52px] text-shadow shadow-black font-bold text-white mx-4 my-[2px] sm:my-[-8px]'>
-                    The Computer Science Club at Skyline
+                <h1 className='z-20 title-main text-center text-[4.6vw] xl:text-[52px] text-shadow shadow-black font-bold text-white mx-4 my-[2px] sm:my-[-8px] whitespace-pre-line leading-tight'>
+                    {'Google Developer Groups \non Campus Skyline College'}
                 </h1>
 
-                <div className='z-20 title-main w-full text-white text-center text-shadow shadow-black text-[3.25vw] sm:text-xl'>
+                <div className='z-20 title-main w-full text-white text-center text-shadow shadow-black text-[3.25vw] sm:text-xl mt-5'>
                     <p className='group'>Elevate Your Code — the <span className='group-hover:text-red-300 group-hover:font-bold transition delay-100'>Sky&apos;s</span> <span className='group-hover:text-red-300 group-hover:font-bold transition delay-300'>the</span> <span className='group-hover:text-red-300 group-hover:font-bold transition delay-500'>Limit.</span></p>
                     <h1 className='title-main font-bold text-2xl sm:pt-[4px]'>
                         {'>'} We{' '}
