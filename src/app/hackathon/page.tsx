@@ -43,6 +43,7 @@ export default function Hackathon() {
             <IntroFade />
 
             <div className='relative flex flex-col w-full h-screen justify-center items-center overflow-hidden'>
+
                 <motion.div
                     initial={{ transform: 'translateY(3%)' }}
                     animate={{ transform: 'translateY(-3%)' }}
@@ -80,12 +81,6 @@ export default function Hackathon() {
 
                 {/* <div className="text-8xl font-bold text-orange-200">Hackathon</div> */}
                 <HackathonTimer startTime={SHOWTIME} endTime={ENDTIME} className='text-center font-bold font-Ubuntu mt-4 bg-[#00000075] rounded-2xl p-2 px-12 sm:text-4xl text-2xl' />
-
-                <div className='text-sm sm:text-xl text-center font-bold mt-4 bg-[#44444470] rounded-2xl p-2 px-12 whitespace-pre-line'>
-                    {
-                        'Coming back soon for Spring 2024. Stay tuned on our Discord and other social media outlets for future details.'
-                    }
-                </div>
 
                 <div className='flex flex-col sm:flex-row mt-4 gap-3'>
                     {/* <a href='https://forms.gle/k9y4ZKbnatqiS  BFRA'> */}
@@ -127,11 +122,11 @@ export default function Hackathon() {
                 <div className='absolute bottom-0 w-full h-[20%] bg-gradient-to-t from-black to-transparent' />
             </div>
 
-            <div>
+            {/* <div>
                 <Track trackName='Track 1' trackDescription='Track1 description' classNames={trackClasses} />
                 <Track trackName='Track 2' trackDescription='Track2 description' />
                 <Track trackName='Track 3' trackDescription='Track3 description' />
-            </div>
+            </div> */}
 
             <Podiums />
 
