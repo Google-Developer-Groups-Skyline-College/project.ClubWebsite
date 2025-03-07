@@ -3,8 +3,7 @@
 const backdrop = '/assets/hackathon/backdrop.png'
 const herologo = '/assets/hackathon/herologo.png'
 
-import IntroFade from '../../../components/IntroFade'
-import Typed from 'react-typed'
+import { IntroFade } from 'shared/_modules'
 
 // import { Scanner, useDeviceList } from '@yudiel/react-qr-scanner'
 
@@ -12,12 +11,11 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 // import { QrReader } from 'react-qr-reader'
-
 import { useState, useEffect } from 'react'
 
 import { useRouter } from 'next/navigation'
 
-import { redirect } from 'next/navigation'
+// import { redirect } from 'next/navigation'
 
 async function queryDatabase(email) {
     const request = {
@@ -38,7 +36,7 @@ async function queryDatabase(email) {
 
 const LOAD_TIME = Date.now()
 
-export default function ({ params }) {
+export default function Slug({ params }) {
     const router = useRouter()
 
     const [targetCamera, setTargetCamera] = useState(null)
@@ -83,7 +81,7 @@ export default function ({ params }) {
         if (cameras.length > 0 && targetCamera == null) {
             setTargetCamera(cameras[0].deviceId)
         }
-    }, [cameras])
+    }, [cameras, targetCamera])
 
     const [data, setData] = useState('Nothing')
 
@@ -143,40 +141,37 @@ export default function ({ params }) {
                 </div>
 
                 <p className='text-xl font-semibold font-Ubuntu my-1 bg-[#00000075] rounded-2xl px-6 py-1'>
-                    This <span className='text-pink-500'>Explorer's</span> Deets
+                    This <span className='text-pink-500'>Explorer&apos;s</span> Deets
                 </p>
 
                 <div className='flex flex-col my-1 gap-3 items-center'>
                     <div className='bg-[#ffd035a4] rounded-2xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center w-full'>
-                        <Typed
+                        <ReactTyped
                             strings={[participant.name]}
                             typeSpeed={75}
                             backSpeed={75}
                             backDelay={99999}
-                            loop
                             className='bg-gradient-to-t from-white to-white bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(255,255,255,1)] font-bold'
-                        ></Typed>
+                        />
                     </div>
                     <div className='bg-[#cc00ff75] rounded-2xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center w-full'>
-                        <Typed
+                        <ReactTyped
                             strings={[participant.email]}
                             typeSpeed={75}
                             backSpeed={75}
                             backDelay={99999}
-                            loop
                             className='bg-gradient-to-t from-white to-white bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(255,255,255,1)] font-bold'
-                        ></Typed>
+                        />
                     </div>
                     <div className='bg-[#0f6186] rounded-2xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center w-full'>
                         From{' '}
-                        <Typed
+                        <ReactTyped
                             strings={[participant.college]}
                             typeSpeed={75}
                             backSpeed={75}
                             backDelay={99999}
-                            loop
                             className='text-white drop-shadow-[0_0_8px_rgba(255,255,255,1)] font-bold'
-                        ></Typed>
+                        />
                     </div>
 
                     <p className='text-xl font-semibold font-Ubuntu my-1 bg-[#ff111175] rounded-2xl px-6 py-1'>

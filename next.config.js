@@ -1,13 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'img.itch.zone',
+                pathname: '/**',
+            },
+        ],
+    },
     async redirects() {
         return [
             {
-                source: '/p5js',
-                destination:
-                    'https://www.canva.com/design/DAGCbZ2TaH4/ZSVhmMFmn8pSIa-GyE5nBQ/view?utm_content=DAGCbZ2TaH4&utm_campaign=designshare&utm_medium=link&utm_source=editor',
+                source: '/',
+                destination: '/home',
+                permanent: true,
+            },
+            {
+                source: '/promotion',
+                destination: '/recruitment',
                 permanent: false,
-                basePath: false,
             },
         ]
     },
