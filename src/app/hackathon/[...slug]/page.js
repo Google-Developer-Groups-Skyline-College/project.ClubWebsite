@@ -36,7 +36,8 @@
 
 // const LOAD_TIME = Date.now()
 
-// export default function Slug({ params }) {
+export default function Slug({ params }) {
+    return ( <></> )
 //     const router = useRouter()
 
 //     const [targetCamera, setTargetCamera] = useState(null)
@@ -240,4 +241,4 @@
 //             </div>
 //         </>
 //     )
-// }
+}
