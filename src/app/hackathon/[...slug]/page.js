@@ -6,12 +6,12 @@ const herologo = '/assets/hackathon/herologo.png'
 import IntroFade from '../../../components/IntroFade'
 import Typed from 'react-typed'
 
-import { Scanner, useDeviceList } from '@yudiel/react-qr-scanner'
+// import { Scanner, useDeviceList } from '@yudiel/react-qr-scanner'
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-import { QrReader } from 'react-qr-reader'
+// import { QrReader } from 'react-qr-reader'
 
 import { useState, useEffect } from 'react'
 
