@@ -10,14 +10,17 @@ import { HackathonAlbum } from '@/dispositions/gallery'
 // components
 import Image from 'next/image'
 
+import { HackathonTimer } from '@/lib/hackathon/Timer'
+import { Track } from '@/lib/hackathon/Track'
+
 import { Podiums } from './components/_modules'
 import { Footer, IntroFade, Gallery } from 'shared/_modules'
 
 const backdrop = '/assets/hackathon/backdrop.png'
 const herologo = '/assets/hackathon/herologo.png'
 
-const SHOWTIME = new Date(0).setSeconds(1713826800) // 4:00 - 04/22/24
-const ENDTIME = new Date(0).setSeconds(1714431600) // 4:00 - 04/29/24
+const SHOWTIME = new Date(0).setSeconds(1744268400) // 4:00 - 04/22/24
+const ENDTIME = new Date(0).setSeconds(1744873200) // 4:00 - 04/29/24
 
 const GALLERY_TYPED_WORDS = [
     'Experience Software Development',
@@ -26,52 +29,14 @@ const GALLERY_TYPED_WORDS = [
     'Experience Real-World Programming',
 ]
 
+const trackClasses = {
+    container: 'font-bold',
+    content: 'font-bold',
+    header: 'font-bold',
+    description: 'font-bold',
+};
+
 export default function Hackathon() {
-    const [altFormat, setAltFormat] = useState(false)
-    const [countdown, setCountDown] = useState(0)
-
-    function secondsToDhms(seconds: number): string {
-        const negative = seconds < 0
-        seconds = Math.abs(seconds)
-        const d = Math.floor(seconds / (3600 * 24))
-        const h = Math.floor((seconds % (3600 * 24)) / 3600)
-        const m = Math.floor((seconds % 3600) / 60)
-        const s = Math.floor(seconds % 60)
-
-        if (altFormat) {
-            return (
-                (d > 0 ? d + (d == 1 ? ' day, ' : ' days, ') : '') +
-                (m > 0 ? m + (m == 1 ? ' minute, ' : ' minutes, ') : '') +
-                (h > 0 ? h + (h == 1 ? ' hour, ' : ' hours, ') : '') +
-                (s > 0 ? s + (s == 1 ? ' second' : ' seconds') : '0 seconds') +
-                (negative ? ' ago' : '')
-            )
-        }
-
-        return (
-            'T' +
-            (negative ? ' + ' : ' - ') +
-            d.toString().padStart(2, '0') +
-            ' : ' +
-            h.toString().padStart(2, '0') +
-            ' : ' +
-            m.toString().padStart(2, '0') +
-            ' : ' +
-            s.toString().padStart(2, '0')
-        )
-    }
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (SHOWTIME - Date.now() > 0) {
-                setCountDown(SHOWTIME - Date.now())
-            } else {
-                setCountDown(ENDTIME - Date.now())
-            }
-        }, 500)
-
-        return () => clearInterval(interval)
-    }, [countdown])
 
     return (
         <>
@@ -114,22 +79,7 @@ export default function Hackathon() {
                 </motion.div>
 
                 {/* <div className="text-8xl font-bold text-orange-200">Hackathon</div> */}
-                <div
-                    className={
-                        'text-center font-bold font-Ubuntu mt-4 bg-[#00000075] rounded-2xl p-2 px-12 ' +
-                        (altFormat
-                            ? 'sm:text-xl text-xl'
-                            : 'sm:text-4xl text-2xl')
-                    }
-                    onMouseEnter={() => {
-                        setAltFormat(true)
-                    }}
-                    onMouseLeave={() => {
-                        setAltFormat(false)
-                    }}
-                >
-                    {`${secondsToDhms(countdown / 1000)}`}
-                </div>
+                <HackathonTimer startTime={SHOWTIME} endTime={ENDTIME} className='text-center font-bold font-Ubuntu mt-4 bg-[#00000075] rounded-2xl p-2 px-12 sm:text-4xl text-2xl' />
 
                 <div className='text-sm sm:text-xl text-center font-bold mt-4 bg-[#44444470] rounded-2xl p-2 px-12 whitespace-pre-line'>
                     {
@@ -175,6 +125,12 @@ export default function Hackathon() {
                 </div>
 
                 <div className='absolute bottom-0 w-full h-[20%] bg-gradient-to-t from-black to-transparent' />
+            </div>
+
+            <div>
+                <Track trackName='Track 1' trackDescription='Track1 description' classNames={trackClasses} />
+                <Track trackName='Track 2' trackDescription='Track2 description' />
+                <Track trackName='Track 3' trackDescription='Track3 description' />
             </div>
 
             <Podiums />

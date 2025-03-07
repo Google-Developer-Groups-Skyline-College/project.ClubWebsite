@@ -1,8 +1,10 @@
+import Image from 'next/image'
+
 export const Track: React.FC<HackathonTrackProps> = ({
     trackName,
     trackDescription,
     iconSrc,
-    classNames,
+    classNames
 }) => {
     if (typeof classNames === 'undefined') {
         return (
@@ -15,6 +17,7 @@ export const Track: React.FC<HackathonTrackProps> = ({
             </TrackContainer>
         )
     }
+
     return (
         <TrackContainer className={classNames.container}>
             {iconSrc && <TrackIcon src={iconSrc} />}
@@ -30,24 +33,24 @@ export const Track: React.FC<HackathonTrackProps> = ({
     )
 }
 
-export const TrackContainer = ({ children }: any) => {
-    return <div>{children}</div>
+export const TrackContainer = ({ ...props }: any) => {
+    return <div {...props} />
 }
 
-export const TrackContent = ({ children }: any) => {
-    return <div>{children}</div>
+export const TrackContent = ({ ...props }: any) => {
+    return <div {...props} />
 }
 
-export const TrackHeader = ({ children }: any) => {
-    return <h1>{children}</h1>
+export const TrackHeader = ({ ...props }: any) => {
+    return <h1 {...props} />
 }
 
-export const TrackDescription = ({ description }: any) => {
-    return <div>{description}</div>
+export const TrackDescription = ({ ...props }: any) => {
+    return <div {...props} />
 }
 
 export const TrackIcon = ({ src }: any) => {
-    return <img src={src} alt='Track Icon' />
+    return <Image src={src} alt='Track Icon' />
 }
 
 /**
