@@ -2,8 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Overview } from './components/_modules'
-import { Footer, IntroFade } from 'shared/_modules'
+import { Footer, IntroFade, InfoHub } from 'shared/_modules'
 import { IoHomeOutline } from 'react-icons/io5'
 
 export default function Recruitment(): React.ReactNode {
@@ -59,7 +58,7 @@ export default function Recruitment(): React.ReactNode {
                 </Link> 
             </div>
 
-            <Overview/>
+            <InfoHub />
 
             <div className='absolute w-full h-full'>
                 {/* top        */}
@@ -72,12 +71,12 @@ export default function Recruitment(): React.ReactNode {
                     Join our Online Community on Discord
                 </h1>
 
-                <iframe src="https://e.widgetbot.io/channels/939701223144185867/939714632929665034" 
-                    allow="clipboard-write; fullscreen" 
-                    height="600"
+                <iframe src='https://e.widgetbot.io/channels/939701223144185867/939714632929665034'
+                    allow='clipboard-write'
+                    height='600'
+                    width='75%'
                     className='rounded-2xl drop-shadow-[0_0_20px_rgba(0,0,0,0.5)]'
-                    width="75%">
-                </iframe>
+                />
 
                 <a href='https://discord.com/invite/z5P9kccwRh' target='_blank' className='w-[75%] h-[72px] hover:scale-[101%] hover:animate-pulse transition-all opacity-70 hover:opacity-85 duration-300'>
                     <iframe

@@ -22,8 +22,8 @@ export const HackathonTimer: React.FC<HackathonTimerProps> = ({
     const [countdown, setCountDown] = useState(0)
 
     const intervalDelayMs = 500
-    const remainingStartTimeMs = startTime - Date.now()
-    const remainingEndTimeMs = endTime - Date.now()
+    const remainingStartTimeMs = (startTime - Date.now()) / 1000
+    const remainingEndTimeMs = (endTime - Date.now()) / 1000
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -33,7 +33,7 @@ export const HackathonTimer: React.FC<HackathonTimerProps> = ({
         }, intervalDelayMs)
 
         return () => clearInterval(interval)
-    }, [countdown])
+    })
 
     return (
         <div

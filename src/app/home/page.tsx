@@ -2,14 +2,14 @@
 
 import React from 'react'
 
-import { Element } from 'react-scroll'
+// import { Element } from 'react-scroll'
 import { ReactTyped } from 'react-typed'
 
 import { HomeAlbum } from '@/dispositions/gallery'
 
 // components
-import { IntroFade, Gallery, Footer } from '../shared/_modules'
-import { Overview, Hero, Techstack, About, Leadership, Recruitment } from './components/_modules'
+import { IntroFade, Gallery, Footer, InfoHub } from '../shared/_modules'
+import { Hero, Techstack, About, Leadership, Recruitment } from './components/_modules'
 
 const GALLERY_TYPED_WORDS = [
     'Social Events',
@@ -29,7 +29,7 @@ export default function App() {
             <IntroFade />
 
             <Hero />
-            <Overview />
+            <InfoHub />
             
             <Leadership />
 
@@ -52,7 +52,7 @@ export default function App() {
                     ></ReactTyped>
                 </h1>
 
-                <Element name='gallery' />
+                {/* <Element name='gallery' /> */}
                 <Gallery album={HomeAlbum} />
             </div>
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useState } from 'react'
-import { Element } from 'react-scroll'
+// import { Element } from 'react-scroll'
 
 import { motion, useInView } from 'framer-motion'
 import { useSound } from 'use-sound'
@@ -25,7 +25,7 @@ export function About(): React.ReactNode {
 
     return (
         <div ref={ref} className='w-full h-full bg-gradient-to-b from-black to-[#0a0a0a] text-gray-300 py-[24vh] mt-40 overflow-hidden'>
-            <Element name='about' />
+            {/* <Element name='about' /> */}
 
             <div className='w-full max-w-[2600px] mx-auto py-24 flex flex-col lg:flex-row justify-center items-center gap-x-20 gap-y-8 bg-[#030303]'>
             
@@ -57,15 +57,15 @@ export function About(): React.ReactNode {
                     <h2>📍 San Bruno, San Mateo County, California</h2>
                     <div className='w-full h-[1px] bg-white my-3'></div>
                     <div className='flex flex-col gap-y-4 font-semibold lg:font-normal'>
-                        <p className=''>
+                        <p>
                             Since our formation in 🍃 Fall of 2020, we have served as a platform for over <b>256 members</b> past and present.
                             We are a club made up entirely by students, led by other fellow students, backed by a diverse network of outside community members
                             from all branches of computer science.
                         </p>
-                        <p className=''>
-                            Whether you are a beginner to the field, or are already deeply-immersed into the industry with the newest software and technology stacks, our club and its growing community welcomes everyone of all experience levels—beginners included!
+                        <p>
+                            Regardless if you&apos;re a beginner to the field, or are already deeply-immersed into the industry with the newest software and technology stacks, our club and its growing community welcomes everyone of all experience levels—beginners included!
                         </p>
-                        <p className=''>
+                        <p>
                             This is your place to network, to explore, to experiment, and to ultimately discover yourself!
                         </p>
                         {/* <p className='my-2'>

@@ -1,6 +1,5 @@
 export * from './About'
 export * from './Hero'
 export * from './Leadership'
-export * from './Overview'
 export * from './Recruitment'
 export * from './Techstack'
