@@ -1,6 +1,6 @@
 'use client'
 
-import { Element } from 'react-scroll'
+// import { Element } from 'react-scroll'
 import Image from 'next/image'
 
 export function Recruitment(): React.ReactNode {
@@ -67,7 +67,7 @@ f
                     <p className='font-semibold mt-2 ml-2'>👉 Click to join us!</p>
                 </a>
 
-                <Element name='recruitment' />
+                {/* <Element name='recruitment' /> */}
 
             </div>
         </div>

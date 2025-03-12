@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { ReactTyped } from 'react-typed'
-import { Element } from 'react-scroll'
+// import { Element } from 'react-scroll'
 
 import Image from 'next/image'
 
@@ -209,7 +209,7 @@ export function Techstack(): React.ReactNode {
 
     return (
         <div className='w-full h-full mt-60 text-gray-300 overflow-hidden'>
-            <Element name='tech' />
+            {/* <Element name='tech' /> */}
 
             <motion.img
                 width={100}
