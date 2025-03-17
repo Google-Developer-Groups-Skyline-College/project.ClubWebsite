@@ -9,8 +9,9 @@ export function Podiums() {
     const { reward, isAnimating } = useReward('rewardId', 'confetti', { position: 'absolute', decay: 0.978, startVelocity: 18, spread: 90, lifetime: 600 })
 
     return (
-        <div className='w-full h-[1000px] my-60 flex flex-col justify-center items-center bg-black overflow-hidden'>
+        <div className='w-full py-60 flex flex-col justify-center items-center bg-black overflow-hidden'>
 
+            
             <Image
                 src={'/assets/hackathon/galaxy.jpg'}
                 alt=''
@@ -19,17 +20,9 @@ export function Podiums() {
                 className='absolute w-full h-full object-cover opacity-40 blur-[16px]'
             />
 
-            {/* gradient       */}
-            <div className='absolute w-full h-full'>
-                {/* top        */}
-                <div className='absolute top-[-16px] w-full h-[15%] bg-gradient-to-b from-black to-transparent' />
-                {/* bottom     */}
-                <div className='absolute bottom-[-16px] w-full h-[20%] bg-gradient-to-t from-black to-transparent' />
-            </div>
 
-            
 
-            <div className='max-w-[1280px] h-full flex flex-col justify-center items-center gap-y-2'>
+            <div className='max-w-[1280px] h-full py-20 flex flex-col justify-center items-center gap-y-2'>
 
                 <p className='title-main text-2xl'>Game Development Track</p>
                 <p className='pb-2 title-main text-4xl sm:text-5xl text-transparent font-extrabold bg-gradient-to-t from-white to-[#ffbb00] bg-clip-text drop-shadow-[0_0_40px_rgba(50,250,255,1)]'>
@@ -131,9 +124,7 @@ export function Podiums() {
                         )}
 
                     </div>
-
                 </div>
-
 
             </div>
         </div>
