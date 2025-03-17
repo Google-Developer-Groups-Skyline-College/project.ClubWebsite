@@ -1,6 +1,6 @@
 // Announcements are top-bar website notifications.
-export const ANNOUNCEMENT_TEXT: string = '🚧 Mind the mess! — Our website is undergoing constant development 🚧' // Announcement bar will be hidden if empty string
-export const ANNOUNCEMENT_GRAD_COLOR: string = 'from-[#33200d]' // Background gradient. keep the 'from-' prefix and have the color code within the square [] brackets
+export const ANNOUNCEMENT_TEXT: string = '🚀 Hey, Explorers! The SMCCCD Intercollegiate Hackathon is BACK! Apply now at https://skycs.club/hackathon!' // Announcement bar will be hidden if empty string
+export const ANNOUNCEMENT_GRAD_COLOR: string = 'from-[#9B0074FF]' // Background gradient. keep the 'from-' prefix and have the color code within the square [] brackets
 
 // Overview section for info regarding our meetings
 export const INFOHUB_MEETING_DAY: number = 5 // The day of the week, from [0-6] with 0 being Sunday

@@ -94,7 +94,7 @@ export default function Hackathon() {
                     <Link
                         href='https://tally.so/r/npvKoP' target='_blank'
                         className='bg-[#1ebd1e75] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                        📝 Apply Here
+                        📝 Apply Here Now!
                     </Link>
 
                     <Link
