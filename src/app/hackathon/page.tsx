@@ -20,8 +20,8 @@ import Link from 'next/link'
 const backdrop = '/assets/hackathon/backdrop.png'
 const herologo = '/assets/hackathon/logo.png'
 
-const SHOWTIME = new Date(0).setSeconds(1744268400) // 4:00 - 04/22/24
-const ENDTIME = new Date(0).setSeconds(1744873200) // 4:00 - 04/29/24
+const SHOWTIME = new Date(0).setSeconds(1745017200) // 4:00 - 04/22/24
+const ENDTIME = new Date(0).setSeconds(1745622000) // 4:00 - 04/29/24
 
 const GALLERY_TYPED_WORDS = [
     'Experience Software Development',
@@ -81,10 +81,11 @@ export default function Hackathon() {
                     />
                 </motion.div>
 
-                {/* <div className="text-8xl font-bold text-orange-200">Hackathon</div> */}
-                {/* <HackathonTimer startTime={SHOWTIME} endTime={ENDTIME} className='text-center font-bold font-Ubuntu mt-4 bg-[#00000075] rounded-2xl p-2 px-12 sm:text-4xl text-2xl' /> */}
-
+                { new Date().getSeconds() < SHOWTIME ?
                 <Countdown timestamp={SHOWTIME} className='' />
+                :
+                <Countdown timestamp={ENDTIME} className='' />
+                }
 
                 <div className='flex flex-col md:flex-row mt-4 gap-3'>
                     <span className='absolute flex h-3 w-3'>
@@ -98,13 +99,13 @@ export default function Hackathon() {
                     </Link>
 
                     <Link
-                        href='https://drive.google.com/file/d/1H9kzRPuWqiKmZSB3WRJo_PqzxrOWLSpB/view?usp=sharing' target='_blank'
+                        href='https://drive.google.com/file/d/11Rvu9Jx0t1qg_MP3NSUTahXrZ6-ildve/view?usp=sharing' target='_blank'
                         className='bg-[#ffd035a4] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
                         🕒 Mission Timeline
                     </Link>
 
                     <Link
-                        href='https://docs.google.com/document/d/15pP7UGDzaynIAKgSyr7UfDeE1j1VzpseOmH3kx6Ukv0/edit?usp=sharing' target='_blank'
+                        href='https://docs.google.com/document/d/1ERW69gX_VNuuO59LUMoFDdS3Ysinw-jfG1h9lHEs40k/edit?usp=sharing' target='_blank'
                         className='bg-[#cc00ff75] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
                         📖 Hacker Handbook
                     </Link>
