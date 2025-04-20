@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { useReward } from 'react-rewards'
 
-const { SUBMISSIONS } = require('@/dispositions/hackathon')
+import { SUBMISSIONS } from '@/dispositions/hackathon'
 
 export function Podiums() {
     const { reward, isAnimating } = useReward('rewardId', 'confetti', { position: 'absolute', decay: 0.978, startVelocity: 18, spread: 90, lifetime: 600 })
@@ -11,7 +11,6 @@ export function Podiums() {
     return (
         <div className='w-full py-60 flex flex-col justify-center items-center bg-black overflow-hidden'>
 
-            
             <Image
                 src={'/assets/hackathon/galaxy.jpg'}
                 alt=''

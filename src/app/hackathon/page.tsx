@@ -18,10 +18,11 @@ import { Footer, IntroFade, Gallery, Countdown } from 'shared/_modules'
 import Link from 'next/link'
 
 const backdrop = '/assets/hackathon/backdrop.png'
-const herologo = '/assets/hackathon/logo.png'
+const hackathonLogo = '/assets/hackathon/logo.png'
 
-const SHOWTIME = new Date(0).setSeconds(1745017200) // 4:00 - 04/22/24
-const ENDTIME = new Date(0).setSeconds(1745622000) // 4:00 - 04/29/24
+const SHOWTIME = new Date(1745017200 * 1000).getTime() // 4:00 - 04/22/24
+const SUBMISSIONS_DUE = new Date(1745600400 * 1000).getTime()
+const ENDTIME = new Date(1745622000 * 1000).getTime() // 4:00 - 04/29/24
 
 const GALLERY_TYPED_WORDS = [
     'Experience Software Development',
@@ -44,7 +45,7 @@ export default function Hackathon() {
             <IntroFade />
 
             {/* hero section */}
-            <div className='relative flex flex-col w-full h-screen justify-center items-center overflow-hidden'>
+            <div className='relative flex flex-col w-full h-screen justify-center items-center overflow-hidden gap-6'>
 
                 <motion.div
                     initial={{ transform: 'translateY(3%)' }}
@@ -58,7 +59,7 @@ export default function Hackathon() {
                 >
                     <Image
                         className='lg:h-[17vw] px-4 object-contain pointer-events-none select-none'
-                        src={herologo}
+                        src={hackathonLogo}
                         width={1000}
                         height={1000}
                         alt=''
@@ -81,67 +82,82 @@ export default function Hackathon() {
                     />
                 </motion.div>
 
-                { new Date().getSeconds() < SHOWTIME ?
-                <Countdown timestamp={SHOWTIME} className='' />
-                :
-                <Countdown timestamp={ENDTIME} className='' />
-                }
-
-                <div className='flex flex-col md:flex-row mt-4 gap-3'>
-                    <span className='absolute flex h-3 w-3'>
-                        <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1dfd1d75] opacity-75'></span>
-                        <span className='relative inline-flex rounded-full h-3 w-3 bg-[#1dfd1d75]'></span>
-                    </span>
-                    <Link
-                        href='https://tally.so/r/npvKoP' target='_blank'
-                        className='bg-[#1ebd1e75] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                        📝 Apply Here Now!
-                    </Link>
-
-                    <Link
-                        href='https://drive.google.com/file/d/11Rvu9Jx0t1qg_MP3NSUTahXrZ6-ildve/view?usp=sharing' target='_blank'
-                        className='bg-[#ffd035a4] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                        🕒 Mission Timeline
-                    </Link>
-
-                    <Link
-                        href='https://docs.google.com/document/d/1ERW69gX_VNuuO59LUMoFDdS3Ysinw-jfG1h9lHEs40k/edit?usp=sharing' target='_blank'
-                        className='bg-[#cc00ff75] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                        📖 Hacker Handbook
-                    </Link>
+                <div className='flex flex-col text-lg font-Poppins font-bold text-center gap-2'>
+                    { new Date(Date.now()).getTime() < SHOWTIME ?
+                    <>
+                        <h1>Opening Day Starts In</h1>
+                        <Countdown timestamp={SHOWTIME} />
+                    </>
+                    : new Date(Date.now()).getTime() < SUBMISSIONS_DUE ?
+                    <>
+                        <h1>Submissions Due In</h1>
+                        <Countdown timestamp={SUBMISSIONS_DUE} />
+                    </>
+                    :
+                    <>
+                        <h1>Closing Day Starts In</h1>
+                        <Countdown timestamp={SUBMISSIONS_DUE} />
+                    </>
+                    }
                 </div>
 
-                <div className='flex flex-col md:flex-row mt-2 gap-2'>
+                <div className='flex flex-col items-center gap-2'>
+                    <div className='flex flex-col md:flex-row gap-3'>
+                        <span className='absolute flex h-3 w-3'>
+                            <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-[#bd1e1e75] opacity-75'></span>
+                            <span className='relative inline-flex rounded-full h-3 w-3 bg-[#bd1e1e75]'></span>
+                        </span>
+                        <div
+                            // href='https://tally.so/r/npvKoP' target='_blank'
+                            className='bg-[#bd1e1e75] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            📝 Applicatons Closed
+                        </div>
 
-                    <Link
-                        href='https://discord.gg/X8a6YucWru' target='_blank'
-                        className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                        CSM Girls Who Code
-                    </Link>
+                        <Link
+                            href='https://drive.google.com/file/d/11Rvu9Jx0t1qg_MP3NSUTahXrZ6-ildve/view?usp=sharing' target='_blank'
+                            className='bg-[#ffd035a4] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            🕒 Mission Timeline
+                        </Link>
 
-                    <Link
-                        href='https://discord.gg/Q6CPAscMcv' target='_blank'
-                        className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                        CSM AI Club
-                    </Link>
+                        <Link
+                            href='https://docs.google.com/document/d/1ERW69gX_VNuuO59LUMoFDdS3Ysinw-jfG1h9lHEs40k/edit?usp=sharing' target='_blank'
+                            className='bg-[#cc00ff75] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            📖 Hacker Handbook
+                        </Link>
+                    </div>
 
-                    <Link
-                        href='https://discord.gg/z5P9kccwRh' target='_blank'
-                        className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                        GDGoC Skyline College
-                    </Link>
+                    <div className='flex flex-col md:flex-row gap-2'>
 
-                    <Link
-                        href='https://discord.gg/g8dvmWCXPB' target='_blank'
-                        className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                        CSM Computer Science Club
-                    </Link>
+                        <Link
+                            href='https://discord.gg/X8a6YucWru' target='_blank'
+                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            CSM Girls Who Code
+                        </Link>
 
-                    <Link
-                        href='https://discord.gg/YcryEdk8H5'
-                        className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                        Skyline Data Science Club
-                    </Link>
+                        <Link
+                            href='https://discord.gg/Q6CPAscMcv' target='_blank'
+                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            CSM AI Club
+                        </Link>
+
+                        <Link
+                            href='https://discord.gg/z5P9kccwRh' target='_blank'
+                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            GDGoC Skyline College
+                        </Link>
+
+                        <Link
+                            href='https://discord.gg/g8dvmWCXPB' target='_blank'
+                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            CSM Computer Science Club
+                        </Link>
+
+                        <Link
+                            href='https://discord.gg/YcryEdk8H5'
+                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            Skyline Data Science Club
+                        </Link>
+                    </div>
                 </div>
 
 
