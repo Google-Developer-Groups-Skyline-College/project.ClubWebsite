@@ -17,9 +17,9 @@
         "date-fns": "^4.1.0",
         "eslint-config-next": "^15.1.6",
         "eslint-config-prettier": "^9.1.0",
-        "next": "14.2.15",
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0",
+        "next": "15.5.4",
+        "react": "19.1.1",
+        "react-dom": "19.1.1",
         "react-rewards": "^2.0.4",
         "use-sound": "^2.2.0"
     },
