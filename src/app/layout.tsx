@@ -1,5 +1,7 @@
 import './globals.css'
 
+import type { Metadata } from 'next'
+
 import { Inter, Poppins, Ubuntu, Rubik, Open_Sans } from 'next/font/google'
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -37,9 +39,9 @@ const open_sans = Open_Sans({
     variable: '--font-open_sans',
 })
 
-export const metadata = {
-    title: 'The Computer Science Club @ Skyline',
-    description: 'The best club website at Skyline College :) 🪁',
+export const metadata: Metadata = {
+    title: 'GDG on Campus Skyline College',
+    description: 'The official Google-affiliated Computer Science Organization at Skyline College. 🪁',
 }
 
 export default function RootLayout({

@@ -14,10 +14,11 @@ import { HackathonTimer } from '@/lib/hackathon/Timer'
 import { Track } from '@/lib/hackathon/Track'
 
 import { Podiums } from './components/_modules'
-import { Footer, IntroFade, Gallery } from 'shared/_modules'
+import { Footer, IntroFade, Gallery, Countdown } from 'shared/_modules'
+import Link from 'next/link'
 
 const backdrop = '/assets/hackathon/backdrop.png'
-const herologo = '/assets/hackathon/herologo.png'
+const hackathonLogo = '/assets/hackathon/logo.png'
 
 const SHOWTIME = new Date(0).setSeconds(1744268400) // 4:00 - 04/22/24
 const ENDTIME = new Date(0).setSeconds(1744873200) // 4:00 - 04/29/24
@@ -42,6 +43,7 @@ export default function Hackathon() {
         <>
             <IntroFade />
 
+            {/* hero section */}
             <div className='relative flex flex-col w-full h-screen justify-center items-center overflow-hidden'>
 
                 <motion.div
@@ -55,8 +57,8 @@ export default function Hackathon() {
                     }}
                 >
                     <Image
-                        className='lg:h-[17vw] px-4 object-contain pointer-events-none'
-                        src={herologo}
+                        className='lg:h-[17vw] px-4 object-contain pointer-events-none select-none'
+                        src={hackathonLogo}
                         width={1000}
                         height={1000}
                         alt=''
@@ -64,13 +66,13 @@ export default function Hackathon() {
                 </motion.div>
 
                 <motion.div
-                    className='-z-10 absolute w-full h-screen pointer-events-none blur-sm'
+                    className='-z-10 absolute w-full h-full blur-sm pointer-events-none select-none'
                     initial={{ transform: 'translateY(10%)' }}
                     animate={{ transform: 'translateY(0%)' }}
                     transition={{ duration: 3, ease: 'backOut' }}
                 >
                     <Image
-                        className='object-cover'
+                        className='h-full object-cover'
                         src={backdrop}
                         width={2880}
                         height={2620}
@@ -79,6 +81,7 @@ export default function Hackathon() {
                     />
                 </motion.div>
 
+
                 {/* <div className="text-8xl font-bold text-orange-200">Hackathon</div> */}
                 <HackathonTimer startTime={SHOWTIME} endTime={ENDTIME} className='text-center font-bold font-Ubuntu mt-4 bg-[#00000075] rounded-2xl p-2 px-12 sm:text-4xl text-2xl' />
 
@@ -86,40 +89,65 @@ export default function Hackathon() {
                     {/* <a href='https://forms.gle/k9y4ZKbnatqiS  BFRA'> */}
                     <div className='flex bg-[#c51a1a75] rounded-xl sm:w-40 h-10 font-semibold transition-all hover:scale-105 text-center'>
                         <span className='absolute flex h-3 w-3'>
-                            <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ff4d40] opacity-75'></span>
-                            <span className='relative inline-flex rounded-full h-3 w-3 bg-[#ff4d40]'></span>
+                            <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-[#bd1e1e75] opacity-75'></span>
+                            <span className='relative inline-flex rounded-full h-3 w-3 bg-[#bd1e1e75]'></span>
                         </span>
-                        <span className='mx-auto my-auto text-center'>
-                            ⛔ Apps Closed
-                        </span>
-                    </div>
-                    {/* </a> */}
-                    <a href='https://drive.google.com/file/d/1H9kzRPuWqiKmZSB3WRJo_PqzxrOWLSpB/view?usp=sharing'>
-                        <div className='bg-[#ffd035a4] rounded-xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center'>
-                            🕒 The Timeline
+                        <div
+                            // href='https://tally.so/r/npvKoP' target='_blank'
+                            className='bg-[#bd1e1e75] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            📝 Applicatons Closed
                         </div>
-                    </a>
-                    <a href='https://docs.google.com/document/d/15pP7UGDzaynIAKgSyr7UfDeE1j1VzpseOmH3kx6Ukv0/edit?usp=sharing'>
-                        <div className='bg-[#cc00ff75] rounded-xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center'>
+
+                        <Link
+                            href='https://drive.google.com/file/d/11Rvu9Jx0t1qg_MP3NSUTahXrZ6-ildve/view?usp=sharing' target='_blank'
+                            className='bg-[#ffd035a4] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            🕒 Mission Timeline
+                        </Link>
+
+                        <Link
+                            href='https://docs.google.com/document/d/1ERW69gX_VNuuO59LUMoFDdS3Ysinw-jfG1h9lHEs40k/edit?usp=sharing' target='_blank'
+                            className='bg-[#cc00ff75] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
                             📖 Hacker Handbook
-                        </div>
-                    </a>
+                        </Link>
+                    </div>
+
+                    <div className='flex flex-col md:flex-row gap-2'>
+
+                        <Link
+                            href='https://discord.gg/X8a6YucWru' target='_blank'
+                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            CSM Girls Who Code
+                        </Link>
+
+                        <Link
+                            href='https://discord.gg/Q6CPAscMcv' target='_blank'
+                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            CSM AI Club
+                        </Link>
+
+                        <Link
+                            href='https://discord.gg/z5P9kccwRh' target='_blank'
+                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            GDGoC Skyline College
+                        </Link>
+
+                        <Link
+                            href='https://discord.gg/g8dvmWCXPB' target='_blank'
+                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            CSM Computer Science Club
+                        </Link>
+
+                        <Link
+                            href='https://discord.gg/YcryEdk8H5'
+                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                            Skyline Data Science Club
+                        </Link>
+                    </div>
                 </div>
 
-                <div className='flex flex-col sm:flex-row mt-2 gap-2'>
-                    <a href='https://discord.gg/z5P9kccwRh'>
-                        <div className='bg-[#00000075] rounded-xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center'>
-                            Join Skyline&apos;s CSC Discord
-                        </div>
-                    </a>
-                    <a href='https://discord.gg/g8dvmWCXPB'>
-                        <div className='bg-[#00000075] rounded-xl p-2 px-6 font-semibold transition-all hover:scale-105 text-center'>
-                            Join San Mateo&apos;s CSC Discord
-                        </div>
-                    </a>
-                </div>
 
                 <div className='absolute bottom-0 w-full h-[20%] bg-gradient-to-t from-black to-transparent' />
+
             </div>
 
             {/* <div>
