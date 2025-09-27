@@ -26,8 +26,8 @@
     "devDependencies": {
         "@types/howler": "^2.2.12",
         "@types/node": "^20.10.5",
-        "@types/react": "^18",
-        "@types/react-dom": "^18",
+        "@types/react": "^18.2.0",
+        "@types/react-dom": "^18.2.0",
         "autoprefixer": "^10.0.1",
         "eslint": "^8.57.0",
         "framer-motion": "^10.16.14",

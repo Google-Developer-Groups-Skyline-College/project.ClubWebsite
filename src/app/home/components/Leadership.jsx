@@ -263,7 +263,7 @@ function MinorLeaderCard({ details, index }) {
 
 export function Leadership() {
 
-    const [currentPage, setCurrentPage] = useState(0)
+    const [currentPage, setCurrentPage] = useState(leadership.length - 1)
 
     return (
         <div className='w-full h-full flex justify-center items-center pb-40 bg-gradient-to-b from-black via-[#031302] to-black'>
