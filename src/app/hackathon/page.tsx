@@ -20,9 +20,8 @@ import Link from 'next/link'
 const backdrop = '/assets/hackathon/backdrop.png'
 const hackathonLogo = '/assets/hackathon/logo.png'
 
-const SHOWTIME = new Date(1745017200 * 1000).getTime() // 4:00 - 04/22/24
-const SUBMISSIONS_DUE = new Date(1745600400 * 1000).getTime()
-const ENDTIME = new Date(1745622000 * 1000).getTime() // 4:00 - 04/29/24
+const SHOWTIME = new Date(0).setSeconds(1744268400) // 4:00 - 04/22/24
+const ENDTIME = new Date(0).setSeconds(1744873200) // 4:00 - 04/29/24
 
 const GALLERY_TYPED_WORDS = [
     'Experience Software Development',
@@ -45,7 +44,7 @@ export default function Hackathon() {
             <IntroFade />
 
             {/* hero section */}
-            <div className='relative flex flex-col w-full h-screen justify-center items-center overflow-hidden gap-6'>
+            <div className='relative flex flex-col w-full h-screen justify-center items-center overflow-hidden'>
 
                 <motion.div
                     initial={{ transform: 'translateY(3%)' }}
@@ -82,27 +81,13 @@ export default function Hackathon() {
                     />
                 </motion.div>
 
-                <div className='flex flex-col text-lg font-Poppins font-bold text-center gap-2'>
-                    { new Date(Date.now()).getTime() < SHOWTIME ?
-                    <>
-                        <h1>Opening Day Starts In</h1>
-                        <Countdown timestamp={SHOWTIME} />
-                    </>
-                    : new Date(Date.now()).getTime() < SUBMISSIONS_DUE ?
-                    <>
-                        <h1>Submissions Due In</h1>
-                        <Countdown timestamp={SUBMISSIONS_DUE} />
-                    </>
-                    :
-                    <>
-                        <h1>Closing Day Starts In</h1>
-                        <Countdown timestamp={SUBMISSIONS_DUE} />
-                    </>
-                    }
-                </div>
 
-                <div className='flex flex-col items-center gap-2'>
-                    <div className='flex flex-col md:flex-row gap-3'>
+                {/* <div className="text-8xl font-bold text-orange-200">Hackathon</div> */}
+                <HackathonTimer startTime={SHOWTIME} endTime={ENDTIME} className='text-center font-bold font-Ubuntu mt-4 bg-[#00000075] rounded-2xl p-2 px-12 sm:text-4xl text-2xl' />
+
+                <div className='flex flex-col sm:flex-row mt-4 gap-3'>
+                    {/* <a href='https://forms.gle/k9y4ZKbnatqiS  BFRA'> */}
+                    <div className='flex bg-[#c51a1a75] rounded-xl sm:w-40 h-10 font-semibold transition-all hover:scale-105 text-center'>
                         <span className='absolute flex h-3 w-3'>
                             <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-[#bd1e1e75] opacity-75'></span>
                             <span className='relative inline-flex rounded-full h-3 w-3 bg-[#bd1e1e75]'></span>
