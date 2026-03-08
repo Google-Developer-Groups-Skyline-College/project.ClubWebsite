@@ -41,7 +41,7 @@ export default function Recruitment(): React.ReactNode {
                     </span>
                 </h1>
                 <h1 className='title-main w-full text-center text-2xl md:text-5xl font-semibold drop-shadow-[0_0_12px_rgba(255,255,255,0.2)]'>
-                    Open to all for 2024—2025.
+                    Open to all for 2025—2026.
                 </h1>
                 <h1 className='title-main w-full text-center text-xl font-semibold drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] animate-pulse'>
                     Scroll down to find out how.

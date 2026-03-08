@@ -16,10 +16,9 @@ export function Recruitment(): React.ReactNode {
                 width={1600}
                 height={1600}
                 alt=''
-                className='-z-10 bg-white object-cover aspect-auto` absolute w-full h-full opacity-[80%]'
+                className='-z-10 bg-white object-cover aspect-auto absolute w-full h-full opacity-[80%]'
                 priority
             />
-f
             <div className='w-full h-[110vh] absolute flex flex-col bottom-[12rem] justify-center items-center'>
 
                 <Image
@@ -41,7 +40,7 @@ f
                         </span>
                     </h1>
                     <h1 className='title-main w-full text-center text-2xl md:text-5xl font-semibold drop-shadow-[0_0_12px_rgba(255,255,255,0.2)]'>
-                        Open to all for 2024—2025.
+                        Open to all for 2025—2026.
                     </h1>
                     <h1 className='title-main w-full text-center text-xl font-semibold drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] animate-pulse'>
                         Join our Community on Discord now below!
