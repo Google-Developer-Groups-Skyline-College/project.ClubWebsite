@@ -112,26 +112,33 @@ export default function Hackathon() {
                     {/* participating clubs */}
                     <p className='text-xs tracking-[0.2em] uppercase text-neutral-500 font-Poppins mt-2'>Participating Clubs</p>
                     <div className='flex flex-wrap justify-center gap-2 max-w-3xl'>
-                        <span className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold text-center text-neutral-300'>
-                            CSM Computer Science
-                        </span>
-                        <span className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold text-center text-neutral-300'>
-                            CSM Data Engineering
-                        </span>
-                        <span className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold text-center text-neutral-300'>
+                        <Link href='https://discord.gg/g8dvmWCXPB' target='_blank'
+                            className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold transition-all duration-300 text-center text-neutral-300 hover:text-white hover:bg-[#ffffff20]'>
+                            CSM Computer Science Club
+                        </Link>
+                        <Link href='https://discord.gg/d37V2vut' target='_blank'
+                            className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold transition-all duration-300 text-center text-neutral-300 hover:text-white hover:bg-[#ffffff20]'>
+                            CSM Data Engineering Club
+                        </Link>
+                        <Link href='https://discord.gg/4D9hxv4QHg' target='_blank'
+                            className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold transition-all duration-300 text-center text-neutral-300 hover:text-white hover:bg-[#ffffff20]'>
                             CSM Robotics Club
-                        </span>
+                        </Link>
                         <Link href='https://discord.gg/X8a6YucWru' target='_blank'
                             className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold transition-all duration-300 text-center text-neutral-300 hover:text-white hover:bg-[#ffffff20]'>
                             CSM Girls Who Code
                         </Link>
-                        <Link href='https://discord.gg/z5P9kccwRh' target='_blank'
+                        <Link href='https://discord.gg/Q6CPAscMcv' target='_blank'
+                            className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold transition-all duration-300 text-center text-neutral-300 hover:text-white hover:bg-[#ffffff20]'>
+                            CSM AI Club
+                        </Link>
+                        <Link href='https://discord.gg/FmSYJANKec' target='_blank'
                             className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold transition-all duration-300 text-center text-neutral-300 hover:text-white hover:bg-[#ffffff20]'>
                             CSM Google Developer Group
                         </Link>
-                        <Link href='https://discord.gg/g8dvmWCXPB' target='_blank'
+                        <Link href='https://discord.gg/ZMEDAGtpWK' target='_blank'
                             className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold transition-all duration-300 text-center text-neutral-300 hover:text-white hover:bg-[#ffffff20]'>
-                            Skyline Google Developer Group / CS Club
+                            Skyline Google Developer Group
                         </Link>
                         <Link href='https://discord.gg/YcryEdk8H5' target='_blank'
                             className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold transition-all duration-300 text-center text-neutral-300 hover:text-white hover:bg-[#ffffff20]'>
