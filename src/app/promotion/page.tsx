@@ -18,7 +18,7 @@ export default function Promotion(): React.ReactNode {
                     width={1600}
                     height={1600}
                     alt=''
-                    className='bg-white object-cover aspect-auto` absolute w-full h-[220vh] opacity-[80%]'
+                    className='bg-white object-cover aspect-auto absolute w-full h-[220vh] opacity-[80%]'
                     priority
                 />
 
@@ -43,7 +43,7 @@ export default function Promotion(): React.ReactNode {
                             </span>
                         </h1>
                         <h1 className='title-main w-full text-center text-2xl md:text-5xl font-semibold drop-shadow-[0_0_12px_rgba(255,255,255,0.2)]'>
-                            Open to all for 2024—2025.
+                            Open to all for 2025—2026.
                         </h1>
                         <h1 className='title-main w-full text-center text-xl font-semibold drop-shadow-[0_0_12px_rgba(255,255,255,0.2)] animate-pulse'>
                             Join our Community on Discord now below!

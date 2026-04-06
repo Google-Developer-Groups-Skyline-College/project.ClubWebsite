@@ -14,7 +14,6 @@
 
 */
 
-// TODO prepare to add yearly leaderships ✅
 
 import { BiCrown } from 'react-icons/bi'
 import { CgCrown } from 'react-icons/cg'
@@ -42,6 +41,39 @@ export const FALLBACK_QUOTE = (
 )
 
 export const leadership = [
+
+    {
+        title: '2025 — 2026',
+        major: [
+            {
+                name: 'Assem Alghaithi',
+                role: 'Chapter President',
+                imgSrc: dir_2024_2025 + 'sam.jpg',
+                quote: '"The human brain, such an enigma." - Majed',
+                email: 'mailto:president+website@skycs.club',
+                linktree: '',
+                instagram: '',
+                discord: 'https://discordapp.com/users/853343486756388944',
+                github: '',
+                linkedin: '',
+                website: '',
+                icon: <BiCrown />,
+            },
+            {
+                name: 'Majed Elqossari',
+                role: 'Chapter Vice-President',
+                imgSrc: dir_2024_2025 + 'majed.png',
+                quote: '"Strive always to excel in virtue and truth." - Prophet Muhammed',
+                email: 'mailto:vicepresident+website@skycs.club',
+                instagram: 'https://www.instagram.com/majidali.77',
+                discord: 'https://discordapp.com/users/928831417734004746',
+                github: 'https://www.github.com/CptnMaj',
+                linkedin: 'https://www.linkedin.com/in/majedelqossari/',
+                icon: <CgCrown />,
+            },
+        ],
+        minor: [],
+    },
 
     {
         title: '2024 — 2025',

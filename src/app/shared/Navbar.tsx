@@ -1,14 +1,8 @@
 'use client'
 
-/*
-    TODO:
-        Add context pull-out section for hovering over announcement bar
-*/
-
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
-// import { Link as ScrollLink, animateScroll } from 'react-scroll'
 import Link from 'next/link'
 
 import { HiOutlineRocketLaunch } from 'react-icons/hi2'
@@ -110,10 +104,6 @@ export function Navbar(): React.ReactNode {
 
                     <Link
                         href='/'
-                        // FIX:
-                        // onMouseUp={() => {
-                        //     animateScroll.scrollToTop()
-                        // }}
                         className='py-1 px-3 hover:px-6 active:scale-90 flex bg-neutral-950/25 hover:bg-neutral-700/50 rounded-lg transition-all duration-300'
                     >
                         <GoHome className='my-auto mr-2' />
@@ -134,11 +124,7 @@ export function Navbar(): React.ReactNode {
                         <GoCodeOfConduct className='my-auto mr-2 text-pink-300'/>
                         <p>Join Us!</p>
                     </Link>
-                    {/* <ScrollLink to='recruitment' offset={-1200} smooth={true} duration={2500}>Join Us!</ScrollLink> */}
                 </div>
-
-
-
 
 
                 {/* Mobile menu */}
@@ -159,11 +145,6 @@ export function Navbar(): React.ReactNode {
                     <div className='flex flex-col gap-4 font-semibold text-2xl'>
                         <Link
                             href='/'
-                            // FIX:
-                            // onMouseUp={() => {
-                            //     animateScroll.scrollToTop()
-                            //     handleClick()
-                            // }}
                         >
                             <div className='p-3 hover:px-5 flex bg-neutral-950/25 hover:bg-neutral-700/50 rounded-lg transition-all'>
                                 <GoHome className='my-auto mr-2' />

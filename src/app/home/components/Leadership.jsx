@@ -22,7 +22,7 @@ import {
 import { MdOutlineMail } from 'react-icons/md';
 import { FaGlobeAmericas, FaQuoteLeft } from 'react-icons/fa'
 
-const { leadership, FALLBACK_QUOTE } = require('@/dispositions/leadership.tsx')
+import { leadership, FALLBACK_QUOTE } from '@/dispositions/leadership.tsx'
 
 function MajorLeaderCard ({ details, index }) {
     const [playSfx_clunk] = useSound('/assets/audio/clunk.mp3')

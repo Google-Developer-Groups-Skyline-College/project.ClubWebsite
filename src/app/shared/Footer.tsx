@@ -10,7 +10,7 @@ export function Footer() {
             <p className='title-main font-semibold text-xl'>Let&apos;s connect.</p>
             <p className='title-main text-neutral-500 font-semibold'>Expand your professional network with us.</p>
 
-            <Socials/ >
+            <Socials />
 
             <div className='flex flex-row items-center justify-center gap-4 py-2 w-full'>
                 <Link href='https://skylinecollege.edu/' target='_blank'>
@@ -38,7 +38,7 @@ export function Footer() {
                     </p>
                 </Link>
                 <p className='text-neutral-500 text-sm sm:text-lg'>
-                    Copyright ©️ Skyline Computer Science Club 2022-2024
+                    Copyright ©️ Skyline Computer Science Club 2022-2026
                 </p>
             </div>
         </footer>

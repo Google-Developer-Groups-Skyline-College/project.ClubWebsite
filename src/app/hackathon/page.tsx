@@ -3,25 +3,20 @@
 import { motion } from 'framer-motion'
 import { ReactTyped } from 'react-typed'
 
-import { useState, useEffect } from 'react'
-
 import { HackathonAlbum } from '@/dispositions/gallery'
 
-// components
 import Image from 'next/image'
 
 import { HackathonTimer } from '@/lib/hackathon/Timer'
-import { Track } from '@/lib/hackathon/Track'
 
 import { Podiums } from './components/_modules'
-import { Footer, IntroFade, Gallery, Countdown } from 'shared/_modules'
+import { Footer, IntroFade, Gallery } from 'shared/_modules'
 import Link from 'next/link'
 
 const backdrop = '/assets/hackathon/backdrop.png'
-const hackathonLogo = '/assets/hackathon/logo.png'
 
-const SHOWTIME = new Date(0).setSeconds(1744268400) // 4:00 - 04/22/24
-const ENDTIME = new Date(0).setSeconds(1744873200) // 4:00 - 04/29/24
+const SHOWTIME = new Date(0).setSeconds(1776459600) // 2:00 PM - 04/17/26
+const ENDTIME = new Date(0).setSeconds(1777064400) // 2:00 PM - 04/24/26
 
 const GALLERY_TYPED_WORDS = [
     'Experience Software Development',
@@ -29,13 +24,6 @@ const GALLERY_TYPED_WORDS = [
     'Experience Team Coordination',
     'Experience Real-World Programming',
 ]
-
-const trackClasses = {
-    container: 'font-bold',
-    content: 'font-bold',
-    header: 'font-bold',
-    description: 'font-bold',
-};
 
 export default function Hackathon() {
 
@@ -45,25 +33,6 @@ export default function Hackathon() {
 
             {/* hero section */}
             <div className='relative flex flex-col w-full h-screen justify-center items-center overflow-hidden'>
-
-                <motion.div
-                    initial={{ transform: 'translateY(3%)' }}
-                    animate={{ transform: 'translateY(-3%)' }}
-                    transition={{
-                        duration: 3,
-                        ease: 'easeInOut',
-                        repeat: Infinity,
-                        repeatType: 'mirror',
-                    }}
-                >
-                    <Image
-                        className='lg:h-[17vw] px-4 object-contain pointer-events-none select-none'
-                        src={hackathonLogo}
-                        width={1000}
-                        height={1000}
-                        alt=''
-                    />
-                </motion.div>
 
                 <motion.div
                     className='-z-10 absolute w-full h-full blur-sm pointer-events-none select-none'
@@ -81,84 +50,102 @@ export default function Hackathon() {
                     />
                 </motion.div>
 
+                <motion.div
+                    className='flex flex-col items-center pointer-events-none select-none'
+                    initial={{ opacity: 0, transform: 'translateY(20px)' }}
+                    animate={{ opacity: 1, transform: 'translateY(0px)' }}
+                    transition={{ duration: 1.2, delay: 0.5, ease: 'easeOut' }}
+                >
+                    <p className='text-sm sm:text-lg tracking-[0.3em] uppercase text-neutral-400 font-Poppins'>
+                        The Third Annual Intercollegiate
+                    </p>
+                    <h1 className='text-5xl sm:text-7xl lg:text-8xl font-extrabold font-Poppins tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-neutral-500 leading-tight'>
+                        HACKATHON
+                    </h1>
+                    <p className='text-base sm:text-xl text-neutral-300 font-Poppins mt-1'>
+                        April 17 — 24, 2026
+                    </p>
+                </motion.div>
 
-                {/* <div className="text-8xl font-bold text-orange-200">Hackathon</div> */}
-                <HackathonTimer startTime={SHOWTIME} endTime={ENDTIME} className='text-center font-bold font-Ubuntu mt-4 bg-[#00000075] rounded-2xl p-2 px-12 sm:text-4xl text-2xl' />
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 1.2 }}
+                >
+                    <HackathonTimer startTime={SHOWTIME} endTime={ENDTIME} className='text-center font-bold font-Ubuntu mt-6 bg-[#00000075] backdrop-blur-sm rounded-2xl p-2 px-12 sm:text-4xl text-2xl' />
+                </motion.div>
 
-                <div className='flex flex-col sm:flex-row mt-4 gap-3'>
-                    {/* <a href='https://forms.gle/k9y4ZKbnatqiS  BFRA'> */}
-                    <div className='flex bg-[#c51a1a75] rounded-xl sm:w-40 h-10 font-semibold transition-all hover:scale-105 text-center'>
-                        <span className='absolute flex h-3 w-3'>
-                            <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-[#bd1e1e75] opacity-75'></span>
-                            <span className='relative inline-flex rounded-full h-3 w-3 bg-[#bd1e1e75]'></span>
-                        </span>
-                        <div
-                            // href='https://tally.so/r/npvKoP' target='_blank'
-                            className='bg-[#bd1e1e75] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                            📝 Applicatons Closed
-                        </div>
+                <motion.div
+                    className='flex flex-col items-center mt-6 gap-3'
+                    initial={{ opacity: 0, transform: 'translateY(10px)' }}
+                    animate={{ opacity: 1, transform: 'translateY(0px)' }}
+                    transition={{ duration: 0.8, delay: 1.6 }}
+                >
+                    {/* main action buttons */}
+                    <div className='flex flex-col sm:flex-row gap-3 items-center'>
+                        <a
+                            href='https://tally.so/r/npvKoP' target='_blank'
+                            className='relative bg-[#bd1e1e] rounded-xl p-2 px-8 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:brightness-125'>
+                            <span className='absolute -top-1 -right-1 flex h-3 w-3'>
+                                <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75'></span>
+                                <span className='relative inline-flex rounded-full h-3 w-3 bg-red-500'></span>
+                            </span>
+                            Applications Open
+                        </a>
 
+                        {/* Hidden for now — restore when ready
                         <Link
                             href='https://drive.google.com/file/d/11Rvu9Jx0t1qg_MP3NSUTahXrZ6-ildve/view?usp=sharing' target='_blank'
-                            className='bg-[#ffd035a4] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                            🕒 Mission Timeline
+                            className='bg-[#ffd035cc] text-black rounded-xl p-2 px-8 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:brightness-125'>
+                            Mission Timeline
                         </Link>
 
                         <Link
                             href='https://docs.google.com/document/d/1ERW69gX_VNuuO59LUMoFDdS3Ysinw-jfG1h9lHEs40k/edit?usp=sharing' target='_blank'
-                            className='bg-[#cc00ff75] rounded-xl p-2 px-6 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                            📖 Hacker Handbook
+                            className='bg-[#cc00ffcc] rounded-xl p-2 px-8 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:brightness-125'>
+                            Hacker Handbook
                         </Link>
+                        */}
+
                     </div>
 
-                    <div className='flex flex-col md:flex-row gap-2'>
-
-                        <Link
-                            href='https://discord.gg/X8a6YucWru' target='_blank'
-                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                    {/* participating clubs */}
+                    <p className='text-xs tracking-[0.2em] uppercase text-neutral-500 font-Poppins mt-2'>Participating Clubs</p>
+                    <div className='flex flex-wrap justify-center gap-2 max-w-3xl'>
+                        <span className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold text-center text-neutral-300'>
+                            CSM Computer Science
+                        </span>
+                        <span className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold text-center text-neutral-300'>
+                            CSM Data Engineering
+                        </span>
+                        <span className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold text-center text-neutral-300'>
+                            CSM Robotics Club
+                        </span>
+                        <Link href='https://discord.gg/X8a6YucWru' target='_blank'
+                            className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold transition-all duration-300 text-center text-neutral-300 hover:text-white hover:bg-[#ffffff20]'>
                             CSM Girls Who Code
                         </Link>
-
-                        <Link
-                            href='https://discord.gg/Q6CPAscMcv' target='_blank'
-                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                            CSM AI Club
+                        <Link href='https://discord.gg/z5P9kccwRh' target='_blank'
+                            className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold transition-all duration-300 text-center text-neutral-300 hover:text-white hover:bg-[#ffffff20]'>
+                            CSM Google Developer Group
                         </Link>
-
-                        <Link
-                            href='https://discord.gg/z5P9kccwRh' target='_blank'
-                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                            GDGoC Skyline College
+                        <Link href='https://discord.gg/g8dvmWCXPB' target='_blank'
+                            className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold transition-all duration-300 text-center text-neutral-300 hover:text-white hover:bg-[#ffffff20]'>
+                            Skyline Google Developer Group / CS Club
                         </Link>
-
-                        <Link
-                            href='https://discord.gg/g8dvmWCXPB' target='_blank'
-                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
-                            CSM Computer Science Club
-                        </Link>
-
-                        <Link
-                            href='https://discord.gg/YcryEdk8H5'
-                            className='bg-[#00000075] rounded-xl p-2 px-6 hover:px-10 text-base font-Poppins font-bold transition-all duration-300 text-center hover:animate-pulse'>
+                        <Link href='https://discord.gg/YcryEdk8H5' target='_blank'
+                            className='bg-[#00000090] backdrop-blur-sm rounded-xl p-2 px-5 text-sm font-Poppins font-semibold transition-all duration-300 text-center text-neutral-300 hover:text-white hover:bg-[#ffffff20]'>
                             Skyline Data Science Club
                         </Link>
                     </div>
-                </div>
-
+                </motion.div>
 
                 <div className='absolute bottom-0 w-full h-[20%] bg-gradient-to-t from-black to-transparent' />
 
             </div>
 
-            {/* <div>
-                <Track trackName='Track 1' trackDescription='Track1 description' classNames={trackClasses} />
-                <Track trackName='Track 2' trackDescription='Track2 description' />
-                <Track trackName='Track 3' trackDescription='Track3 description' />
-            </div> */}
-
             <Podiums />
 
-            {/* <Gallery /> */}
             <div className='w-full bg-gradient-to-b from-slate-900 via-black to-black py-20'>
                 <h1 className='title-main mx-auto text-4xl text-center sm:text-4xl font-extrabold text-white'>
                     <ReactTyped
