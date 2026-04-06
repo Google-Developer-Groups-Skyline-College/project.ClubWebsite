@@ -84,7 +84,7 @@ export default function Hackathon() {
                     {/* main action buttons */}
                     <div className='flex flex-col sm:flex-row gap-3 items-center'>
                         <a
-                            href='https://tally.so/r/npvKoP' target='_blank'
+                            href='https://tally.so/r/RG45LK' target='_blank'
                             className='relative bg-[#bd1e1e] rounded-xl p-2 px-8 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:brightness-125'>
                             <span className='absolute -top-1 -right-1 flex h-3 w-3'>
                                 <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75'></span>
