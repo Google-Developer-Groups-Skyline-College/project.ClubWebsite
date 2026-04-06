@@ -93,6 +93,7 @@ export default function Hackathon() {
                             Applications Open
                         </a>
 
+                        {/* Hidden for now — restore when ready
                         <Link
                             href='https://drive.google.com/file/d/11Rvu9Jx0t1qg_MP3NSUTahXrZ6-ildve/view?usp=sharing' target='_blank'
                             className='bg-[#ffd035cc] text-black rounded-xl p-2 px-8 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:brightness-125'>
@@ -104,6 +105,8 @@ export default function Hackathon() {
                             className='bg-[#cc00ffcc] rounded-xl p-2 px-8 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:brightness-125'>
                             Hacker Handbook
                         </Link>
+                        */}
+
                     </div>
 
                     {/* participating clubs */}
