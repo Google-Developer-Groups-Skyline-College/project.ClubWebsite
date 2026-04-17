@@ -93,19 +93,17 @@ export default function Hackathon() {
                             Applications Open
                         </a>
 
-                        {/* Hidden for now — restore when ready
                         <Link
-                            href='https://drive.google.com/file/d/11Rvu9Jx0t1qg_MP3NSUTahXrZ6-ildve/view?usp=sharing' target='_blank'
+                            href='/hackathon/timeline'
                             className='bg-[#ffd035cc] text-black rounded-xl p-2 px-8 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:brightness-125'>
                             Mission Timeline
                         </Link>
 
                         <Link
-                            href='https://docs.google.com/document/d/1ERW69gX_VNuuO59LUMoFDdS3Ysinw-jfG1h9lHEs40k/edit?usp=sharing' target='_blank'
+                            href='/hackathon/handbook'
                             className='bg-[#cc00ffcc] rounded-xl p-2 px-8 hover:px-10 text-lg font-Poppins font-bold transition-all duration-300 text-center hover:brightness-125'>
                             Hacker Handbook
                         </Link>
-                        */}
 
                     </div>
 
