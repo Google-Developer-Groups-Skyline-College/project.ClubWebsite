@@ -46,7 +46,7 @@ export default function Handbook() {
                         <ul className='mt-4 space-y-2 font-Poppins text-neutral-200'>
                             <li>Teams of up to <span className='text-white font-bold'>3 members</span></li>
                             <li>You can form your team through the application</li>
-                            <li>No team yet? We'll help you find one on check-in day or in Discord</li>
+                            <li>No team yet? We&apos;ll help you find one on check-in day or in Discord</li>
                             <li>Solo entries welcome</li>
                         </ul>
                     </section>
